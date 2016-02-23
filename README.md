@@ -1,2 +1,3 @@
 # ACED-Cheat-Sheet
-The cheat sheet about Java Deserialization vulnerabilities
+A cheat sheet about Java Native Binary Deserialization vulnerabilities
+For pentesters
