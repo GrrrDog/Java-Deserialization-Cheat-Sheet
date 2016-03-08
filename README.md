@@ -50,19 +50,26 @@ File uploading via:
 ### Exploits 
 
 ##### RMI 
-Default - 1099/tcp for registry
+- Protocol
+- Default - 1099/tcp for registry
 
 [yososerial](#yososerial) (works only on RMI registry service)
 
 ##### JMX 
+- Protocol based on RMI
+- Default - ?/tcp
+
 [yososerial](#yososerial)
 
-###### T3 (Weblogic)
+##### T3 of Oracle Weblogic
+- Protoclo
+- Default - 7001/tcp on localhost interface
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
 ##### Websphere 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
+
 ##### JBoss 
 - [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 - [https://github.com/njfox/Java-Deserialization-Exploit](https://github.com/njfox/Java-Deserialization-Exploit)
@@ -72,7 +79,7 @@ Default - 1099/tcp for registry
 
 ##### Restlet  
 - <= 2.1.2
-- When Rest API accepts seriazed objects
+- When Rest API accepts seriazed objects (ObjectRepresentation)
 
 ### Detect 
 
@@ -84,14 +91,18 @@ Default - 1099/tcp for registry
 - [SuperSerial](https://github.com/DirectDefense/SuperSerial)
 - [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
 
-### Vulnerable apps (without sploits)  
+### Vulnerable apps (without public sploits)  
 ##### ActiveMQ
 - <= 5.12.1
-
 - [CVE-2015-5254](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txthttp://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
-- [Explanation of the vul]n(https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
+ 
+- [Explanation of the vuln](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
 
 ##### Atlassian Bamboo
+- 2.2 <= version < 5.8.5
+- 5.9.0 <= version < 5.9.7
+- [CVE-2015-6576](https://confluence.atlassian.com/x/Hw7RLg)
+
 ##### Tomcat
 
 ### Protection 
@@ -99,6 +110,9 @@ Default - 1099/tcp for registry
 - [NotSoSerial](https://github.com/kantega/notsoserial)
 - [SerialKiller](https://github.com/ikkisoft/SerialKiller)
 - [ValidatingObjectInputStream](https://issues.apache.org/jira/browse/IO-487)
+
+### For Android 
+-
 
 ### Other serialization 
 ##### XMLEncoder 
