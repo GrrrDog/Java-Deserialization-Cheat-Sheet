@@ -9,7 +9,7 @@ From pentester for pentesters
 - [From Terse Systems](https://tersesystems.com/2015/11/08/closing-the-open-door-of-java-object-serialization/)
 
 ### Main talks & presentaions 
-##### AppSecCali 2015: Marshalling Pickles 
+##### Marshalling Pickles 
 by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
 
 - [Video](https://www.youtube.com/watch?v=KSA7vUkXGSg) 
@@ -20,6 +20,12 @@ by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
 by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 
 - [Video](https://www.youtube.com/watch?v=VviY3O-euVQ)
+
+
+##### Serial Killer: Silently Pwning Your Java Endpoints
+by [@pwntester](http://twitter.com/cschneider4711) & [@cschneider4711](http://twitter.com/pwntester)
+
+- [Slides](https://www.rsaconference.com/writable/presentations/file_upload/asd-f03-serial-killer-silently-pwning-your-java-endpoints.pdf)
 
 ### Payload generators 
 ##### yososerial 
@@ -63,7 +69,7 @@ File uploading via:
 [yososerial](#yososerial)
 
 ##### T3 of Oracle Weblogic
-- Protoclo
+- Protocol
 - Default - 7001/tcp on localhost interface
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
@@ -96,7 +102,6 @@ File uploading via:
 ##### ActiveMQ
 - <= 5.12.1
 - [CVE-2015-5254](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txthttp://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
- 
 - [Explanation of the vuln](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
 
 ##### Atlassian Bamboo
