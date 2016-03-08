@@ -1,7 +1,8 @@
-# ACED-Cheat-Sheet
+# Java-Deserialization-Cheat-Sheet
 A cheat sheet about Java Native Binary Deserialization vulnerabilities
 
-For pentesters
+From pentester for pentesters
+
 
 ### Overview
 - [From Foxgloves Security](http://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/) 
@@ -112,7 +113,8 @@ File uploading via:
 - [ValidatingObjectInputStream](https://issues.apache.org/jira/browse/IO-487)
 
 ### For Android 
--
+- [One Class to Rule Them All: 0-Day Deserialization Vulnerabilities in Android](https://www.usenix.org/conference/woot15/workshop-program/presentation/peles)
+- [Android Serialization Vulnerabilities Revisited](https://www.rsaconference.com/events/us16/agenda/sessions/2455/android-serialization-vulnerabilities-revisited)
 
 ### Other serialization 
 ##### XMLEncoder 
