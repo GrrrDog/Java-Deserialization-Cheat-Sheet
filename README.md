@@ -66,23 +66,24 @@ File uploading via:
 - Protocol based on RMI
 - Default - ?/tcp
 
-[yososerial](#yososerial)
+- [yososerial](#yososerial)
 
 ##### T3 of Oracle Weblogic
 - Protocol
 - Default - 7001/tcp on localhost interface
 
-[JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
+- [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
 ##### Websphere 
-[JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
+- [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### JBoss 
 - [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 - [https://github.com/njfox/Java-Deserialization-Exploit](https://github.com/njfox/Java-Deserialization-Exploit)
 
 ##### Jenkins 
-[JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
+
+- [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### Restlet  
 - <= 2.1.2
@@ -116,12 +117,13 @@ File uploading via:
 - [NotSoSerial](https://github.com/kantega/notsoserial)
 - [SerialKiller](https://github.com/ikkisoft/SerialKiller)
 - [ValidatingObjectInputStream](https://issues.apache.org/jira/browse/IO-487)
+- [Protection bypasses](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet/blob/master/README.md#serial-killer-silently-pwning-your-java-endpoints)
 
 ### For Android 
 - [One Class to Rule Them All: 0-Day Deserialization Vulnerabilities in Android](https://www.usenix.org/conference/woot15/workshop-program/presentation/peles)
 - [Android Serialization Vulnerabilities Revisited](https://www.rsaconference.com/events/us16/agenda/sessions/2455/android-serialization-vulnerabilities-revisited)
 
-### Other serialization 
+### Other serialization types
 ##### XMLEncoder 
 - [http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html)
 
