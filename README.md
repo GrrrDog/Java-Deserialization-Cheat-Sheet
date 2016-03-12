@@ -65,7 +65,6 @@ File uploading via:
 
 ##### JMX 
 - *Protocol based on RMI*
-- *Default - ?/tcp*
 
 - [yososerial](#yososerial)
 
@@ -73,21 +72,32 @@ File uploading via:
 - *Protocol*
 - *Default - 7001/tcp on localhost interface*
 
-- [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
+[JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
 ##### Websphere 
+*wsadmin*
+*Default port - 8880/tcp*
+
 - [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### JBoss 
+*http://jboss_server/invoker/JMXInvokerServlet*
+*Default port - 8080/tcp*
+
 - [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 - [https://github.com/njfox/Java-Deserialization-Exploit](https://github.com/njfox/Java-Deserialization-Exploit)
 
 ##### Jenkins 
+*Jenkins CLI*
+*Default port - High number/tcp*
+
 - [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### Restlet  
 - *<= 2.1.2*
 - *When Rest API accepts seriazed objects (uses ObjectRepresentation)*
+
+- no spec tool
 
 ### Detect 
 ##### Code review 
@@ -96,7 +106,7 @@ File uploading via:
 - [Find Security Bugs](http://find-sec-bugs.github.io/)
 
 ##### Traffic
-- *Magic bytes 'ac ed 00 05' bytes  or 'rO0' for Base64*
+- *Magic bytes 'ac ed 00 05' bytes or 'rO0' for Base64*
 
 ##### Burp plugins 
 - [Java Deserialization Scanner ](https://github.com/federicodotta/Java-Deserialization-Scanner)
