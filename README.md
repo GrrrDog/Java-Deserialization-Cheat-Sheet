@@ -23,9 +23,10 @@ by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 
 
 ##### Serial Killer: Silently Pwning Your Java Endpoints
-by [@pwntester](http://twitter.com/cschneider4711) & [@cschneider4711](http://twitter.com/pwntester)
+by [@pwntester](http://twitter.com/pwntester) & [@cschneider4711](http://twitter.com/cschneider4711)
 
 - [Slides](https://www.rsaconference.com/writable/presentations/file_upload/asd-f03-serial-killer-silently-pwning-your-java-endpoints.pdf)
+- [White Paper](http://community.hpe.com/hpeb/attachments/hpeb/off-by-on-software-security-blog/722/1/HPE-SR%20whitepaper%20java%20deserialization%20RSA2016.pdf)
 
 ### Payload generators 
 ##### yososerial 
@@ -57,20 +58,20 @@ File uploading via:
 ### Exploits 
 
 ##### RMI 
-- Protocol
-- Default - 1099/tcp for registry
+- *Protocol*
+- *Default - 1099/tcp for rmiregistry*
 
-[yososerial](#yososerial) (works only on RMI registry service)
+[yososerial](#yososerial) (works only against a RMI registry service)
 
 ##### JMX 
-- Protocol based on RMI
-- Default - ?/tcp
+- *Protocol based on RMI*
+- *Default - ?/tcp*
 
 - [yososerial](#yososerial)
 
 ##### T3 of Oracle Weblogic
-- Protocol
-- Default - 7001/tcp on localhost interface
+- *Protocol*
+- *Default - 7001/tcp on localhost interface*
 
 - [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
@@ -82,33 +83,36 @@ File uploading via:
 - [https://github.com/njfox/Java-Deserialization-Exploit](https://github.com/njfox/Java-Deserialization-Exploit)
 
 ##### Jenkins 
-
 - [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### Restlet  
-- <= 2.1.2
-- When Rest API accepts seriazed objects (ObjectRepresentation)
+- *<= 2.1.2*
+- *When Rest API accepts seriazed objects (uses ObjectRepresentation)*
 
 ### Detect 
-
 ##### Code review 
+- *ObjectInputStream.readObject*
+
+- [Find Security Bugs](http://find-sec-bugs.github.io/)
+
+##### Traffic
+- *Magic bytes 'ac ed 00 05' bytes  or 'rO0' for Base64*
 
 ##### Burp plugins 
-- Look for the magic bytes 'ac ed 00 05' bytes  or 'rO0' for Base64
 - [Java Deserialization Scanner ](https://github.com/federicodotta/Java-Deserialization-Scanner)
 - [SuperSerial](https://github.com/DirectDefense/SuperSerial)
 - [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
 
 ### Vulnerable apps (without public sploits)  
 ##### ActiveMQ
-- <= 5.12.1
-- [CVE-2015-5254](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txthttp://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
-- [Explanation of the vuln](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
+- *<= 5.12.1*
+- [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txthttp://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
+- [*Explanation of the vuln*](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
 
 ##### Atlassian Bamboo
-- 2.2 <= version < 5.8.5
-- 5.9.0 <= version < 5.9.7
-- [CVE-2015-6576](https://confluence.atlassian.com/x/Hw7RLg)
+- *2.2 <= version < 5.8.5*
+- *5.9.0 <= version < 5.9.7*
+- [*CVE-2015-6576*](https://confluence.atlassian.com/x/Hw7RLg)
 
 ##### Tomcat
 
@@ -117,6 +121,7 @@ File uploading via:
 - [NotSoSerial](https://github.com/kantega/notsoserial)
 - [SerialKiller](https://github.com/ikkisoft/SerialKiller)
 - [ValidatingObjectInputStream](https://issues.apache.org/jira/browse/IO-487)
+
 - [Protection bypasses](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet/blob/master/README.md#serial-killer-silently-pwning-your-java-endpoints)
 
 ### For Android 
