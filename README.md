@@ -76,12 +76,14 @@ File uploading via:
 
 ##### Websphere 
 *wsadmin*
+
 *Default port - 8880/tcp*
 
 - [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### JBoss 
 *http://jboss_server/invoker/JMXInvokerServlet*
+
 *Default port - 8080/tcp*
 
 - [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
@@ -89,11 +91,12 @@ File uploading via:
 
 ##### Jenkins 
 *Jenkins CLI*
+
 *Default port - High number/tcp*
 
 - [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
-##### Restlet  
+##### Restlet
 - *<= 2.1.2*
 - *When Rest API accepts seriazed objects (uses ObjectRepresentation)*
 
