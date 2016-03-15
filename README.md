@@ -106,18 +106,20 @@ File uploading via:
 ### Detect 
 ##### Code review 
 - *ObjectInputStream.readObject*
+- *ObjectInputStream.readUnshared*
 
 - [Find Security Bugs](http://find-sec-bugs.github.io/)
 
 ##### Traffic
-- *Magic bytes 'ac ed 00 05' bytes or 'rO0' for Base64*
+- *Magic bytes 'ac ed 00 05' bytes*
+- *'rO0' for Base64*
 
 ##### Burp plugins 
 - [Java Deserialization Scanner ](https://github.com/federicodotta/Java-Deserialization-Scanner)
 - [SuperSerial](https://github.com/DirectDefense/SuperSerial)
 - [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
 
-### Vulnerable apps (without public sploits)  
+### Vulnerable apps (without public sploits/need more info)  
 ##### ActiveMQ
 - *<= 5.12.1*
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txthttp://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
@@ -128,7 +130,17 @@ File uploading via:
 - *5.9.0 <= version < 5.9.7*
 - [*CVE-2015-6576*](https://confluence.atlassian.com/x/Hw7RLg)
 
-##### Tomcat
+##### AMF (Action Message Format)
+##### JSF ViewState
+##### JMS (Java Messaging System)
+##### Spring Service Invokerts (HTTP, JMS, RMI...)
+##### Apache Tomcat
+##### Apache Tomcat
+##### Apache Batchee
+##### Apache JCS
+##### Apache openjpa
+##### Apache Owb
+##### Apache TomEE
 
 ### Protection 
 - [Look-ahead Java deserialization](http://www.ibm.com/developerworks/library/se-lookahead/ )
