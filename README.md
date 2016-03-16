@@ -74,6 +74,7 @@ File uploading via:
 ##### Websphere 
 - *wsadmin*
 - *Default port - 8880/tcp*
+
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### JBoss 
@@ -99,8 +100,6 @@ no spec tool
 ##### Code review 
 - *ObjectInputStream.readObject*
 - *ObjectInputStream.readUnshared*
-
-
 - [Find Security Bugs](http://find-sec-bugs.github.io/)
 
 ##### Traffic
@@ -114,14 +113,14 @@ no spec tool
 
 ### Vulnerable apps (without public sploits/need more info)  
 ##### ActiveMQ
-- *<= 5.12.1*
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txthttp://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
+- *<= 5.12.1*
 - [*Explanation of the vuln*](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
 
 ##### Atlassian Bamboo
+- [*CVE-2015-6576*](https://confluence.atlassian.com/x/Hw7RLg)
 - *2.2 <= version < 5.8.5*
 - *5.9.0 <= version < 5.9.7*
-- [*CVE-2015-6576*](https://confluence.atlassian.com/x/Hw7RLg)
 
 ##### AMF (Action Message Format)
 ##### JSF ViewState
