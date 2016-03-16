@@ -82,11 +82,12 @@ File uploading via:
 - *Default port - 8080/tcp*
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
+
 [https://github.com/njfox/Java-Deserialization-Exploit](https://github.com/njfox/Java-Deserialization-Exploit)
 
 ##### Jenkins 
--*Jenkins CLI*
--*Default port - High number/tcp*
+- *Jenkins CLI*
+- *Default port - High number/tcp*
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
