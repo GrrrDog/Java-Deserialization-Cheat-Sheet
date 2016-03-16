@@ -140,8 +140,7 @@ no spec tool
 - [NotSoSerial](https://github.com/kantega/notsoserial)
 - [SerialKiller](https://github.com/ikkisoft/SerialKiller)
 - [ValidatingObjectInputStream](https://issues.apache.org/jira/browse/IO-487)
-
-- [Protection bypasses](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet/blob/master/README.md#serial-killer-silently-pwning-your-java-endpoints)
+- [Some protection bypasses](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet/blob/master/README.md#serial-killer-silently-pwning-your-java-endpoints)
 
 ### For Android 
 - [One Class to Rule Them All: 0-Day Deserialization Vulnerabilities in Android](https://www.usenix.org/conference/woot15/workshop-program/presentation/peles)
