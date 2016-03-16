@@ -1,12 +1,8 @@
 # Java-Deserialization-Cheat-Sheet
-A cheat sheet about Java Native Binary Deserialization vulnerabilities
-
-From pentester for pentesters
-
+A cheat sheet for pentesters about Java Native Binary Deserialization vulnerabilities
 
 ### Overview
 - [From Foxgloves Security](http://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/) 
-- [From Terse Systems](https://tersesystems.com/2015/11/08/closing-the-open-door-of-java-object-serialization/)
 
 ### Main talks & presentaions 
 ##### Marshalling Pickles 
@@ -67,7 +63,7 @@ File uploading via:
 ##### JMX 
 - *Protocol based on RMI*
 
-- [yososerial](#yososerial)
+[yososerial](#yososerial)
 
 ##### T3 of Oracle Weblogic
 - *Protocol*
@@ -76,37 +72,34 @@ File uploading via:
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
 ##### Websphere 
-*wsadmin*
-
-*Default port - 8880/tcp*
-
-- [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
+- *wsadmin*
+- *Default port - 8880/tcp*
+[JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### JBoss 
-*http://jboss_server/invoker/JMXInvokerServlet*
+- *http://jboss_server/invoker/JMXInvokerServlet*
+- *Default port - 8080/tcp*
 
-*Default port - 8080/tcp*
-
-- [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
-- [https://github.com/njfox/Java-Deserialization-Exploit](https://github.com/njfox/Java-Deserialization-Exploit)
+[JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
+[https://github.com/njfox/Java-Deserialization-Exploit](https://github.com/njfox/Java-Deserialization-Exploit)
 
 ##### Jenkins 
-*Jenkins CLI*
+-*Jenkins CLI*
+-*Default port - High number/tcp*
 
-*Default port - High number/tcp*
-
-- [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
+[JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### Restlet
 - *<= 2.1.2*
 - *When Rest API accepts seriazed objects (uses ObjectRepresentation)*
 
-- no spec tool
+no spec tool
 
 ### Detect 
 ##### Code review 
 - *ObjectInputStream.readObject*
 - *ObjectInputStream.readUnshared*
+
 
 - [Find Security Bugs](http://find-sec-bugs.github.io/)
 
