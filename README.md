@@ -27,6 +27,7 @@ by [@pwntester](http://twitter.com/pwntester) & [@cschneider4711](http://twitter
 ### Payload generators 
 ##### yososerial 
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
+[Lastest release of ysoserial](https://github.com/frohoff/ysoserial/releases/download/v0.0.4/ysoserial-0.0.4-all.jar)
 
 RCE via:
 
