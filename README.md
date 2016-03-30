@@ -95,7 +95,7 @@ File uploading via:
 
 ##### Restlet
 - *<= 2.1.2*
-- *When Rest API accepts seriazed objects (uses ObjectRepresentation)*
+- *When Rest API accepts serialized objects (uses ObjectRepresentation)*
 
 no spec tool
 
@@ -103,7 +103,7 @@ no spec tool
 ##### Code review 
 - *ObjectInputStream.readObject*
 - *ObjectInputStream.readUnshared*
-- [Find Security Bugs](http://find-sec-bugs.github.io/)
+- Tool: [Find Security Bugs](http://find-sec-bugs.github.io/)
 
 ##### Traffic
 - *Magic bytes 'ac ed 00 05' bytes*
@@ -121,11 +121,19 @@ no spec tool
 - [*Explanation of the vuln*](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
 
 ##### Atlassian Bamboo
-- [*CVE-2015-6576*](https://confluence.atlassian.com/x/Hw7RLg)
-- *2.2 <= version < 5.8.5*
+1. [*CVE-2015-6576*](https://confluence.atlassian.com/x/Hw7RLg)
+-  *2.2 <= version < 5.8.5*
 - *5.9.0 <= version < 5.9.7*
 
+2. [*CVE-2015-8360*](https://confluence.atlassian.com/bamboo/bamboo-security-advisory-2016-01-20-794376535.html)
+- *2.3.1 <= version < 5.9.9*
+- Bamboo JMS port (port 54663 by default)
+
 ##### AMF (Action Message Format)
+- *Protoco*
+
+[Belch](https://appsec-labs.com/belch/)
+
 ##### JSF ViewState
 ##### JMS (Java Messaging System)
 ##### Spring Service Invokerts (HTTP, JMS, RMI...)
