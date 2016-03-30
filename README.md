@@ -125,12 +125,13 @@ no spec tool
 -  *2.2 <= version < 5.8.5*
 - *5.9.0 <= version < 5.9.7*
 
-2. [*CVE-2015-8360*](https://confluence.atlassian.com/bamboo/bamboo-security-advisory-2016-01-20-794376535.html)
+
+1. [*CVE-2015-8360*](https://confluence.atlassian.com/bamboo/bamboo-security-advisory-2016-01-20-794376535.html)
 - *2.3.1 <= version < 5.9.9*
 - Bamboo JMS port (port 54663 by default)
 
 ##### AMF (Action Message Format)
-- *Protoco*
+- *Protocol*
 
 [Belch](https://appsec-labs.com/belch/)
 
