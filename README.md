@@ -70,18 +70,21 @@ File uploading via:
 ##### T3 of Oracle Weblogic
 - *Protocol*
 - *Default - 7001/tcp on localhost interface*
+- CVE-2015-4852
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
 ##### Websphere 
 - *wsadmin*
 - *Default port - 8880/tcp*
+- CVE-2015-7450
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### JBoss 
 - *http://jboss_server/invoker/JMXInvokerServlet*
 - *Default port - 8080/tcp*
+- CVE-2015-7501
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
@@ -90,6 +93,7 @@ File uploading via:
 ##### Jenkins 
 - *Jenkins CLI*
 - *Default port - High number/tcp*
+- CVE-2015-8103
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
@@ -98,6 +102,16 @@ File uploading via:
 - *When Rest API accepts serialized objects (uses ObjectRepresentation)*
 
 no spec tool
+
+##### OpenNMS
+- RMI
+
+[yososerial](#yososerial)
+
+##### Progress OpenEdge RDBMS
+- RMI
+
+[yososerial](#yososerial)
 
 ### Detect 
 ##### Code review 
@@ -120,13 +134,13 @@ no spec tool
 - *<= 5.12.1*
 - [*Explanation of the vuln*](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
 
-##### Atlassian Bamboo
-1. [*CVE-2015-6576*](https://confluence.atlassian.com/x/Hw7RLg)
+##### Atlassian Bamboo 1
+- [*CVE-2015-6576*](https://confluence.atlassian.com/x/Hw7RLg)
 -  *2.2 <= version < 5.8.5*
 - *5.9.0 <= version < 5.9.7*
 
-
-1. [*CVE-2015-8360*](https://confluence.atlassian.com/bamboo/bamboo-security-advisory-2016-01-20-794376535.html)
+##### Atlassian Bamboo 2
+- [*CVE-2015-8360*](https://confluence.atlassian.com/bamboo/bamboo-security-advisory-2016-01-20-794376535.html)
 - *2.3.1 <= version < 5.9.9*
 - Bamboo JMS port (port 54663 by default)
 
@@ -139,12 +153,38 @@ no spec tool
 ##### JMS (Java Messaging System)
 ##### Spring Service Invokerts (HTTP, JMS, RMI...)
 ##### Apache Tomcat
-##### Apache Tomcat
+
+##### Apache Camel 
+- CVE-2015-5348
+
+##### VMWare vCenter/vRealize (various) CVE-2015-6934
+##### 
+##### 
+##### 
+##### 
+##### Cisco 
+- CVE-2015-6420
+
+##### Symantec Endpoint Protection Manager 
+- CVE-2015-6555
+
+#####  Unify OpenScape 
+- CVE-2015-8237
+- CVE-2015-8238
+
+##### Apache TomEE
+- CVE-2015-8581
+- 
+##### IBM Congnos BI 
+- CVE-2012-4858
+
+#####  Commvault Edge Server 
+- CVE-2015-7253
+
 ##### Apache Batchee
 ##### Apache JCS
 ##### Apache openjpa
 ##### Apache Owb
-##### Apache TomEE
 
 ### Protection 
 - [Look-ahead Java deserialization](http://www.ibm.com/developerworks/library/se-lookahead/ )
