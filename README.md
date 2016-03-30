@@ -149,24 +149,30 @@ no spec tool
 
 [Belch](https://appsec-labs.com/belch/)
 
+##### Jenkins 2
+- CVE-2016-0788
+
 ##### JSF ViewState
 ##### JMS (Java Messaging System)
 ##### Spring Service Invokerts (HTTP, JMS, RMI...)
-##### Apache Tomcat
 
 ##### Apache Camel 
 - CVE-2015-5348
 
-##### VMWare vCenter/vRealize (various) CVE-2015-6934
-##### 
-##### 
-##### 
-##### 
+##### VMWare vCenter/vRealize (various) 
+- CVE-2015-6934
+
 ##### Cisco 
 - CVE-2015-6420
 
 ##### Symantec Endpoint Protection Manager 
 - CVE-2015-6555
+
+#####  McAfee ePolicy Orchestrator 
+- CVE-2015-8765
+
+##### Adobe Experience Manager 
+- CVE-2016-0958
 
 #####  Unify OpenScape 
 - CVE-2015-8237
@@ -174,17 +180,28 @@ no spec tool
 
 ##### Apache TomEE
 - CVE-2015-8581
-- 
+- CVE-2016-0779
+
 ##### IBM Congnos BI 
 - CVE-2012-4858
 
 #####  Commvault Edge Server 
 - CVE-2015-7253
 
+##### Apache SOLR 
+- SOLR-8262
+
+##### Apache Shiro 
+- SHIRO-550
+
+##### Apache HBase 
+- HBASE-14799
+
+##### Apache Tomcat
 ##### Apache Batchee
 ##### Apache JCS
-##### Apache openjpa
-##### Apache Owb
+##### Apache OpenJPA
+##### Apache OpenWebBeans
 
 ### Protection 
 - [Look-ahead Java deserialization](http://www.ibm.com/developerworks/library/se-lookahead/ )
