@@ -82,6 +82,12 @@ File uploading via:
 
 [yososerial](#yososerial)
 
+##### JNDI 
+- when we "control" JNDI
+- Atricle: [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
+
+[jndipoc](https://github.com/zerothoughts/jndipoc)
+
 ##### T3 of Oracle Weblogic
 - *Protocol*
 - *Default - 7001/tcp on localhost interface*
