@@ -186,6 +186,9 @@ no spec tool
 #####  McAfee ePolicy Orchestrator 
 - CVE-2015-8765
 
+#####  HP Operations Orchestration
+- CVE-2016-1997
+
 ##### Adobe Experience Manager 
 - CVE-2016-0958
 
