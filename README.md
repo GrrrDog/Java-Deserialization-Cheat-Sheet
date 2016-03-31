@@ -69,6 +69,17 @@ Won't fix DoS via default Java classes
 File uploading via:
 - Apache Commons FileUpload <= 1.3 (CVE-2013-2186) and Oracle JDK < 7u40 
 
+##### JNDI RCE
+[https://github.com/zerothoughts/jndipoc](https://github.com/zerothoughts/jndipoc)
+
+How does it work:
+- [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
+
+RCE via JNDI:
+
+- When we control an adrress for lookup of JNDI (context.lookup(address))
+
+
 ### Exploits 
 
 ##### RMI 
@@ -81,12 +92,6 @@ File uploading via:
 - *Protocol based on RMI*
 
 [yososerial](#yososerial)
-
-##### JNDI 
-- when we "control" JNDI
-- Atricle: [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
-
-[jndipoc](https://github.com/zerothoughts/jndipoc)
 
 ##### T3 of Oracle Weblogic
 - *Protocol*
