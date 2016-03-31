@@ -28,12 +28,16 @@ by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 
 - [Video](https://www.youtube.com/watch?v=VviY3O-euVQ)
 
-
 ##### Serial Killer: Silently Pwning Your Java Endpoints
 by [@pwntester](http://twitter.com/pwntester) & [@cschneider4711](http://twitter.com/cschneider4711)
 
 - [Slides](https://www.rsaconference.com/writable/presentations/file_upload/asd-f03-serial-killer-silently-pwning-your-java-endpoints.pdf)
 - [White Paper](http://community.hpe.com/hpeb/attachments/hpeb/off-by-on-software-security-blog/722/1/HPE-SR%20whitepaper%20java%20deserialization%20RSA2016.pdf)
+
+##### Deserialize My Shorts: Or How I Learned To Start Worrying and Hate Java Object Deserialization  
+by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
+
+- [Slides](http://www.slideshare.net/frohoff1/deserialize-my-shorts-or-how-i-learned-to-start-worrying-and-hate-java-object-deserialization)
 
 ### Payload generators 
 ##### yososerial 
