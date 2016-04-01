@@ -52,7 +52,10 @@ RCE via:
 - Groovy <= 2.3.9
 - Spring Core <= 4.1.4 (?)
 - JDK <=7u21
-- Apache Commons beanutils 1.9.2 + Commons Collections <=3.1 + Commons Logging 1.2 (?)
+- Apache Commons BeanUtils 1.9.2 + Commons Collections <=3.1 + Commons Logging 1.2 (?)
+
+Additional tools:
+- [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller) - access to ysoserial in Burp extension 
 
 How does it work:
 - [https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/](https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/)
@@ -78,7 +81,6 @@ How does it work:
 RCE via JNDI:
 
 - When we control an adrress for lookup of JNDI (context.lookup(address))
-
 
 ### Exploits 
 
@@ -169,11 +171,6 @@ no spec tool
 - [*CVE-2015-8360*](https://confluence.atlassian.com/bamboo/bamboo-security-advisory-2016-01-20-794376535.html)
 - *2.3.1 <= version < 5.9.9*
 - Bamboo JMS port (port 54663 by default)
-
-##### AMF (Action Message Format)
-- *Protocol*
-
-[Belch](https://appsec-labs.com/belch/)
 
 ##### Jenkins 2
 - CVE-2016-0788
