@@ -92,6 +92,8 @@ Won't fix DoS via default Java classes
 
 ### Exploits 
 
+no spec tool - You don't need a special tool (just Burp + payload) 
+
 ##### RMI 
 - *Protocol*
 - *Default - 1099/tcp for rmiregistry*
@@ -149,6 +151,12 @@ no spec tool
 
 [yososerial](#yososerial)
 
+#####  Commvault Edge Server 
+- [CVE-2015-7253](https://www.vulners.com/search?query=CVE-2015-7253)
+- Serialized object in cookie
+
+no spec tool
+
 ### Detect 
 ##### Code review 
 - *ObjectInputStream.readObject*
@@ -165,6 +173,11 @@ no spec tool
 - [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
 
 ### Vulnerable apps (without public sploits/need more info)  
+
+##### JSF ViewState
+##### JMS (Java Messaging System)
+##### Spring Service Invokerts (HTTP, JMS, RMI...)
+
 ##### ActiveMQ
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
 - *<= 5.12.1*
@@ -182,10 +195,6 @@ no spec tool
 
 ##### Jenkins 2
 - [CVE-2016-0788](https://www.vulners.com/search?query=CVE-2016-0788)
-
-##### JSF ViewState
-##### JMS (Java Messaging System)
-##### Spring Service Invokerts (HTTP, JMS, RMI...)
 
 ##### Apache Camel 
 - [CVE-2015-5348](https://www.vulners.com/search?query=CVE-2015-5348)
@@ -218,9 +227,6 @@ no spec tool
 
 ##### IBM Congnos BI 
 - [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
-
-#####  Commvault Edge Server 
-- [CVE-2015-7253](https://www.vulners.com/search?query=CVE-2015-7253)
 
 ##### Apache SOLR 
 - SOLR-8262
