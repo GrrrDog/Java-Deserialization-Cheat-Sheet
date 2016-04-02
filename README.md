@@ -106,21 +106,21 @@ Won't fix DoS via default Java classes
 ##### T3 of Oracle Weblogic
 - *Protocol*
 - *Default - 7001/tcp on localhost interface*
-- CVE-2015-4852
+- [CVE-2015-4852](https://www.vulners.com/search?query=CVE-2015-4852)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
 ##### Websphere 
 - *wsadmin*
 - *Default port - 8880/tcp*
-- CVE-2015-7450
+- [CVE-2015-7450](https://www.vulners.com/search?query=CVE-2015-7450)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### JBoss 
 - *http://jboss_server/invoker/JMXInvokerServlet*
 - *Default port - 8080/tcp*
-- CVE-2015-7501
+- [CVE-2015-7501](https://www.vulners.com/search?query=CVE-2015-7501)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
@@ -129,7 +129,7 @@ Won't fix DoS via default Java classes
 ##### Jenkins 
 - *Jenkins CLI*
 - *Default port - High number/tcp*
-- CVE-2015-8103
+- [CVE-2015-8103](https://www.vulners.com/search?query=CVE-2015-8103)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
@@ -166,7 +166,7 @@ no spec tool
 
 ### Vulnerable apps (without public sploits/need more info)  
 ##### ActiveMQ
-- [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txthttp://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
+- [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
 - *<= 5.12.1*
 - [*Explanation of the vuln*](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
 
@@ -181,46 +181,46 @@ no spec tool
 - Bamboo JMS port (port 54663 by default)
 
 ##### Jenkins 2
-- CVE-2016-0788
+- [CVE-2016-0788](https://www.vulners.com/search?query=CVE-2016-0788)
 
 ##### JSF ViewState
 ##### JMS (Java Messaging System)
 ##### Spring Service Invokerts (HTTP, JMS, RMI...)
 
 ##### Apache Camel 
-- CVE-2015-5348
+- [CVE-2015-5348](https://www.vulners.com/search?query=CVE-2015-5348)
 
 ##### VMWare vCenter/vRealize (various) 
-- CVE-2015-6934
+- [CVE-2015-6934](https://www.vulners.com/search?query=CVE-2015-6934)
 
 ##### Cisco 
-- CVE-2015-6420
+- [CVE-2015-6420](https://www.vulners.com/search?query=CVE-2015-6420)
 
 ##### Symantec Endpoint Protection Manager 
-- CVE-2015-6555
+- [CVE-2015-6555](https://www.vulners.com/search?query=CVE-2015-6555)
 
 #####  McAfee ePolicy Orchestrator 
-- CVE-2015-8765
+- [CVE-2015-8765](https://www.vulners.com/search?query=CVE-2015-8765)
 
 #####  HP Operations Orchestration
-- CVE-2016-1997
+- [CVE-2016-1997](https://www.vulners.com/search?query=CVE-2016-1997)
 
 ##### Adobe Experience Manager 
-- CVE-2016-0958
+- [CVE-2016-0958](https://www.vulners.com/search?query=CVE-2016-0958)
 
 #####  Unify OpenScape 
-- CVE-2015-8237
-- CVE-2015-8238
+- [CVE-2015-8237](https://www.vulners.com/search?query=CVE-2015-8237)
+- [CVE-2015-8238](https://www.vulners.com/search?query=CVE-2015-8238)
 
 ##### Apache TomEE
-- CVE-2015-8581
-- CVE-2016-0779
+- [CVE-2015-8581](https://www.vulners.com/search?query=CVE-2015-8581)
+- [CVE-2016-0779](https://www.vulners.com/search?query=CVE-2016-0779)
 
 ##### IBM Congnos BI 
-- CVE-2012-4858
+- [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
 
 #####  Commvault Edge Server 
-- CVE-2015-7253
+- [CVE-2015-7253](https://www.vulners.com/search?query=CVE-2015-7253)
 
 ##### Apache SOLR 
 - SOLR-8262
