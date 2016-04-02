@@ -61,11 +61,6 @@ How does it work:
 - [https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/](https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/)
 - [http://gursevkalra.blogspot.ro/2016/01/ysoserial-commonscollections1-exploit.html](http://gursevkalra.blogspot.ro/2016/01/ysoserial-commonscollections1-exploit.html)
 
-##### Universal billion-laughs DoS 
-[https://gist.github.com/coekie/a27cc406fc9f3dc7a70d](https://gist.github.com/coekie/a27cc406fc9f3dc7a70d)
-
-Won't fix DoS via default Java classes
-
 ##### ACEDcup 
 [https://github.com/GrrrDog/ACEDcup](https://github.com/GrrrDog/ACEDcup)
 
@@ -81,6 +76,19 @@ How does it work:
 RCE via JNDI:
 
 - When we control an adrress for lookup of JNDI (context.lookup(address))
+
+##### Universal billion-laughs DoS 
+[https://gist.github.com/coekie/a27cc406fc9f3dc7a70d](https://gist.github.com/coekie/a27cc406fc9f3dc7a70d)
+
+Won't fix DoS via default Java classes
+
+##### Universal Heap overflows DoS using Arrays and HashMaps  
+[https://github.com/topolik/ois-dos/](https://github.com/topolik/ois-dos/)
+
+How it works:
+- [Java Deserialization DoS - payloads](http://topolik-at-work.blogspot.ru/2016/04/java-deserialization-dos-payloads.html)
+
+Won't fix DoS via default Java classes
 
 ### Exploits 
 
