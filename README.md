@@ -57,7 +57,7 @@ RCE via:
 Additional tools:
 - [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller) - access to ysoserial in Burp extension 
 
-How does it work:
+How it works:
 - [https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/](https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/)
 - [http://gursevkalra.blogspot.ro/2016/01/ysoserial-commonscollections1-exploit.html](http://gursevkalra.blogspot.ro/2016/01/ysoserial-commonscollections1-exploit.html)
 
@@ -70,7 +70,7 @@ File uploading via:
 ##### JNDI RCE
 [https://github.com/zerothoughts/jndipoc](https://github.com/zerothoughts/jndipoc)
 
-How does it work:
+How it works:
 - [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
 
 RCE via JNDI:
