@@ -15,7 +15,7 @@ A cheat sheet for pentesters about Java Native Binary Deserialization vulnerabil
 ### Overview
 - [From Foxgloves Security](http://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/) 
 
-### Main talks & presentaions 
+### Main talks & presentations & docs
 ##### Marshalling Pickles 
 by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
 
@@ -38,6 +38,11 @@ by [@pwntester](http://twitter.com/pwntester) & [@cschneider4711](http://twitter
 by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
 
 - [Slides](http://www.slideshare.net/frohoff1/deserialize-my-shorts-or-how-i-learned-to-start-worrying-and-hate-java-object-deserialization)
+
+##### Deserialization for other languages
+by [@pwntester](http://twitter.com/pwntester)
+
+- [PoC for Scala, Grovy](https://github.com/pwntester/JVMDeserialization)
 
 ### Payload generators 
 ##### yososerial 
@@ -92,7 +97,7 @@ Won't fix DoS via default Java classes
 
 ### Exploits 
 
-no spec tool - You don't need a special tool (just Burp + payload) 
+no spec tool - You don't need a special tool (just Burp/ZAP + payload) 
 
 ##### RMI 
 - *Protocol*
@@ -178,6 +183,15 @@ no spec tool
 ##### JMS (Java Messaging System)
 ##### Spring Service Invokerts (HTTP, JMS, RMI...)
 
+##### Apache SOLR 
+- [SOLR-8262](https://issues.apache.org/jira/browse/SOLR-8262)
+- 5.1 <= version <=5.4
+- /stream handler uses Java serialization for RPC 
+
+##### Apache Shiro 
+- [SHIRO-550](https://issues.apache.org/jira/browse/SHIRO-550)
+- encrypted cookie (with the hardcoded key)
+
 ##### ActiveMQ
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
 - *<= 5.12.1*
@@ -196,14 +210,24 @@ no spec tool
 ##### Jenkins 2
 - [CVE-2016-0788](https://www.vulners.com/search?query=CVE-2016-0788)
 
+##### Apache HBase 
+- [HBASE-14799](https://issues.apache.org/jira/browse/HBASE-14799)
+
 ##### Apache Camel 
 - [CVE-2015-5348](https://www.vulners.com/search?query=CVE-2015-5348)
+
+##### Red Hat JBoss BPM Suite
+- [RHSA-2016-0539](http://rhn.redhat.com/errata/RHSA-2016-0539.html)
+- [CVE-2016-2510](https://www.vulners.com/search?query=CVE-2016-2510)
 
 ##### VMWare vCenter/vRealize (various) 
 - [CVE-2015-6934](https://www.vulners.com/search?query=CVE-2015-6934)
 
-##### Cisco 
+##### Cisco (various)
 - [CVE-2015-6420](https://www.vulners.com/search?query=CVE-2015-6420)
+
+##### Lexmark Markvision Enterprise 
+- [CVE-2016-1487](http://support.lexmark.com/index?page=content&id=TE747&locale=en&userlocale=EN_US)
 
 ##### Symantec Endpoint Protection Manager 
 - [CVE-2015-6555](https://www.vulners.com/search?query=CVE-2015-6555)
@@ -214,12 +238,17 @@ no spec tool
 #####  HP Operations Orchestration
 - [CVE-2016-1997](https://www.vulners.com/search?query=CVE-2016-1997)
 
+#####  HP Asset Manager
+- [CVE-2016-2000](https://www.vulners.com/search?query=CVE-2016-2000)
+
 ##### Adobe Experience Manager 
 - [CVE-2016-0958](https://www.vulners.com/search?query=CVE-2016-0958)
 
-#####  Unify OpenScape 
+#####  Unify OpenScape (various) 
 - [CVE-2015-8237](https://www.vulners.com/search?query=CVE-2015-8237)
+- RMI (30xx/tcp)
 - [CVE-2015-8238](https://www.vulners.com/search?query=CVE-2015-8238)
+- js-soc protocol (4711/tcp)
 
 ##### Apache TomEE
 - [CVE-2015-8581](https://www.vulners.com/search?query=CVE-2015-8581)
@@ -228,14 +257,13 @@ no spec tool
 ##### IBM Congnos BI 
 - [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
 
-##### Apache SOLR 
-- SOLR-8262
+##### F5 (various) 
+- [sol30518307](https://support.f5.com/kb/en-us/solutions/public/k/30/sol30518307.html)
 
-##### Apache Shiro 
-- SHIRO-550
+##### Hitachi (various) 
+- [HS16-010](http://www.hitachi.co.jp/Prod/comp/soft1/global/security/info/vuls/HS16-010/index.html)
+- [0328_acc](http://www.hitachi.co.jp/products/it/storage-solutions/global/sec_info/2016/0328_acc.html)
 
-##### Apache HBase 
-- HBASE-14799
 
 ##### Apache Tomcat
 ##### Apache Batchee
