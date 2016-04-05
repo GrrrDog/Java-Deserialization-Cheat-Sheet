@@ -1,6 +1,8 @@
 # Java-Deserialization-Cheat-Sheet
 A cheat sheet for pentesters about Java Native Binary Deserialization vulnerabilities
 
+Please, use #javadeser hash tag for tweets.
+
 ###  Table of content
 - [Overview](#overview)
 - [Main talks & presentaions ](#main-talks--presentaions)
