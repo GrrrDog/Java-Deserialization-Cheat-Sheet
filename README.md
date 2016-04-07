@@ -126,6 +126,8 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
+[serialator](https://github.com/roo7break/serialator)
+
 ##### JBoss 
 - *http://jboss_server/invoker/JMXInvokerServlet*
 - *Default port - 8080/tcp*
@@ -134,6 +136,8 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 [https://github.com/njfox/Java-Deserialization-Exploit](https://github.com/njfox/Java-Deserialization-Exploit)
+
+[serialator](https://github.com/roo7break/serialator)
 
 ##### Jenkins 
 - *Jenkins CLI*
@@ -163,6 +167,12 @@ no spec tool
 - Serialized object in cookie
 
 no spec tool
+
+##### Symantec Endpoint Protection Manager 
+- */servlet/ConsoleServlet?ActionType=SendStatPing*
+- [CVE-2015-6555](https://www.vulners.com/search?query=CVE-2015-6555)
+
+[serialator](https://github.com/roo7break/serialator)
 
 ### Detect 
 ##### Code review 
@@ -230,9 +240,6 @@ no spec tool
 
 ##### Lexmark Markvision Enterprise 
 - [CVE-2016-1487](http://support.lexmark.com/index?page=content&id=TE747&locale=en&userlocale=EN_US)
-
-##### Symantec Endpoint Protection Manager 
-- [CVE-2015-6555](https://www.vulners.com/search?query=CVE-2015-6555)
 
 #####  McAfee ePolicy Orchestrator 
 - [CVE-2015-8765](https://www.vulners.com/search?query=CVE-2015-8765)
