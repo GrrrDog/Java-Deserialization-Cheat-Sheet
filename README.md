@@ -278,6 +278,11 @@ no spec tool
 - [HS16-010](http://www.hitachi.co.jp/Prod/comp/soft1/global/security/info/vuls/HS16-010/index.html)
 - [0328_acc](http://www.hitachi.co.jp/products/it/storage-solutions/global/sec_info/2016/0328_acc.html)
 
+##### Apache OFBiz
+- [CVE-2016-2170](https://blogs.apache.org/ofbiz/date/20160405)
+ 
+##### NetApp (various)
+- [CVE-2015-8545](https://kb.netapp.com/support/index?page=content&id=9010052)
 
 ##### Apache Tomcat
 ##### Apache Batchee
