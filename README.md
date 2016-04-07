@@ -236,6 +236,7 @@ no spec tool
 - [CVE-2015-6934](https://www.vulners.com/search?query=CVE-2015-6934)
 
 ##### Cisco (various)
+- [List of vulnerable products](https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151209-java-deserialization)
 - [CVE-2015-6420](https://www.vulners.com/search?query=CVE-2015-6420)
 
 ##### Lexmark Markvision Enterprise 
