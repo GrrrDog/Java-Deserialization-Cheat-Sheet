@@ -250,6 +250,18 @@ no spec tool
 
 #####  HP Asset Manager
 - [CVE-2016-2000](https://www.vulners.com/search?query=CVE-2016-2000)
+ 
+##### HP Service Manager
+- [CVE-2016-1998](https://h20564.www2.hpe.com/hpsc/doc/public/display?docId=emr_na-c05054565)
+
+##### HP Operations Manager
+- [CVE-2016-1985](https://h20565.www2.hpe.com/hpsc/doc/public/display?calledBy=Search_Result&docId=emr_na-c04953244&docLocale=en_US)
+
+##### HP Release Control
+- [CVE-2016-1999](https://h20565.www2.hpe.com/hpsc/doc/public/display?calledBy=Search_Result&docId=emr_na-c05063986&docLocale=en_US)
+
+##### HP Continuous Delivery Automation
+- [CVE-2016-1986](https://h20565.www2.hpe.com/hpsc/doc/public/display?calledBy=Search_Result&docId=emr_na-c04958567&docLocale=en_US)
 
 ##### Adobe Experience Manager 
 - [CVE-2016-0958](https://www.vulners.com/search?query=CVE-2016-0958)
@@ -278,6 +290,11 @@ no spec tool
 - [HS16-010](http://www.hitachi.co.jp/Prod/comp/soft1/global/security/info/vuls/HS16-010/index.html)
 - [0328_acc](http://www.hitachi.co.jp/products/it/storage-solutions/global/sec_info/2016/0328_acc.html)
 
+##### Apache OFBiz
+- [CVE-2016-2170](https://blogs.apache.org/ofbiz/date/20160405)
+ 
+##### NetApp (various)
+- [CVE-2015-8545](https://kb.netapp.com/support/index?page=content&id=9010052)
 
 ##### Apache Tomcat
 ##### Apache Batchee
