@@ -266,6 +266,10 @@ no spec tool
 ##### IBM Congnos BI 
 - [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
 
+##### ForgeRock OpenAM 
+- *9-9.5.5, 10.0.0-10.0.2, 10.1.0-Xpress, 11.0.0-11.0.3 and 12.0.0*
+- [201505-01](https://forgerock.org/2015/07/openam-security-advisory-201505/)
+
 ##### F5 (various) 
 - [sol30518307](https://support.f5.com/kb/en-us/solutions/public/k/30/sol30518307.html)
 
