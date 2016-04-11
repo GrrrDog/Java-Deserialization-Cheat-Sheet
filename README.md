@@ -5,7 +5,7 @@ Please, use #javadeser hash tag for tweets.
 
 ###  Table of content
 - [Overview](#overview)
-- [Main talks & presentaions ](#main-talks--presentaions)
+- [Main talks & presentations & docs](#main-talks--presentaions--docs)
 - [Payload generators](#payload-generators)
 - [Exploits](#exploits)
 - [Detect](#detect)
@@ -35,6 +35,7 @@ by [@pwntester](http://twitter.com/pwntester) & [@cschneider4711](http://twitter
 
 - [Slides](https://www.rsaconference.com/writable/presentations/file_upload/asd-f03-serial-killer-silently-pwning-your-java-endpoints.pdf)
 - [White Paper](http://community.hpe.com/hpeb/attachments/hpeb/off-by-on-software-security-blog/722/1/HPE-SR%20whitepaper%20java%20deserialization%20RSA2016.pdf)
+- [Bypass Gadget Collection](https://github.com/pwntester/SerialKillerBypassGadgetCollection)
 
 ##### Deserialize My Shorts: Or How I Learned To Start Worrying and Hate Java Object Deserialization  
 by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
@@ -116,6 +117,8 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 - *Protocol*
 - *Default - 7001/tcp on localhost interface*
 - [CVE-2015-4852](https://www.vulners.com/search?query=CVE-2015-4852)
+
+[loubia](https://github.com/metalnas/loubia) (tested on 11g and 12c, supports t3s)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
