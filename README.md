@@ -5,7 +5,7 @@ Please, use #javadeser hash tag for tweets.
 
 ###  Table of content
 - [Overview](#overview)
-- [Main talks & presentations & docs](#main-talks--presentaions--docs)
+- [Main talks & presentations & docs](#main-talks--presentations--docs)
 - [Payload generators](#payload-generators)
 - [Exploits](#exploits)
 - [Detect](#detect)
@@ -203,7 +203,9 @@ no spec tool
 ##### JSF ViewState
 ##### JMS (Java Messaging System)
 ##### Spring Service Invokerts (HTTP, JMS, RMI...)
-
+##### SAP P4
+- [from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
+- 
 ##### Apache SOLR 
 - [SOLR-8262](https://issues.apache.org/jira/browse/SOLR-8262)
 - 5.1 <= version <=5.4
