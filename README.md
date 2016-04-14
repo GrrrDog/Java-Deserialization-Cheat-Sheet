@@ -47,6 +47,12 @@ by [@pwntester](http://twitter.com/pwntester)
 
 - [PoC for Scala, Grovy](https://github.com/pwntester/JVMDeserialization)
 
+##### Java Deserialization Vulnerabilities - The Forgotten Bug Class 
+by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
+
+- [Slides](http://www.slideshare.net/codewhitesec/java-deserialization-vulnerabilities-the-forgotten-bug-class)
+
+
 ### Payload generators 
 ##### yososerial 
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
