@@ -231,6 +231,10 @@ no spec tool
 - *2.3.1 <= version < 5.9.9*
 - Bamboo JMS port (port 54663 by default)
 
+##### Spring AMPQ
+- [CVE-2016-2173](http://pivotal.io/security/cve-2016-2173)
+- *1.0.0 <= version < 1.5.5
+
 ##### Jenkins 2
 - [CVE-2016-0788](https://www.vulners.com/search?query=CVE-2016-0788)
 
