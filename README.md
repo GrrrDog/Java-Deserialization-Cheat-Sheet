@@ -217,9 +217,10 @@ no spec tool
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
 - *<= 5.12.1*
 - [*Explanation of the vuln*](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
+- [CVE-2015-7253](https://www.vulners.com/search?query=2015-7253)
 
 ##### Atlassian Bamboo 1
-- [*CVE-2015-6576*](https://confluence.atlassian.com/x/Hw7RLg)
+- [CVE-2015-6576](https://confluence.atlassian.com/x/Hw7RLg)
 -  *2.2 <= version < 5.8.5*
 - *5.9.0 <= version < 5.9.7*
 
@@ -236,6 +237,9 @@ no spec tool
 
 ##### Apache Camel 
 - [CVE-2015-5348](https://www.vulners.com/search?query=CVE-2015-5348)
+
+##### Oracle Hyperion 
+- [from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
 
 ##### Red Hat JBoss BPM Suite
 - [RHSA-2016-0539](http://rhn.redhat.com/errata/RHSA-2016-0539.html)
