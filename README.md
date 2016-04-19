@@ -203,9 +203,10 @@ no spec tool
 ##### JSF ViewState
 ##### JMS (Java Messaging System)
 ##### Spring Service Invokerts (HTTP, JMS, RMI...)
+
 ##### SAP P4
-- [from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
-- 
+- [info from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
+
 ##### Apache SOLR 
 - [SOLR-8262](https://issues.apache.org/jira/browse/SOLR-8262)
 - 5.1 <= version <=5.4
