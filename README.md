@@ -183,6 +183,14 @@ no spec tool
 
 [serialator](https://github.com/roo7break/serialator)
 
+##### Oracle MySQL Enterprise Monitor
+- *https://[target]:18443/v3/dataflow/0/0*
+- [CVE-2016-3461](http://www.tenable.com/security/research/tra-2016-11)
+
+no spec tool
+
+[serialator](https://github.com/roo7break/serialator)
+
 ### Detect 
 ##### Code review 
 - *ObjectInputStream.readObject*
@@ -270,7 +278,7 @@ no spec tool
 
 #####  HP Asset Manager
 - [CVE-2016-2000](https://www.vulners.com/search?query=CVE-2016-2000)
- 
+
 ##### HP Service Manager
 - [CVE-2016-1998](https://h20564.www2.hpe.com/hpsc/doc/public/display?docId=emr_na-c05054565)
 
@@ -282,6 +290,9 @@ no spec tool
 
 ##### HP Continuous Delivery Automation
 - [CVE-2016-1986](https://h20565.www2.hpe.com/hpsc/doc/public/display?calledBy=Search_Result&docId=emr_na-c04958567&docLocale=en_US)
+
+##### HP P9000, XP7 Command View Advanced Edition (CVAE) Suite
+- [CVE-2016-2003](https://h20564.www2.hpe.com/hpsc/doc/public/display?docId=emr_na-c05085438)
 
 ##### Adobe Experience Manager 
 - [CVE-2016-0958](https://www.vulners.com/search?query=CVE-2016-0958)
@@ -298,6 +309,9 @@ no spec tool
 
 ##### IBM Congnos BI 
 - [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
+
+##### Novell NetIQ Sentinel
+- [CVE- ](https://www.tenable.com/plugins/index.php?view=single&id=90602)
 
 ##### ForgeRock OpenAM 
 - *9-9.5.5, 10.0.0-10.0.2, 10.1.0-Xpress, 11.0.0-11.0.3 and 12.0.0*
