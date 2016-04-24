@@ -196,7 +196,7 @@ no spec tool
 - *ObjectInputStream.readObject*
 - *ObjectInputStream.readUnshared*
 - Tool: [Find Security Bugs](http://find-sec-bugs.github.io/)
-- Tool: [Serianalyzer](https://github.com/drosenbauer/serianalyzer)
+- Tool: [Serianalyzer](https://github.com/mbechler/serianalyzer)
 
 ##### Traffic
 - *Magic bytes 'ac ed 00 05' bytes*
