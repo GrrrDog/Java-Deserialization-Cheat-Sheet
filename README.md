@@ -54,7 +54,7 @@ by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 
 
 ### Payload generators 
-##### yososerial 
+##### ysoserial 
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
 
 [Lastest release of ysoserial](https://github.com/frohoff/ysoserial/releases/download/v0.0.4/ysoserial-0.0.4-all.jar)
@@ -112,12 +112,12 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 - *Protocol*
 - *Default - 1099/tcp for rmiregistry*
 
-[yososerial](#yososerial) (works only against a RMI registry service)
+[ysoserial](#ysoserial) (works only against a RMI registry service)
 
 ##### JMX 
 - *Protocol based on RMI*
 
-[yososerial](#yososerial)
+[ysoserial](#ysoserial)
 
 ##### T3 of Oracle Weblogic
 - *Protocol*
@@ -164,12 +164,12 @@ no spec tool
 ##### OpenNMS
 - RMI
 
-[yososerial](#yososerial)
+[ysoserial](#ysoserial)
 
 ##### Progress OpenEdge RDBMS
 - RMI
 
-[yososerial](#yososerial)
+[ysoserial](#ysoserial)
 
 #####  Commvault Edge Server 
 - [CVE-2015-7253](https://www.vulners.com/search?query=CVE-2015-7253)
