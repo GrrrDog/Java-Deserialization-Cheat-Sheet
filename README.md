@@ -15,6 +15,7 @@ Please, use **#javadeser** hash tag for tweets.
 - [Other serialization types](#other-serialization-types)
 
 ### Overview
+- [Java Deserialization Security FAQ](https://christian-schneider.net/JavaDeserializationSecurityFAQ.html)
 - [From Foxgloves Security](http://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/) 
 
 ### Main talks & presentations & docs
