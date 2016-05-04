@@ -258,6 +258,9 @@ no spec tool
 ##### Oracle Hyperion 
 - [from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
 
+##### Oracle Application Testing Suite 
+- [CVE-](http://www.tenable.com/plugins/index.php?view=single&id=90859)
+
 ##### Red Hat JBoss BPM Suite
 - [RHSA-2016-0539](http://rhn.redhat.com/errata/RHSA-2016-0539.html)
 - [CVE-2016-2510](https://www.vulners.com/search?query=CVE-2016-2510)
