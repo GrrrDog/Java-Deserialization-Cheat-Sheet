@@ -69,8 +69,9 @@ RCE via:
 - JDK <=7u21
 - Apache Commons BeanUtils 1.9.2 + Commons Collections <=3.1 + Commons Logging 1.2 (?)
 
-Additional tools:
-- [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller) - access to ysoserial in Burp extension 
+Additional tools (access to ysoserial in Burp extension):
+- [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller) 
+- [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
 
 How it works:
 - [https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/](https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/)
@@ -204,7 +205,7 @@ no spec tool
 - *'rO0' for Base64*
 
 ##### Burp plugins 
-- [Java Deserialization Scanner ](https://github.com/federicodotta/Java-Deserialization-Scanner)
+- [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
 - [SuperSerial](https://github.com/DirectDefense/SuperSerial)
 - [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
 
@@ -347,6 +348,7 @@ no spec tool
 - [SerialKiller](https://github.com/ikkisoft/SerialKiller)
 - [ValidatingObjectInputStream](https://issues.apache.org/jira/browse/IO-487)
 - [Some protection bypasses](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet/blob/master/README.md#serial-killer-silently-pwning-your-java-endpoints)
+- Tool: [Serial Whitelist Application Trainer](https://github.com/cschneider4711/SWAT)
 
 ### For Android 
 - [One Class to Rule Them All: 0-Day Deserialization Vulnerabilities in Android](https://www.usenix.org/conference/woot15/workshop-program/presentation/peles)
