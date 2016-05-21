@@ -268,6 +268,8 @@ no spec tool
 
 ##### VMWare vCenter/vRealize (various) 
 - [CVE-2015-6934](https://www.vulners.com/search?query=CVE-2015-6934)
+- [VMSA-2016-0005](http://www.vmware.com/security/advisories/VMSA-2016-0005.html)
+- JMX
 
 ##### Cisco (various)
 - [List of vulnerable products](https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151209-java-deserialization)
