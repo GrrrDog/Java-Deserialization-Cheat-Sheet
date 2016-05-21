@@ -58,8 +58,6 @@ by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 ##### ysoserial 
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
 
-[Lastest release of ysoserial](https://github.com/frohoff/ysoserial/releases/download/v0.0.4/ysoserial-0.0.4-all.jar)
-
 RCE via:
 
 - Apache Commons Collections <= 3.1
@@ -68,6 +66,16 @@ RCE via:
 - Spring Core <= 4.1.4 (?)
 - JDK <=7u21
 - Apache Commons BeanUtils 1.9.2 + Commons Collections <=3.1 + Commons Logging 1.2 (?)
+- BeanShell 2.0
+- Groovy 2.3.9
+- Jython 2.5.2
+- C3P0 0.9.5.2
+- Apache Commons Fileupload <= 1.3.1 (File uploading)
+- ROME 1.0
+- MyFaces
+- JRMPClient/JRMPListener
+- JSON
+- Hibernate 
 
 Additional tools (access to ysoserial in Burp extension):
 - [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller) 
