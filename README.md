@@ -58,7 +58,7 @@ by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 ##### ysoserial 
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
 
-RCE via:
+RCE (or smth else) via:
 
 - Apache Commons Collections <= 3.1
 - Apache Commons Collections <= 4.0
