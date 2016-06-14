@@ -270,6 +270,10 @@ no spec tool
 ##### Apache Camel 
 - [CVE-2015-5348](https://www.vulners.com/search?query=CVE-2015-5348)
 
+##### Gradle (gui)
+- custom(?) protocol(60024/tcp)
+- [article](http://philwantsfish.github.io/security/java-deserialization-github)
+
 ##### Oracle Hyperion 
 - [from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
 
