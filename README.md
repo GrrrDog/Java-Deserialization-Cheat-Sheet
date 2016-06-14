@@ -126,6 +126,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
 ##### JMX 
 - *Protocol based on RMI*
+- + [CVE-2016-3427](http://engineering.pivotal.io/post/java-deserialization-jmx/)
 
 [ysoserial](#ysoserial)
 
@@ -217,6 +218,10 @@ no spec tool
 ##### Traffic
 - *Magic bytes 'ac ed 00 05' bytes*
 - *'rO0' for Base64*
+
+##### Network
+- Nmap >=7.10 has more java-related probes
+- use nmap --all-version to find JMX/RMI on non-standart ports
 
 ##### Burp plugins 
 - [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
@@ -357,6 +362,10 @@ no spec tool
 - [CVE-2015-8545](https://kb.netapp.com/support/index?page=content&id=9010052)
 
 ##### Apache Tomcat
+- requires local access
+- [CVE-2016-0714](https://www.vulners.com/search?query=CVE-2016-0714)
+- [Article](http://engineering.pivotal.io/post/java-deserialization-jmx/)
+
 ##### Apache Batchee
 ##### Apache JCS
 ##### Apache OpenJPA
