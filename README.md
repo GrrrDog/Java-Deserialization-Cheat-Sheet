@@ -178,6 +178,7 @@ no spec tool
 [ysoserial](#ysoserial)
 
 ##### Progress OpenEdge RDBMS
+- all versions
 - RMI
 
 [ysoserial](#ysoserial)
@@ -207,6 +208,13 @@ no spec tool
 - [MSA-2016-01](http://lab.mogwaisecurity.de/advisories/MSA-2016-01/)
 
 [powerfolder-exploit-poc](https://github.com/h0ng10/powerfolder-exploit-poc)
+
+##### Solarwinds Virtualization Manager 
+- <= 6.3.1
+- RMI
+- [CVE-2016-3642](https://www.vulners.com/search?query=CVE-2016-3642)
+
+[ysoserial](#ysoserial)
 
 ### Detect 
 ##### Code review 
@@ -250,7 +258,7 @@ no spec tool
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
 - *<= 5.12.1*
 - [*Explanation of the vuln*](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
-- [CVE-2015-7253](https://www.vulners.com/search?query=2015-7253)
+- [CVE-2015-7253](https://www.vulners.com/search?query=CVE-2015-7253)
 
 ##### Atlassian Bamboo 1
 - [CVE-2015-6576](https://confluence.atlassian.com/x/Hw7RLg)
