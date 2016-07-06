@@ -203,7 +203,7 @@ no spec tool
 
 [serialator](https://github.com/roo7break/serialator)
 
-##### PowerFolder Business\Enterprise Suite
+##### PowerFolder Business Enterprise Suite
 - custom(?) protocol (1337/tcp)
 - [MSA-2016-01](http://lab.mogwaisecurity.de/advisories/MSA-2016-01/)
 
