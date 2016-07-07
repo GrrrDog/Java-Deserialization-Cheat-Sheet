@@ -203,7 +203,7 @@ no spec tool
 
 [serialator](https://github.com/roo7break/serialator)
 
-##### PowerFolder Business\Enterprise Suite
+##### PowerFolder Business Enterprise Suite
 - custom(?) protocol (1337/tcp)
 - [MSA-2016-01](http://lab.mogwaisecurity.de/advisories/MSA-2016-01/)
 
@@ -350,7 +350,7 @@ no spec tool
 - [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
 
 ##### Novell NetIQ Sentinel
-- [CVE- ](https://www.tenable.com/plugins/index.php?view=single&id=90602)
+- [CVE-2015-7501](https://www.tenable.com/plugins/index.php?view=single&id=90602)
 
 ##### ForgeRock OpenAM 
 - *9-9.5.5, 10.0.0-10.0.2, 10.1.0-Xpress, 11.0.0-11.0.3 and 12.0.0*
