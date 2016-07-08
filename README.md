@@ -291,7 +291,7 @@ no spec tool
 - [from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
 
 ##### Oracle Application Testing Suite 
-- [CVE-](http://www.tenable.com/plugins/index.php?view=single&id=90859)
+- [CVE-2015-7501](http://www.tenable.com/plugins/index.php?view=single&id=90859)
 
 ##### Red Hat JBoss BPM Suite
 - [RHSA-2016-0539](http://rhn.redhat.com/errata/RHSA-2016-0539.html)
@@ -350,7 +350,7 @@ no spec tool
 - [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
 
 ##### Novell NetIQ Sentinel
-- [CVE-2015-7501](https://www.tenable.com/plugins/index.php?view=single&id=90602)
+- [?](https://www.tenable.com/plugins/index.php?view=single&id=90602)
 
 ##### ForgeRock OpenAM 
 - *9-9.5.5, 10.0.0-10.0.2, 10.1.0-Xpress, 11.0.0-11.0.3 and 12.0.0*
