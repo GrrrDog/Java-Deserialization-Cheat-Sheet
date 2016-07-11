@@ -162,9 +162,17 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 ##### Jenkins 
 - *Jenkins CLI*
 - *Default port - High number/tcp*
-- [CVE-2015-8103](https://www.vulners.com/search?query=CVE-2015-8103)
+- [CVE-2015-8103](https://www.vulners.com/search?query=CVE-2015-8103) 
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
+
+##### Jenkins 2
+- patch "bypass" for [Jenkins](#Jenkins)
+- [CVE-2016-0788](https://www.vulners.com/search?query=CVE-2016-0788)
+- [Details of exploit](https://www.insinuator.net/2016/07/jenkins-remoting-rce-ii-the-return-of-the-ysoserial/)
+
+[ysoserial](#ysoserial)
+
 
 ##### Restlet
 - *<= 2.1.2*
@@ -215,6 +223,14 @@ no spec tool
 - [CVE-2016-3642](https://www.vulners.com/search?query=CVE-2016-3642)
 
 [ysoserial](#ysoserial)
+
+##### Cisco Prime Infrastructure 
+- *https://[target]/xmp_data_handler_service/xmpDataOperationRequestServlet*
+- <= 2.2.3 Update 4
+- <= 3.0.2
+- [CVE-2016-1291](https://www.vulners.com/search?query=CVE-2016-1291)
+
+[CoalfireLabs/java_deserialization_exploits](https://github.com/CoalfireLabs/java_deserialization_exploits/tree/master/CVE-2016-1291)
 
 ### Detect 
 ##### Code review 
@@ -274,8 +290,6 @@ no spec tool
 - [CVE-2016-2173](http://pivotal.io/security/cve-2016-2173)
 - *1.0.0 <= version < 1.5.5
 
-##### Jenkins 2
-- [CVE-2016-0788](https://www.vulners.com/search?query=CVE-2016-0788)
 
 ##### Apache HBase 
 - [HBASE-14799](https://issues.apache.org/jira/browse/HBASE-14799)
