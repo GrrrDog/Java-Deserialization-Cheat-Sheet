@@ -167,7 +167,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 ##### Jenkins 2
-- patch "bypass" for [Jenkins](#Jenkins)
+- patch "bypass" for [Jenkins](#jenkins)
 - [CVE-2016-0788](https://www.vulners.com/search?query=CVE-2016-0788)
 - [Details of exploit](https://www.insinuator.net/2016/07/jenkins-remoting-rce-ii-the-return-of-the-ysoserial/)
 
