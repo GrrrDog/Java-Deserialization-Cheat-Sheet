@@ -162,7 +162,8 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 ##### Jenkins 
 - *Jenkins CLI*
 - *Default port - High number/tcp*
-- [CVE-2015-8103](https://www.vulners.com/search?query=CVE-2015-8103) 
+- [CVE-2015-8103](https://www.vulners.com/search?query=CVE-2015-8103)
+- [CVE-2015-3253](https://www.vulners.com/search?query=CVE-2015-3253)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
@@ -246,7 +247,7 @@ no spec tool
 no spec tool
 
 ##### Apache Archiva
-- because it uses (Apache XML-RPC)[#apache-xml--rpc]
+- because it uses [Apache XML-RPC](#apache-xml-rpc)
 - [CVE-2016-5004](https://www.vulners.com/search?query=CVE-2016-5004) 
 - [Details and examples](https://0ang3el.blogspot.ru/2016/07/beware-of-ws-xmlrpc-library-in-your.html)
 
