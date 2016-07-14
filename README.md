@@ -180,6 +180,12 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
 no spec tool
 
+##### RESTEasy
+- *When Rest API accepts serialized objects (uses @Consumes({"*/*"}) or "application/*" )
+- [Details and examples](https://0ang3el.blogspot.ru/2016/06/note-about-security-of-resteasy-services.html)
+
+no spec tool
+
 ##### OpenNMS
 - RMI
 
@@ -231,6 +237,20 @@ no spec tool
 - [CVE-2016-1291](https://www.vulners.com/search?query=CVE-2016-1291)
 
 [CoalfireLabs/java_deserialization_exploits](https://github.com/CoalfireLabs/java_deserialization_exploits/tree/master/CVE-2016-1291)
+
+##### Apache XML-RPC 
+- all version, no fix (the project is not supported)
+- POST XML request with <ex:serializable> element
+- [Details and examples](https://0ang3el.blogspot.ru/2016/07/beware-of-ws-xmlrpc-library-in-your.html)
+
+no spec tool
+
+##### Apache Archiva
+- because it uses (Apache XML-RPC)[#apache-xml--rpc]
+- [CVE-2016-5004](https://www.vulners.com/search?query=CVE-2016-5004) 
+- [Details and examples](https://0ang3el.blogspot.ru/2016/07/beware-of-ws-xmlrpc-library-in-your.html)
+
+no spec tool
 
 ### Detect 
 ##### Code review 
