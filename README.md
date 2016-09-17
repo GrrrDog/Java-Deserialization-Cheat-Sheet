@@ -103,17 +103,6 @@ How it works:
 File uploading via:
 - Apache Commons FileUpload <= 1.3 (CVE-2013-2186) and Oracle JDK < 7u40 
 
-##### JNDI RCE
-[https://github.com/zerothoughts/jndipoc](https://github.com/zerothoughts/jndipoc)
-
-How it works:
-- [Full info](#a-journey-from-jndi-ldap-manipulation-to-remote-code-execution-dream-land)
-- [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
-
-RCE via JNDI:
-
-- When we control an adrress for lookup of JNDI (context.lookup(address))
-
 ##### Universal billion-laughs DoS 
 [https://gist.github.com/coekie/a27cc406fc9f3dc7a70d](https://gist.github.com/coekie/a27cc406fc9f3dc7a70d)
 
@@ -142,6 +131,18 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 - + [CVE-2016-3427](http://engineering.pivotal.io/post/java-deserialization-jmx/)
 
 [ysoserial](#ysoserial)
+
+##### JNDI/LDAP 
+- When we control an adrress for lookup of JNDI (context.lookup(address))
+- [Full info](#a-journey-from-jndildap-manipulation-to-remote-code-execution-dream-land)
+- [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
+
+[https://github.com/zerothoughts/jndipoc](https://github.com/zerothoughts/jndipoc)
+
+##### JMS
+- [Full info](#a-journey-from-jndildap-manipulation-to-remote-code-execution-dream-land)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
 
 ##### T3 of Oracle Weblogic
 - *Protocol*
@@ -186,7 +187,6 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 - [Details of exploit](https://www.insinuator.net/2016/07/jenkins-remoting-rce-ii-the-return-of-the-ysoserial/)
 
 [ysoserial](#ysoserial)
-
 
 ##### Restlet
 - *<= 2.1.2*
@@ -289,7 +289,7 @@ no spec tool
 ### Vulnerable apps (without public sploits/need more info)  
 
 ##### JSF ViewState
-##### JMS (Java Messaging System)
+
 ##### Spring Service Invokerts (HTTP, JMS, RMI...)
 
 ##### SAP P4
