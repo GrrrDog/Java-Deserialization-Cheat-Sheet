@@ -53,6 +53,18 @@ by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 
 - [Slides](http://www.slideshare.net/codewhitesec/java-deserialization-vulnerabilities-the-forgotten-bug-class)
 
+##### Pwning Your Java Messaging With Deserialization Vulnerabilities 
+by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
+
+- [Slides](https://www.blackhat.com/docs/us-16/materials/us-16-Kaiser-Pwning-Your-Java-Messaging-With-Deserialization-Vulnerabilities.pdf)
+- [White Paper](https://www.blackhat.com/docs/us-16/materials/us-16-Kaiser-Pwning-Your-Java-Messaging-With-Deserialization-Vulnerabilities-wp.pdf)
+- [Tool for jms hacking](https://github.com/matthiaskaiser/jmet)
+
+##### A Journey From JNDI/LDAP Manipulation To Remote Code Execution Dream Land 
+by [@pwntester](http://twitter.com/pwntester) and O. Mirosh
+
+- [Slides](https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf)
+- [White Paper](https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE-wp.pdf)
 
 ### Payload generators 
 ##### ysoserial 
