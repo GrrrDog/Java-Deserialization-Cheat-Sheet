@@ -107,6 +107,7 @@ File uploading via:
 [https://github.com/zerothoughts/jndipoc](https://github.com/zerothoughts/jndipoc)
 
 How it works:
+- [Full info](#a-journey-from-jndi-ldap-manipulation-to-remote-code-execution-dream-land)
 - [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
 
 RCE via JNDI:
