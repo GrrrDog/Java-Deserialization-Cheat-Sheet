@@ -140,7 +140,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 [https://github.com/zerothoughts/jndipoc](https://github.com/zerothoughts/jndipoc)
 
 ##### JMS
-- [Full info](#a-journey-from-jndildap-manipulation-to-remote-code-execution-dream-land)
+- [Full info](#pwning-your-java-messaging-with-deserialization-vulnerabilities)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
@@ -265,6 +265,23 @@ no spec tool
 - [Details and examples](https://0ang3el.blogspot.ru/2016/07/beware-of-ws-xmlrpc-library-in-your.html)
 
 no spec tool
+
+##### Apache ActiveMQ
+- [JMS][#jms]
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
+##### Redhat/Apache HornetQ
+##### Oracle OpenMQ
+##### IBM WebSphereMQ
+##### Oracle Weblogic
+##### Pivotal RabbitMQ
+##### IBM MessageSight
+##### IIT Software SwiftMQ
+##### Apache ActiveMQ Artemis
+##### Apache QPID JMS
+##### Apache QPID Client
+##### Amazon SQS Java Messaging
 
 ### Detect 
 ##### Code review 
