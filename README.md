@@ -266,22 +266,65 @@ no spec tool
 
 no spec tool
 
-##### Apache ActiveMQ
-- [JMS][#jms]
+##### Apache ActiveMQ (1)
+- [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
 ##### Redhat/Apache HornetQ
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
 ##### Oracle OpenMQ
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
 ##### IBM WebSphereMQ
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
 ##### Oracle Weblogic
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
 ##### Pivotal RabbitMQ
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
 ##### IBM MessageSight
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
 ##### IIT Software SwiftMQ
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
 ##### Apache ActiveMQ Artemis
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
 ##### Apache QPID JMS
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
 ##### Apache QPID Client
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
+
 ##### Amazon SQS Java Messaging
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
 
 ### Detect 
 ##### Code review 
@@ -321,18 +364,18 @@ no spec tool
 - [SHIRO-550](https://issues.apache.org/jira/browse/SHIRO-550)
 - encrypted cookie (with the hardcoded key)
 
-##### ActiveMQ
+##### Apache ActiveMQ (2)
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
 - *<= 5.12.1*
 - [*Explanation of the vuln*](https://srcclr.com/security/deserialization-untrusted-data/java/s-1893)
 - [CVE-2015-7253](https://www.vulners.com/search?query=CVE-2015-7253)
 
-##### Atlassian Bamboo 1
+##### Atlassian Bamboo (1)
 - [CVE-2015-6576](https://confluence.atlassian.com/x/Hw7RLg)
 -  *2.2 <= version < 5.8.5*
 - *5.9.0 <= version < 5.9.7*
 
-##### Atlassian Bamboo 2
+##### Atlassian Bamboo (2)
 - [*CVE-2015-8360*](https://confluence.atlassian.com/bamboo/bamboo-security-advisory-2016-01-20-794376535.html)
 - *2.3.1 <= version < 5.9.9*
 - Bamboo JMS port (port 54663 by default)
