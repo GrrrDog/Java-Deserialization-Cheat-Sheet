@@ -130,6 +130,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 ##### RMI 
 - *Protocol*
 - *Default - 1099/tcp for rmiregistry*
+- "JRE 1.8.0_91 checks untrusted java deserialization through RMI" (?)
 
 [ysoserial](#ysoserial) (works only against a RMI registry service)
 
@@ -150,6 +151,9 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 - [Full info](#pwning-your-java-messaging-with-deserialization-vulnerabilities)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
+
+##### JSF ViewState
+- if no encryption or good mac
 
 ##### T3 of Oracle Weblogic
 - *Protocol*
@@ -202,7 +206,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 no spec tool
 
 ##### RESTEasy
-- *When Rest API accepts serialized objects (uses @Consumes({"*/*"}) or "application/*" )
+- *When Rest API accepts serialized objects (uses @Consumes({"\*/\*"}) or "application/\*" )
 - [Details and examples](https://0ang3el.blogspot.ru/2016/06/note-about-security-of-resteasy-services.html)
 
 no spec tool
@@ -273,62 +277,69 @@ no spec tool
 
 no spec tool
 
-##### Apache ActiveMQ (1)
+#####  Sun Java Web Console
+- admin panel for Solaris
+- < v3.1.
+- [old DoS sploit](https://www.ikkisoft.com/stuff/SJWC_DoS.java)
+
+no spec tool
+
+##### Apache ActiveMQ - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### Redhat/Apache HornetQ
+##### Redhat/Apache HornetQ - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### Oracle OpenMQ
+##### Oracle OpenMQ - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### IBM WebSphereMQ
+##### IBM WebSphereMQ - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### Oracle Weblogic
+##### Oracle Weblogic - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### Pivotal RabbitMQ
+##### Pivotal RabbitMQ - Client lib 
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### IBM MessageSight
+##### IBM MessageSight - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### IIT Software SwiftMQ
+##### IIT Software SwiftMQ - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### Apache ActiveMQ Artemis
+##### Apache ActiveMQ Artemis - Client lib 
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### Apache QPID JMS
+##### Apache QPID JMS - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### Apache QPID Client
+##### Apache QPID - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### Amazon SQS Java Messaging
+##### Amazon SQS Java Messaging - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
@@ -343,6 +354,7 @@ no spec tool
 ##### Traffic
 - *Magic bytes 'ac ed 00 05' bytes*
 - *'rO0' for Base64*
+- *'application/x-java-serialized-object' for Content-Type header*
 
 ##### Network
 - Nmap >=7.10 has more java-related probes
@@ -355,9 +367,7 @@ no spec tool
 
 ### Vulnerable apps (without public sploits/need more info)  
 
-##### JSF ViewState
-
-##### Spring Service Invokerts (HTTP, JMS, RMI...)
+##### Spring Service Invokers (HTTP, JMS, RMI...)
 
 ##### SAP P4
 - [info from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
