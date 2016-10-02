@@ -43,9 +43,11 @@ by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
 
 - [Slides](http://www.slideshare.net/frohoff1/deserialize-my-shorts-or-how-i-learned-to-start-worrying-and-hate-java-object-deserialization)
 
-##### Deserialization for other languages
-by [@pwntester](http://twitter.com/pwntester)
+##### Surviving the Java serialization apocalypse
+by [@cschneider4711](http://twitter.com/cschneider4711) & [@pwntester](http://twitter.com/pwntester)
 
+- [Slides](http://www.slideshare.net/cschneider4711/surviving-the-java-deserialization-apocalypse-owasp-appseceu-2016)
+- [Video](https://www.youtube.com/watch?v=m1sH240pEfw)
 - [PoC for Scala, Grovy](https://github.com/pwntester/JVMDeserialization)
 
 ##### Java Deserialization Vulnerabilities - The Forgotten Bug Class 
@@ -59,6 +61,11 @@ by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 - [Slides](https://www.blackhat.com/docs/us-16/materials/us-16-Kaiser-Pwning-Your-Java-Messaging-With-Deserialization-Vulnerabilities.pdf)
 - [White Paper](https://www.blackhat.com/docs/us-16/materials/us-16-Kaiser-Pwning-Your-Java-Messaging-With-Deserialization-Vulnerabilities-wp.pdf)
 - [Tool for jms hacking](https://github.com/matthiaskaiser/jmet)
+
+##### Defending against Java Deserialization Vulnerabilities 
+by [@lucacarettoni](https://twitter.com/lucacarettoni)
+
+- [Slides](http://www.slideshare.net/ikkisoft/defending-against-java-deserialization-vulnerabilities)
 
 ##### A Journey From JNDI/LDAP Manipulation To Remote Code Execution Dream Land 
 by [@pwntester](http://twitter.com/pwntester) and O. Mirosh
