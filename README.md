@@ -130,13 +130,13 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 ##### RMI 
 - *Protocol*
 - *Default - 1099/tcp for rmiregistry*
-- "JRE 1.8.0_91 checks untrusted java deserialization through RMI" (?)
 
 [ysoserial](#ysoserial) (works only against a RMI registry service)
 
 ##### JMX 
 - *Protocol based on RMI*
 - + [CVE-2016-3427](http://engineering.pivotal.io/post/java-deserialization-jmx/)
+- partially patched in JRE 
 
 [ysoserial](#ysoserial)
 
