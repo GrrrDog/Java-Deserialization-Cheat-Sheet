@@ -96,9 +96,10 @@ RCE (or smth else) via:
 - JSON
 - Hibernate 
 
-Additional tools (access to ysoserial in Burp extension):
+Additional tools (integration ysoserial with Burp Suite):
 - [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller) 
 - [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
+- [Burp-ysoserial](https://github.com/summitt/burp-ysoserial)
 
 How it works:
 - [https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/](https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/)
