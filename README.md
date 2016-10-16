@@ -180,7 +180,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
 ##### IBM Websphere 2
 - When using custom form authentication
-- WASPostParam
+- WASPostParam cookie
 - [Full info](https://lab.mediaservice.net/advisory/2016-02-websphere.txt)
 
 no spec tool
