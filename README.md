@@ -101,6 +101,10 @@ Additional tools (integration ysoserial with Burp Suite):
 - [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
 - [Burp-ysoserial](https://github.com/summitt/burp-ysoserial)
 
+Full shell (pipes, redirects and other stuff):
+- [$@|sh – Or: Getting a shell environment from Runtime.exec](http://codewhitesec.blogspot.ru/2015/03/sh-or-getting-shell-environment-from.html)
+- Set String[] for Runtime.exec (patch ysoserial's payloads)
+
 How it works:
 - [https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/](https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/)
 - [http://gursevkalra.blogspot.ro/2016/01/ysoserial-commonscollections1-exploit.html](http://gursevkalra.blogspot.ro/2016/01/ysoserial-commonscollections1-exploit.html)
@@ -165,7 +169,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
-##### Websphere 
+##### IBM Websphere 1
 - *wsadmin*
 - *Default port - 8880/tcp*
 - [CVE-2015-7450](https://www.vulners.com/search?query=CVE-2015-7450)
@@ -173,6 +177,13 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
 
 [serialator](https://github.com/roo7break/serialator)
+
+##### IBM Websphere 2
+- When using custom form authentication
+- WASPostParam
+- [Full info](https://lab.mediaservice.net/advisory/2016-02-websphere.txt)
+
+no spec tool
 
 ##### JBoss 
 - *http://jboss_server/invoker/JMXInvokerServlet*
