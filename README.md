@@ -89,7 +89,7 @@ RCE (or smth else) via:
 - Groovy 2.3.9
 - Jython 2.5.2
 - C3P0 0.9.5.2
-- Apache Commons Fileupload <= 1.3.1 (File uploading)
+- Apache Commons Fileupload <= 1.3.1 (File uploading, DoS)
 - ROME 1.0
 - MyFaces
 - JRMPClient/JRMPListener
@@ -109,6 +109,11 @@ How it works:
 - [https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/](https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/)
 - [http://gursevkalra.blogspot.ro/2016/01/ysoserial-commonscollections1-exploit.html](http://gursevkalra.blogspot.ro/2016/01/ysoserial-commonscollections1-exploit.html)
 
+##### JRE8u20_RCE_Gadget
+[https://github.com/pwntester/JRE8u20_RCE_Gadget](https://github.com/pwntester/JRE8u20_RCE_Gadget)
+
+Pure JRE 8 RCE Deserialization gadget
+
 ##### ACEDcup 
 [https://github.com/GrrrDog/ACEDcup](https://github.com/GrrrDog/ACEDcup)
 
@@ -126,7 +131,7 @@ Won't fix DoS via default Java classes
 How it works:
 - [Java Deserialization DoS - payloads](http://topolik-at-work.blogspot.ru/2016/04/java-deserialization-dos-payloads.html)
 
-Won't fix DoS via default Java classes
+Won't fix DoS using default Java classes
 
 ### Exploits 
 
@@ -274,6 +279,13 @@ no spec tool
 - [CVE-2016-1291](https://www.vulners.com/search?query=CVE-2016-1291)
 
 [CoalfireLabs/java_deserialization_exploits](https://github.com/CoalfireLabs/java_deserialization_exploits/tree/master/CVE-2016-1291)
+
+##### Cisco ACS
+- <= 5.8.0.32.2
+- RMI (2020 tcp)
+- [CSCux34781](https://quickview.cloudapps.cisco.com/quickview/bug/CSCux34781) 
+
+[ysoserial](#ysoserial)
 
 ##### Apache XML-RPC 
 - all version, no fix (the project is not supported)
@@ -433,6 +445,12 @@ no spec tool
 ##### Red Hat JBoss BPM Suite
 - [RHSA-2016-0539](http://rhn.redhat.com/errata/RHSA-2016-0539.html)
 - [CVE-2016-2510](https://www.vulners.com/search?query=CVE-2016-2510)
+
+##### VMWare vRealize Operations
+- 6.0 <= version < 6.4.0
+- REST API
+- [VMSA-2016-0020](http://www.vmware.com/security/advisories/VMSA-2016-0020.html)
+- [CVE-2016-7462](https://www.vulners.com/search?query=CVE-2016-7462)
 
 ##### VMWare vCenter/vRealize (various) 
 - [CVE-2015-6934](https://www.vulners.com/search?query=CVE-2015-6934)
