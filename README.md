@@ -73,6 +73,11 @@ by [@pwntester](http://twitter.com/pwntester) and O. Mirosh
 - [Slides](https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf)
 - [White Paper](https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE-wp.pdf)
 
+##### Fixing the Java Serialization mess 
+by [@e_rnst](https://twitter.com/e_rnst)
+
+- [Slides+Source](https://t.co/zsDnQBgw0Y)
+
 ### Payload generators 
 ##### ysoserial 
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
@@ -190,7 +195,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
 no spec tool
 
-##### JBoss 
+##### Red Hat JBoss 
 - *http://jboss_server/invoker/JMXInvokerServlet*
 - *Default port - 8080/tcp*
 - [CVE-2015-7501](https://www.vulners.com/search?query=CVE-2015-7501)
@@ -423,8 +428,12 @@ no spec tool
 
 ##### Spring AMPQ
 - [CVE-2016-2173](http://pivotal.io/security/cve-2016-2173)
-- *1.0.0 <= version < 1.5.5
+- *1.0.0 <= version < 1.5.5*
 
+##### Apache Tika
+- [CVE-2016-6809](https://lists.apache.org/thread.html/93618b15cdf3b38fa1f0bfc0c8c7cf384607e552935bd3db2e322e07@%3Cdev.tika.apache.org%3E)
+- *1.6 <= version < 1.14*
+- Apache Tika’s MATLAB Parser
 
 ##### Apache HBase 
 - [HBASE-14799](https://issues.apache.org/jira/browse/HBASE-14799)
@@ -445,6 +454,7 @@ no spec tool
 ##### Red Hat JBoss BPM Suite
 - [RHSA-2016-0539](http://rhn.redhat.com/errata/RHSA-2016-0539.html)
 - [CVE-2016-2510](https://www.vulners.com/search?query=CVE-2016-2510)
+
 
 ##### VMWare vRealize Operations
 - 6.0 <= version < 6.4.0
@@ -528,6 +538,12 @@ no spec tool
 - requires local access
 - [CVE-2016-0714](https://www.vulners.com/search?query=CVE-2016-0714)
 - [Article](http://engineering.pivotal.io/post/java-deserialization-jmx/)
+
+##### Apache Tomcat JMX
+- JMX
+- [Patch bypass](http://seclists.org/oss-sec/2016/q4/502)
+- [CVE-2016-8735](https://www.vulners.com/search?query=CVE-2016-8735)
+
 
 ##### Apache Batchee
 ##### Apache JCS
