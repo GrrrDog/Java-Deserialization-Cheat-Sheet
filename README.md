@@ -221,6 +221,15 @@ no spec tool
 
 [ysoserial](#ysoserial)
 
+##### Jenkins 3
+- *Jenkins CLI LDAP*
+- *Default port - High number/tcp*
+- <= 2.32 
+- <= 2.19.3 (LTS)
+- [CVE-2016-9299](https://www.vulners.com/search?query=CVE-2016-9299)
+
+Metasploit Module for CVE-2016-9299
+
 ##### Restlet
 - *<= 2.1.2*
 - *When Rest API accepts serialized objects (uses ObjectRepresentation)*
@@ -310,6 +319,16 @@ no spec tool
 - admin panel for Solaris
 - < v3.1.
 - [old DoS sploit](https://www.ikkisoft.com/stuff/SJWC_DoS.java)
+
+no spec tool
+
+##### Apache MyFaces Trinidad
+- *1.0.0 <= version < 1.0.13*
+- *1.2.1 <= version < 1.2.14*
+- *2.0.0 <= version < 2.0.1*
+- *2.1.0 <= version < 2.1.1*
+- it does not check MAC
+- [CVE-2016-5004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5019)
 
 no spec tool
 
@@ -425,6 +444,16 @@ no spec tool
 - [*CVE-2015-8360*](https://confluence.atlassian.com/bamboo/bamboo-security-advisory-2016-01-20-794376535.html)
 - *2.3.1 <= version < 5.9.9*
 - Bamboo JMS port (port 54663 by default)
+
+##### Atlassian Jira 
+- only Jira with a Data Center license
+- RMI (port 40001 by default)
+- [*JRA-46203*](https://jira.atlassian.com/browse/JRA-46203)
+
+##### Akka
+- *version < 2.4.17*
+- "an ActorSystem exposed via Akka Remote over TCP"
+- [Official description](http://doc.akka.io/docs/akka/2.4/security/2017-02-10-java-serialization.html)
 
 ##### Spring AMPQ
 - [CVE-2016-2173](http://pivotal.io/security/cve-2016-2173)
@@ -555,6 +584,7 @@ no spec tool
 - [NotSoSerial](https://github.com/kantega/notsoserial)
 - [SerialKiller](https://github.com/ikkisoft/SerialKiller)
 - [ValidatingObjectInputStream](https://issues.apache.org/jira/browse/IO-487)
+- [Name Space Layout Randomization](http://www.waratek.com/warateks-name-space-layout-randomization-nslr/)
 - [Some protection bypasses](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet/blob/master/README.md#serial-killer-silently-pwning-your-java-endpoints)
 - Tool: [Serial Whitelist Application Trainer](https://github.com/cschneider4711/SWAT)
 
