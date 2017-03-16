@@ -78,6 +78,12 @@ by [@e_rnst](https://twitter.com/e_rnst)
 
 - [Slides+Source](https://t.co/zsDnQBgw0Y)
 
+##### Blind Java Deserialization 
+by deadcode.me
+
+- [Part I - Commons Gadgets](https://deadcode.me/blog/2016/09/02/Blind-Java-Deserialization-Commons-Gadgets.html)
+- [Part II - exploitation rev 2](https://deadcode.me/blog/2016/09/18/Blind-Java-Deserialization-Part-II.html)
+
 ### Payload generators 
 ##### ysoserial 
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
@@ -155,6 +161,8 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
 [ysoserial](#ysoserial)
 
+[JexBoss](https://github.com/joaomatosf/jexboss)
+
 ##### JNDI/LDAP 
 - When we control an adrress for lookup of JNDI (context.lookup(address))
 - [Full info](#a-journey-from-jndildap-manipulation-to-remote-code-execution-dream-land)
@@ -169,6 +177,10 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
 ##### JSF ViewState
 - if no encryption or good mac
+
+no spec tool
+
+[JexBoss](https://github.com/joaomatosf/jexboss)
 
 ##### T3 of Oracle Weblogic
 - *Protocol*
@@ -206,6 +218,8 @@ no spec tool
 
 [serialator](https://github.com/roo7break/serialator)
 
+[JexBoss](https://github.com/joaomatosf/jexboss)
+
 ##### Jenkins 
 - *Jenkins CLI*
 - *Default port - High number/tcp*
@@ -213,6 +227,8 @@ no spec tool
 - [CVE-2015-3253](https://www.vulners.com/search?query=CVE-2015-3253)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits)
+
+[JexBoss](https://github.com/joaomatosf/jexboss)
 
 ##### Jenkins 2
 - patch "bypass" for [Jenkins](#jenkins)
@@ -331,6 +347,19 @@ no spec tool
 - [CVE-2016-5004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5019)
 
 no spec tool
+
+##### Apache Tomcat JMX
+- JMX
+- [Patch bypass](http://seclists.org/oss-sec/2016/q4/502)
+- [CVE-2016-8735](https://www.vulners.com/search?query=CVE-2016-8735)
+
+[JexBoss](https://github.com/joaomatosf/jexboss)
+
+##### OpenText Documentum D2
+- *version 4.x*
+- [CVE-2017-5586](https://www.vulners.com/search?query=CVE-2017-5586)
+
+[exploit](https://www.exploit-db.com/exploits/41366/)
 
 ##### Apache ActiveMQ - Client lib
 - [JMS](#jms)
@@ -506,6 +535,9 @@ no spec tool
 #####  McAfee ePolicy Orchestrator 
 - [CVE-2015-8765](https://www.vulners.com/search?query=CVE-2015-8765)
 
+#####  HP iMC 
+- [CVE-2016-4372](https://www.vulners.com/search?query=CVE-2016-4372)
+
 #####  HP Operations Orchestration
 - [CVE-2016-1997](https://www.vulners.com/search?query=CVE-2016-1997)
 
@@ -526,6 +558,9 @@ no spec tool
 
 ##### HP P9000, XP7 Command View Advanced Edition (CVAE) Suite
 - [CVE-2016-2003](https://h20564.www2.hpe.com/hpsc/doc/public/display?docId=emr_na-c05085438)
+
+##### HP Network Automation
+- [CVE-2016-4385](https://www.vulners.com/search?query=CVE-2016-4385)
 
 ##### Adobe Experience Manager 
 - [CVE-2016-0958](https://www.vulners.com/search?query=CVE-2016-0958)
@@ -568,11 +603,9 @@ no spec tool
 - [CVE-2016-0714](https://www.vulners.com/search?query=CVE-2016-0714)
 - [Article](http://engineering.pivotal.io/post/java-deserialization-jmx/)
 
-##### Apache Tomcat JMX
-- JMX
-- [Patch bypass](http://seclists.org/oss-sec/2016/q4/502)
-- [CVE-2016-8735](https://www.vulners.com/search?query=CVE-2016-8735)
-
+##### Zimbra Collaboration 
+- *version < 8.7.0*
+- [CVE-2016-3415](https://www.vulners.com/search?query=CVE-2016-3415)
 
 ##### Apache Batchee
 ##### Apache JCS
