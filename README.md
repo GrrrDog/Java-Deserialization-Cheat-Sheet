@@ -3,9 +3,8 @@ A cheat sheet for pentesters and researchers about deserialization vulnerabiliti
 
 Please, use **#javadeser** hash tag for tweets.
 
-
 ##  Table of content
-- [Java Native Serialization (binary)](#java-native-binary-serialization--binary-)
+- [Java Native Serialization (binary)](#java-native-serialization-binary)
 	- [Overview](#overview)
 	- [Main talks & presentations & docs](#main-talks--presentations--docs)
 	- [Payload generators](#payload-generators)
@@ -14,12 +13,22 @@ Please, use **#javadeser** hash tag for tweets.
 	- [Vulnerable apps (without public sploits/need more info)](#vulnerable-apps-without-public-sploitsneed-more-info)
 	- [Protection](#protection)
 	- [For Android](#for-android)
-- [XMLEncoder](#xmlencoder)
-- [XStream](#xstream)
-- [Kryo](#kryo)
-- [Hessian/Burlap](#other-serialization-types)
-- [XStreams](#other-serialization-types)
-- ["Safe" deserialization](#other-serialization-types)
+- [XMLEncoder (XML)](#xmlencoder-xml)
+- [XStream (XML/JSON/various)](#xstream-xmljsonvarious)
+- [Kryo (binary)](#kryo-binary)
+- [Hessian/Burlap (binary/XML)](#hessianburlap-binaryxml)
+- [Castor (XML)](#castor-xml)
+- [json-io (JSON)](#json-io-json)
+- [Jackson (JSON)](#jackson-json)
+- [Red5 IO AMF (AMF)](#red5-io-amf-amf)
+- [Apache Flex BlazeDS (AMF)](#apache-flex-blazeds-amf)
+- [Flamingo AMF  (AMF)](#flamingo-amf--amf)
+- [GraniteDS  (AMF)](#graniteds--amf)
+- [WebORB for Java  (AMF)](#weborb-for-java--amf)
+- [SnakeYAML (YAML)](#snakeyaml-yaml)
+- [jYAML (YAML)](#jyaml-yaml)
+- [YamlBeans (YAML)](#yamlbeans-yaml)
+- ["Safe" deserialization](#safe-deserialization)
  
 ## Java Native Serialization (binary)
 
@@ -813,7 +822,7 @@ Payload generators:
 
 Some serialization libs are safe (or almost safe) [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
-However, it's not recomendation, but just a list of libs that has been researched by someone:
+However, it's not a recomendation, but just a list of other libs that has been researched by someone:
 
 - JAXB
 - XmlBeans
