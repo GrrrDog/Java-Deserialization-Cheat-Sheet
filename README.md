@@ -1,18 +1,27 @@
 # Java-Deserialization-Cheat-Sheet
-A cheat sheet for pentesters about Java Native Binary Deserialization vulnerabilities
+A cheat sheet for pentesters and researchers about deserialization vulnerabilities in various Java (JVM) serialization libraries.
 
 Please, use **#javadeser** hash tag for tweets.
 
-###  Table of content
-- [Overview](#overview)
-- [Main talks & presentations & docs](#main-talks--presentations--docs)
-- [Payload generators](#payload-generators)
-- [Exploits](#exploits)
-- [Detect](#detect)
-- [Vulnerable apps (without public sploits/need more info)](#vulnerable-apps-without-public-sploitsneed-more-info)
-- [Protection](#protection)
-- [For Android](#for-android)
-- [Other serialization types](#other-serialization-types)
+
+##  Table of content
+- [Java Native Serialization (binary)](#java-native-binary-serialization--binary-)
+	- [Overview](#overview)
+	- [Main talks & presentations & docs](#main-talks--presentations--docs)
+	- [Payload generators](#payload-generators)
+	- [Exploits](#exploits)
+	- [Detect](#detect)
+	- [Vulnerable apps (without public sploits/need more info)](#vulnerable-apps-without-public-sploitsneed-more-info)
+	- [Protection](#protection)
+	- [For Android](#for-android)
+- [XMLEncoder](#xmlencoder)
+- [XStream](#xstream)
+- [Kryo](#kryo)
+- [Hessian/Burlap](#other-serialization-types)
+- [XStreams](#other-serialization-types)
+- ["Safe" deserialization](#other-serialization-types)
+ 
+## Java Native Serialization (binary)
 
 ### Overview
 - [Java Deserialization Security FAQ](https://christian-schneider.net/JavaDeserializationSecurityFAQ.html)
@@ -134,7 +143,7 @@ File uploading via:
 ##### Universal billion-laughs DoS 
 [https://gist.github.com/coekie/a27cc406fc9f3dc7a70d](https://gist.github.com/coekie/a27cc406fc9f3dc7a70d)
 
-Won't fix DoS via default Java classes
+Won't fix DoS via default Java classes (JRE)
 
 ##### Universal Heap overflows DoS using Arrays and HashMaps  
 [https://github.com/topolik/ois-dos/](https://github.com/topolik/ois-dos/)
@@ -142,7 +151,7 @@ Won't fix DoS via default Java classes
 How it works:
 - [Java Deserialization DoS - payloads](http://topolik-at-work.blogspot.ru/2016/04/java-deserialization-dos-payloads.html)
 
-Won't fix DoS using default Java classes
+Won't fix DoS using default Java classes (JRE)
 
 ### Exploits 
 
@@ -164,7 +173,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 [JexBoss](https://github.com/joaomatosf/jexboss)
 
 ##### JNDI/LDAP 
-- When we control an adrress for lookup of JNDI (context.lookup(address))
+- When we control an adrress for lookup of JNDI (context.lookup(address) and can have backconnect from a server
 - [Full info](#a-journey-from-jndildap-manipulation-to-remote-code-execution-dream-land)
 - [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
 
@@ -620,19 +629,194 @@ no spec tool
 - [Name Space Layout Randomization](http://www.waratek.com/warateks-name-space-layout-randomization-nslr/)
 - [Some protection bypasses](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet/blob/master/README.md#serial-killer-silently-pwning-your-java-endpoints)
 - Tool: [Serial Whitelist Application Trainer](https://github.com/cschneider4711/SWAT)
+- [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290) in JDK 6u141, 7u131, 8u121 
 
 ### For Android 
 - [One Class to Rule Them All: 0-Day Deserialization Vulnerabilities in Android](https://www.usenix.org/conference/woot15/workshop-program/presentation/peles)
 - [Android Serialization Vulnerabilities Revisited](https://www.rsaconference.com/events/us16/agenda/sessions/2455/android-serialization-vulnerabilities-revisited)
 
-### Other serialization types
-##### XMLEncoder 
-- [http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html)
+## XMLEncoder (XML)
+How it works:
 
-##### XStream 
+- [http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html)
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+## XStream (XML/JSON/various) 
+How it works:
+
 - [http://www.pwntester.com/blog/2013/12/23/rce-via-xstream-object-deserialization38/](http://www.pwntester.com/blog/2013/12/23/rce-via-xstream-object-deserialization38/)
 - [http://blog.diniscruz.com/2013/12/xstream-remote-code-execution-exploit.html](http://blog.diniscruz.com/2013/12/xstream-remote-code-execution-exploit.html)
 - [https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-2-xstream](https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-2-xstream)
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-##### Kryo
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+Vulnerable apps (without public sploits/need more info):
+##### Atlassian Bamboo 
+- [CVE-2016-5229](https://www.vulners.com/search?query=CVE-2016-5229)
+
+##### Jenkins 
+- [CVE-2017-2608](https://www.vulners.com/search?query=CVE-2017-2608)
+
+## Kryo (binary)
+
+How it works:
+
 - [https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-1-kryo](https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-1-kryo)
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+## Hessian/Burlap (binary/XML)
+How it works:
+
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+## Castor (XML)
+How it works:
+
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+Vulnerable apps (without public sploits/need more info):
+##### OpenNMS
+- [NMS-9100](https://issues.opennms.org/browse/NMS-9100)
+
+## json-io (JSON)
+How it works:
+
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+## Jackson (JSON)
+*vulnerable in some configuration*
+ 
+How it works:
+
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+Vulnerable apps (without public sploits/need more info):
+##### Apache Camel 
+- [CVE-2016-8749](https://www.vulners.com/search?query=CVE-2016-8749)
+
+## Red5 IO AMF (AMF)
+How it works:
+
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+Vulnerable apps (without public sploits/need more info):
+##### Apache OpenMeetings 
+- [CVE-2017-5878](https://www.vulners.com/search?query=CVE-2017-5878)
+
+## Apache Flex BlazeDS (AMF)
+How it works:
+
+- [AMF – Another Malicious Format](http://codewhitesec.blogspot.ru/2017/04/amf.html)
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+Vulnerable apps (without public sploits/need more info):
+##### Adobe ColdFusion 
+- [CVE-2017-3066](https://www.vulners.com/search?query=CVE-2017-3066)
+- *<= 2016 Update 3*
+- *<= 11 update 11*
+- *<= 10 Update 22*
+
+##### Apache BlazeDS 
+- [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
+
+##### VMWare VCenter 
+- [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
+
+## Flamingo AMF  (AMF)
+How it works:
+
+- [AMF – Another Malicious Format](http://codewhitesec.blogspot.ru/2017/04/amf.html)
+
+## GraniteDS  (AMF)
+How it works:
+
+- [AMF – Another Malicious Format](http://codewhitesec.blogspot.ru/2017/04/amf.html)
+
+## WebORB for Java  (AMF)
+How it works:
+
+- [AMF – Another Malicious Format](http://codewhitesec.blogspot.ru/2017/04/amf.html)
+
+## SnakeYAML (YAML)
+How it works:
+
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+Vulnerable apps (without public sploits/need more info):
+##### Resteasy 
+- [CVE-2016-9606](https://www.vulners.com/search?query=CVE-2016-9606)
+
+##### Apache Camel 
+- [CVE-2017-3159](https://www.vulners.com/search?query=CVE-2017-3159)
+
+##### Apache Brooklyn 
+- [CVE-2016-8744](https://www.vulners.com/search?query=CVE-CVE-2016-8744)
+
+## jYAML (YAML)
+How it works:
+
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+## YamlBeans (YAML)
+How it works:
+
+- [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+
+Payload generators:
+
+- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+## "Safe" deserialization
+
+Some serialization libs are safe (or almost safe) [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+However, it's not recomendation, but just a list of libs that has been researched by someone:
+
+- JAXB
+- XmlBeans
+- Jibx
+- ProtobufGSON
+- GWT-RPC
