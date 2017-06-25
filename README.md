@@ -349,6 +349,12 @@ no spec tool
 
 no spec tool
 
+##### SAP NetWeaver
+- *https://[target]/developmentserver/metadatauploader*
+- [CVE-2017-9844](https://erpscan.com/advisories/erpscan-17-014-sap-netweaver-java-deserialization-untrusted-user-value-metadatauploader/)
+
+[PoC](https://github.com/vah13/SAP_vulnerabilities/tree/5995daf7bac2e01a63dc57dcf5bbab70489bf6bb/CVE-2017-9844)
+
 #####  Sun Java Web Console
 - admin panel for Solaris
 - < v3.1.
