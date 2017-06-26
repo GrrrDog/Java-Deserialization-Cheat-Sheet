@@ -133,6 +133,7 @@ Additional tools (integration ysoserial with Burp Suite):
 Full shell (pipes, redirects and other stuff):
 - [$@|sh – Or: Getting a shell environment from Runtime.exec](http://codewhitesec.blogspot.ru/2015/03/sh-or-getting-shell-environment-from.html)
 - Set String[] for Runtime.exec (patch ysoserial's payloads)
+- [Shell Commands Converter](http://jackson.thuraisamy.me/runtime-exec-payloads.html)
 
 How it works:
 - [https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/](https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/)
