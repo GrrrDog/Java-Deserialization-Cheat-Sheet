@@ -108,23 +108,6 @@ by deadcode.me
 
 ysoserial 0.6 payloads:
 
-- Apache Commons Collections <= 3.1
-- Apache Commons Collections <= 4.0
-- Groovy <= 2.3.9
-- Spring Core <= 4.1.4 (?)
-- JDK <=7u21
-- Apache Commons BeanUtils 1.9.2 + Commons Collections <=3.1 + Commons Logging 1.2 (?)
-- BeanShell 2.0
-- Groovy 2.3.9
-- Jython 2.5.2
-- C3P0 0.9.5.2
-- Apache Commons Fileupload <= 1.3.1 (File uploading, DoS)
-- ROME 1.0
-- MyFaces
-- JRMPClient/JRMPListener
-- JSON
-- Hibernate
-
 payload | author | dependencies | impact (if not RCE)
 ------|--------|------ |------
 BeanShell1          |@pwntester, @cschneider4711 |bsh:2.0b5
@@ -154,7 +137,7 @@ Myfaces2            |@mbechler|
 ROME                |@mbechler                   |rome:1.0
 Spring1             |@frohoff                    |spring-core:4.1.4.RELEASE, spring-beans:4.1.4.RELEASE
 Spring2             |@mbechler                   |spring-core:4.1.4.RELEASE, spring-aop:4.1.4.RELEASE, aopalliance:1.0, commons-logging:1.2
-URLDNS              |@gebl| jre only vuln detect
+URLDNS              |@gebl| | jre only vuln detect
 Wicket1             |@jacob-baines               |wicket-util:6.23.0, slf4j-api:1.6.4
 
 
@@ -162,6 +145,8 @@ Additional tools (integration ysoserial with Burp Suite):
 - [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller)
 - [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
 - [Burp-ysoserial](https://github.com/summitt/burp-ysoserial)
+- [SuperSerial](https://github.com/DirectDefense/SuperSerial)
+- [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
 
 Full shell (pipes, redirects and other stuff):
 - [$@|sh – Or: Getting a shell environment from Runtime.exec](http://codewhitesec.blogspot.ru/2015/03/sh-or-getting-shell-environment-from.html)
@@ -521,15 +506,16 @@ no spec tool
 - use nmap --all-version to find JMX/RMI on non-standart ports
 
 ##### Burp plugins
+- [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller)
 - [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
+- [Burp-ysoserial](https://github.com/summitt/burp-ysoserial)
 - [SuperSerial](https://github.com/DirectDefense/SuperSerial)
 - [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
 
 ### Vulnerable apps (without public sploits/need more info)
 
 ##### Spring Service Invokers (HTTP, JMS, RMI...)
-[CVE-2016-1000027](https://www.vulners.com/search?query=CVE-2016-1000027)
-[Details](https://www.tenable.com/security/research/tra-2016-20)
+- [Details](https://www.tenable.com/security/research/tra-2016-20)
 
 ##### SAP P4
 - [info from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
