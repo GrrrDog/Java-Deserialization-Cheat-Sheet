@@ -29,22 +29,22 @@ Please, use **#javadeser** hash tag for tweets.
 - [jYAML (YAML)](#jyaml-yaml)
 - [YamlBeans (YAML)](#yamlbeans-yaml)
 - ["Safe" deserialization](#safe-deserialization)
- 
+
 ## Java Native Serialization (binary)
 
 ### Overview
 - [Java Deserialization Security FAQ](https://christian-schneider.net/JavaDeserializationSecurityFAQ.html)
-- [From Foxgloves Security](http://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/) 
+- [From Foxgloves Security](http://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/)
 
 ### Main talks & presentations & docs
-##### Marshalling Pickles 
+##### Marshalling Pickles
 by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
 
-- [Video](https://www.youtube.com/watch?v=KSA7vUkXGSg) 
+- [Video](https://www.youtube.com/watch?v=KSA7vUkXGSg)
 - [Slides](http://www.slideshare.net/frohoff1/appseccali-2015-marshalling-pickles)
 - [Other stuff](http://frohoff.github.io/appseccali-marshalling-pickles/ )
 
-##### Exploiting Deserialization Vulnerabilities in Java 
+##### Exploiting Deserialization Vulnerabilities in Java
 by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 
 - [Video](https://www.youtube.com/watch?v=VviY3O-euVQ)
@@ -56,7 +56,7 @@ by [@pwntester](http://twitter.com/pwntester) & [@cschneider4711](http://twitter
 - [White Paper](http://community.hpe.com/hpeb/attachments/hpeb/off-by-on-software-security-blog/722/1/HPE-SR%20whitepaper%20java%20deserialization%20RSA2016.pdf)
 - [Bypass Gadget Collection](https://github.com/pwntester/SerialKillerBypassGadgetCollection)
 
-##### Deserialize My Shorts: Or How I Learned To Start Worrying and Hate Java Object Deserialization  
+##### Deserialize My Shorts: Or How I Learned To Start Worrying and Hate Java Object Deserialization
 by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
 
 - [Slides](http://www.slideshare.net/frohoff1/deserialize-my-shorts-or-how-i-learned-to-start-worrying-and-hate-java-object-deserialization)
@@ -68,45 +68,45 @@ by [@cschneider4711](http://twitter.com/cschneider4711) & [@pwntester](http://tw
 - [Video](https://www.youtube.com/watch?v=m1sH240pEfw)
 - [PoC for Scala, Grovy](https://github.com/pwntester/JVMDeserialization)
 
-##### Java Deserialization Vulnerabilities - The Forgotten Bug Class 
+##### Java Deserialization Vulnerabilities - The Forgotten Bug Class
 by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 
 - [Slides](http://www.slideshare.net/codewhitesec/java-deserialization-vulnerabilities-the-forgotten-bug-class)
 
-##### Pwning Your Java Messaging With Deserialization Vulnerabilities 
+##### Pwning Your Java Messaging With Deserialization Vulnerabilities
 by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 
 - [Slides](https://www.blackhat.com/docs/us-16/materials/us-16-Kaiser-Pwning-Your-Java-Messaging-With-Deserialization-Vulnerabilities.pdf)
 - [White Paper](https://www.blackhat.com/docs/us-16/materials/us-16-Kaiser-Pwning-Your-Java-Messaging-With-Deserialization-Vulnerabilities-wp.pdf)
 - [Tool for jms hacking](https://github.com/matthiaskaiser/jmet)
 
-##### Defending against Java Deserialization Vulnerabilities 
+##### Defending against Java Deserialization Vulnerabilities
 by [@lucacarettoni](https://twitter.com/lucacarettoni)
 
 - [Slides](http://www.slideshare.net/ikkisoft/defending-against-java-deserialization-vulnerabilities)
 
-##### A Journey From JNDI/LDAP Manipulation To Remote Code Execution Dream Land 
+##### A Journey From JNDI/LDAP Manipulation To Remote Code Execution Dream Land
 by [@pwntester](http://twitter.com/pwntester) and O. Mirosh
 
 - [Slides](https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf)
 - [White Paper](https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE-wp.pdf)
 
-##### Fixing the Java Serialization mess 
+##### Fixing the Java Serialization mess
 by [@e_rnst](https://twitter.com/e_rnst)
 
 - [Slides+Source](https://t.co/zsDnQBgw0Y)
 
-##### Blind Java Deserialization 
+##### Blind Java Deserialization
 by deadcode.me
 
 - [Part I - Commons Gadgets](https://deadcode.me/blog/2016/09/02/Blind-Java-Deserialization-Commons-Gadgets.html)
 - [Part II - exploitation rev 2](https://deadcode.me/blog/2016/09/18/Blind-Java-Deserialization-Part-II.html)
 
-### Payload generators 
-##### ysoserial 
+### Payload generators
+##### ysoserial
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
 
-RCE (or smth else) via:
+ysoserial 0.6 payloads:
 
 - Apache Commons Collections <= 3.1
 - Apache Commons Collections <= 4.0
@@ -123,10 +123,43 @@ RCE (or smth else) via:
 - MyFaces
 - JRMPClient/JRMPListener
 - JSON
-- Hibernate 
+- Hibernate
+
+payload | author | dependencies | impact (if not RCE)
+------|--------|------ |------
+BeanShell1          |@pwntester, @cschneider4711 |bsh:2.0b5
+C3P0                |@mbechler                   |c3p0:0.9.5.2, mchange-commons-java:0.2.11
+Clojure             |@JackOfMostTrades           |clojure:1.8.0
+CommonsBeanutils1   |@frohoff                    |commons-beanutils:1.9.2, commons-collections:3.1, commons-logging:1.2
+CommonsCollections1 |@frohoff                    |commons-collections:3.1
+CommonsCollections2 |@frohoff                    |commons-collections4:4.0
+CommonsCollections3 |@frohoff                    |commons-collections:3.1
+CommonsCollections4 |@frohoff                    |commons-collections4:4.0
+CommonsCollections5 |@matthias_kaiser, @jasinner |commons-collections:3.1
+CommonsCollections6 |@matthias_kaiser            |commons-collections:3.1
+FileUpload1         |@mbechler                   |commons-fileupload:1.3.1, commons-io:2.4 | file uploading
+Groovy1             |@frohoff                    |groovy:2.3.9
+Hibernate1          |@mbechler|
+Hibernate2          |@mbechler|
+JBossInterceptors1  |@matthias_kaiser            |javassist:3.12.1.GA, jboss-interceptor-core:2.0.0.Final, cdi-api:1.0-SP1, javax.interceptor-api:3.1, jboss-interceptor-spi:2.0.0.Final, slf4j-api:1.7.21
+JRMPClient          |@mbechler|
+JRMPListener        |@mbechler|
+JSON1               |@mbechler                   |json-lib:jar:jdk15:2.4, spring-aop:4.1.4.RELEASE, aopalliance:1.0, commons-logging:1.2, commons-lang:2.6, ezmorph:1.0.6, commons-beanutils:1.9.2, spring-core:4.1.4.RELEASE, commons-collections:3.1
+JavassistWeld1      |@matthias_kaiser            |javassist:3.12.1.GA, weld-core:1.1.33.Final, cdi-api:1.0-SP1, javax.interceptor-api:3.1, jboss-interceptor-spi:2.0.0.Final, slf4j-api:1.7.21
+Jdk7u21             |@frohoff|
+Jython1             |@pwntester, @cschneider4711 |jython-standalone:2.5.2
+MozillaRhino1       |@matthias_kaiser            |js:1.7R2
+Myfaces1            |@mbechler|
+Myfaces2            |@mbechler|
+ROME                |@mbechler                   |rome:1.0
+Spring1             |@frohoff                    |spring-core:4.1.4.RELEASE, spring-beans:4.1.4.RELEASE
+Spring2             |@mbechler                   |spring-core:4.1.4.RELEASE, spring-aop:4.1.4.RELEASE, aopalliance:1.0, commons-logging:1.2
+URLDNS              |@gebl| jre only vuln detect
+Wicket1             |@jacob-baines               |wicket-util:6.23.0, slf4j-api:1.6.4
+
 
 Additional tools (integration ysoserial with Burp Suite):
-- [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller) 
+- [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller)
 - [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
 - [Burp-ysoserial](https://github.com/summitt/burp-ysoserial)
 
@@ -144,18 +177,18 @@ How it works:
 
 Pure JRE 8 RCE Deserialization gadget
 
-##### ACEDcup 
+##### ACEDcup
 [https://github.com/GrrrDog/ACEDcup](https://github.com/GrrrDog/ACEDcup)
 
 File uploading via:
-- Apache Commons FileUpload <= 1.3 (CVE-2013-2186) and Oracle JDK < 7u40 
+- Apache Commons FileUpload <= 1.3 (CVE-2013-2186) and Oracle JDK < 7u40
 
-##### Universal billion-laughs DoS 
+##### Universal billion-laughs DoS
 [https://gist.github.com/coekie/a27cc406fc9f3dc7a70d](https://gist.github.com/coekie/a27cc406fc9f3dc7a70d)
 
 Won't fix DoS via default Java classes (JRE)
 
-##### Universal Heap overflows DoS using Arrays and HashMaps  
+##### Universal Heap overflows DoS using Arrays and HashMaps
 [https://github.com/topolik/ois-dos/](https://github.com/topolik/ois-dos/)
 
 How it works:
@@ -163,26 +196,26 @@ How it works:
 
 Won't fix DoS using default Java classes (JRE)
 
-### Exploits 
+### Exploits
 
-no spec tool - You don't need a special tool (just Burp/ZAP + payload) 
+no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
-##### RMI 
+##### RMI
 - *Protocol*
 - *Default - 1099/tcp for rmiregistry*
 
 [ysoserial](#ysoserial) (works only against a RMI registry service)
 
-##### JMX 
+##### JMX
 - *Protocol based on RMI*
 - + [CVE-2016-3427](http://engineering.pivotal.io/post/java-deserialization-jmx/)
-- partially patched in JRE 
+- partially patched in JRE
 
 [ysoserial](#ysoserial)
 
 [JexBoss](https://github.com/joaomatosf/jexboss)
 
-##### JNDI/LDAP 
+##### JNDI/LDAP
 - When we control an adrress for lookup of JNDI (context.lookup(address) and can have backconnect from a server
 - [Full info](#a-journey-from-jndildap-manipulation-to-remote-code-execution-dream-land)
 - [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
@@ -205,12 +238,14 @@ no spec tool
 - *Protocol*
 - *Default - 7001/tcp on localhost interface*
 - [CVE-2015-4852](https://www.vulners.com/search?query=CVE-2015-4852)
+- [Blacklist bypass](https://www.tenable.com/security/research/tra-2017-07)
 
 [loubia](https://github.com/metalnas/loubia) (tested on 11g and 12c, supports t3s)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
-##### IBM Websphere 1
+
+##### IBM Websphere (1)
 - *wsadmin*
 - *Default port - 8880/tcp*
 - [CVE-2015-7450](https://www.vulners.com/search?query=CVE-2015-7450)
@@ -219,14 +254,14 @@ no spec tool
 
 [serialator](https://github.com/roo7break/serialator)
 
-##### IBM Websphere 2
+##### IBM Websphere (2)
 - When using custom form authentication
 - WASPostParam cookie
 - [Full info](https://lab.mediaservice.net/advisory/2016-02-websphere.txt)
 
 no spec tool
 
-##### Red Hat JBoss 
+##### Red Hat JBoss (1)
 - *http://jboss_server/invoker/JMXInvokerServlet*
 - *Default port - 8080/tcp*
 - [CVE-2015-7501](https://www.vulners.com/search?query=CVE-2015-7501)
@@ -239,7 +274,14 @@ no spec tool
 
 [JexBoss](https://github.com/joaomatosf/jexboss)
 
-##### Jenkins 
+##### Red Hat JBoss (2)
+- *http://jboss_server/jbossmq-httpil/HTTPServerILServlet/*
+- <= 4.x
+- [Details](https://www.vulners.com/search?query=CVE-2017-7504)
+
+no spec tool
+
+##### Jenkins (1)
 - *Jenkins CLI*
 - *Default port - High number/tcp*
 - [CVE-2015-8103](https://www.vulners.com/search?query=CVE-2015-8103)
@@ -249,21 +291,28 @@ no spec tool
 
 [JexBoss](https://github.com/joaomatosf/jexboss)
 
-##### Jenkins 2
+##### Jenkins (2)
 - patch "bypass" for [Jenkins](#jenkins)
 - [CVE-2016-0788](https://www.vulners.com/search?query=CVE-2016-0788)
 - [Details of exploit](https://www.insinuator.net/2016/07/jenkins-remoting-rce-ii-the-return-of-the-ysoserial/)
 
 [ysoserial](#ysoserial)
 
-##### Jenkins 3
+##### Jenkins (s)
 - *Jenkins CLI LDAP*
 - *Default port - High number/tcp*
-- <= 2.32 
+- <= 2.32
 - <= 2.19.3 (LTS)
 - [CVE-2016-9299](https://www.vulners.com/search?query=CVE-2016-9299)
 
 Metasploit Module for CVE-2016-9299
+
+##### CloudBees Jenkins
+- <= 2.32.1
+- [CVE-2017-1000353](https://www.vulners.com/search?query=CVE-2017-1000353)
+- [Details](https://blogs.securiteam.com/index.php/archives/3171)
+
+[Sploit](https://blogs.securiteam.com/index.php/archives/3171)
 
 ##### Restlet
 - *<= 2.1.2*
@@ -288,13 +337,13 @@ no spec tool
 
 [ysoserial](#ysoserial)
 
-#####  Commvault Edge Server 
+#####  Commvault Edge Server
 - [CVE-2015-7253](https://www.vulners.com/search?query=CVE-2015-7253)
 - Serialized object in cookie
 
 no spec tool
 
-##### Symantec Endpoint Protection Manager 
+##### Symantec Endpoint Protection Manager
 - */servlet/ConsoleServlet?ActionType=SendStatPing*
 - [CVE-2015-6555](https://www.vulners.com/search?query=CVE-2015-6555)
 
@@ -314,14 +363,14 @@ no spec tool
 
 [powerfolder-exploit-poc](https://github.com/h0ng10/powerfolder-exploit-poc)
 
-##### Solarwinds Virtualization Manager 
+##### Solarwinds Virtualization Manager
 - <= 6.3.1
 - RMI
 - [CVE-2016-3642](https://www.vulners.com/search?query=CVE-2016-3642)
 
 [ysoserial](#ysoserial)
 
-##### Cisco Prime Infrastructure 
+##### Cisco Prime Infrastructure
 - *https://[target]/xmp_data_handler_service/xmpDataOperationRequestServlet*
 - <= 2.2.3 Update 4
 - <= 3.0.2
@@ -332,11 +381,11 @@ no spec tool
 ##### Cisco ACS
 - <= 5.8.0.32.2
 - RMI (2020 tcp)
-- [CSCux34781](https://quickview.cloudapps.cisco.com/quickview/bug/CSCux34781) 
+- [CSCux34781](https://quickview.cloudapps.cisco.com/quickview/bug/CSCux34781)
 
 [ysoserial](#ysoserial)
 
-##### Apache XML-RPC 
+##### Apache XML-RPC
 - all version, no fix (the project is not supported)
 - POST XML request with <ex:serializable> element
 - [Details and examples](https://0ang3el.blogspot.ru/2016/07/beware-of-ws-xmlrpc-library-in-your.html)
@@ -345,7 +394,7 @@ no spec tool
 
 ##### Apache Archiva
 - because it uses [Apache XML-RPC](#apache-xml-rpc)
-- [CVE-2016-5004](https://www.vulners.com/search?query=CVE-2016-5004) 
+- [CVE-2016-5004](https://www.vulners.com/search?query=CVE-2016-5004)
 - [Details and examples](https://0ang3el.blogspot.ru/2016/07/beware-of-ws-xmlrpc-library-in-your.html)
 
 no spec tool
@@ -364,12 +413,12 @@ no spec tool
 no spec tool
 
 ##### Apache MyFaces Trinidad
-- *1.0.0 <= version < 1.0.13*
-- *1.2.1 <= version < 1.2.14*
-- *2.0.0 <= version < 2.0.1*
-- *2.1.0 <= version < 2.1.1*
+- 1.0.0 <= version < 1.0.13
+- 1.2.1 <= version < 1.2.14
+- 2.0.0 <= version < 2.0.1
+- 2.1.0 <= version < 2.1.1
 - it does not check MAC
-- [CVE-2016-5004](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2016-5019)
+- [CVE-2016-5004](https://www.vulners.com/search?query=CVE-2016-5019)
 
 no spec tool
 
@@ -385,6 +434,15 @@ no spec tool
 - [CVE-2017-5586](https://www.vulners.com/search?query=CVE-2017-5586)
 
 [exploit](https://www.exploit-db.com/exploits/41366/)
+
+##### Liferay
+- */api/spring*
+- */api/liferay*
+- <= 7.0-ga3
+- if IP check works incorrectly
+- [Details](https://www.tenable.com/security/research/tra-2017-01)
+
+no spec tool
 
 ##### Apache ActiveMQ - Client lib
 - [JMS](#jms)
@@ -411,7 +469,7 @@ no spec tool
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### Pivotal RabbitMQ - Client lib 
+##### Pivotal RabbitMQ - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
@@ -426,7 +484,7 @@ no spec tool
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-##### Apache ActiveMQ Artemis - Client lib 
+##### Apache ActiveMQ Artemis - Client lib
 - [JMS](#jms)
 
 [JMET](https://github.com/matthiaskaiser/jmet)
@@ -446,8 +504,8 @@ no spec tool
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
-### Detect 
-##### Code review 
+### Detect
+##### Code review
 - *ObjectInputStream.readObject*
 - *ObjectInputStream.readUnshared*
 - Tool: [Find Security Bugs](http://find-sec-bugs.github.io/)
@@ -462,24 +520,26 @@ no spec tool
 - Nmap >=7.10 has more java-related probes
 - use nmap --all-version to find JMX/RMI on non-standart ports
 
-##### Burp plugins 
+##### Burp plugins
 - [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
 - [SuperSerial](https://github.com/DirectDefense/SuperSerial)
 - [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
 
-### Vulnerable apps (without public sploits/need more info)  
+### Vulnerable apps (without public sploits/need more info)
 
 ##### Spring Service Invokers (HTTP, JMS, RMI...)
+[CVE-2016-1000027](https://www.vulners.com/search?query=CVE-2016-1000027)
+[Details](https://www.tenable.com/security/research/tra-2016-20)
 
 ##### SAP P4
 - [info from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
 
-##### Apache SOLR 
+##### Apache SOLR
 - [SOLR-8262](https://issues.apache.org/jira/browse/SOLR-8262)
 - 5.1 <= version <=5.4
-- /stream handler uses Java serialization for RPC 
+- /stream handler uses Java serialization for RPC
 
-##### Apache Shiro 
+##### Apache Shiro
 - [SHIRO-550](https://issues.apache.org/jira/browse/SHIRO-550)
 - encrypted cookie (with the hardcoded key)
 
@@ -499,7 +559,7 @@ no spec tool
 - *2.3.1 <= version < 5.9.9*
 - Bamboo JMS port (port 54663 by default)
 
-##### Atlassian Jira 
+##### Atlassian Jira
 - only Jira with a Data Center license
 - RMI (port 40001 by default)
 - [*JRA-46203*](https://jira.atlassian.com/browse/JRA-46203)
@@ -518,20 +578,24 @@ no spec tool
 - *1.6 <= version < 1.14*
 - Apache Tika’s MATLAB Parser
 
-##### Apache HBase 
+##### Apache HBase
 - [HBASE-14799](https://issues.apache.org/jira/browse/HBASE-14799)
 
-##### Apache Camel 
+##### Apache Camel
 - [CVE-2015-5348](https://www.vulners.com/search?query=CVE-2015-5348)
+
+##### Apache Log4j
+- as server
+- [CVE-2017-5645](https://vulners.com/search?query=CVE-2017-5645)
 
 ##### Gradle (gui)
 - custom(?) protocol(60024/tcp)
 - [article](http://philwantsfish.github.io/security/java-deserialization-github)
 
-##### Oracle Hyperion 
+##### Oracle Hyperion
 - [from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
 
-##### Oracle Application Testing Suite 
+##### Oracle Application Testing Suite
 - [CVE-2015-7501](http://www.tenable.com/plugins/index.php?view=single&id=90859)
 
 ##### Red Hat JBoss BPM Suite
@@ -545,7 +609,7 @@ no spec tool
 - [VMSA-2016-0020](http://www.vmware.com/security/advisories/VMSA-2016-0020.html)
 - [CVE-2016-7462](https://www.vulners.com/search?query=CVE-2016-7462)
 
-##### VMWare vCenter/vRealize (various) 
+##### VMWare vCenter/vRealize (various)
 - [CVE-2015-6934](https://www.vulners.com/search?query=CVE-2015-6934)
 - [VMSA-2016-0005](http://www.vmware.com/security/advisories/VMSA-2016-0005.html)
 - JMX
@@ -554,13 +618,13 @@ no spec tool
 - [List of vulnerable products](https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151209-java-deserialization)
 - [CVE-2015-6420](https://www.vulners.com/search?query=CVE-2015-6420)
 
-##### Lexmark Markvision Enterprise 
+##### Lexmark Markvision Enterprise
 - [CVE-2016-1487](http://support.lexmark.com/index?page=content&id=TE747&locale=en&userlocale=EN_US)
 
-#####  McAfee ePolicy Orchestrator 
+#####  McAfee ePolicy Orchestrator
 - [CVE-2015-8765](https://www.vulners.com/search?query=CVE-2015-8765)
 
-#####  HP iMC 
+#####  HP iMC
 - [CVE-2016-4372](https://www.vulners.com/search?query=CVE-2016-4372)
 
 #####  HP Operations Orchestration
@@ -587,57 +651,70 @@ no spec tool
 ##### HP Network Automation
 - [CVE-2016-4385](https://www.vulners.com/search?query=CVE-2016-4385)
 
-##### Adobe Experience Manager 
+##### Adobe Experience Manager
 - [CVE-2016-0958](https://www.vulners.com/search?query=CVE-2016-0958)
 
-#####  Unify OpenScape (various) 
+#####  Unify OpenScape (various)
 - [CVE-2015-8237](https://www.vulners.com/search?query=CVE-2015-8237)
 - RMI (30xx/tcp)
 - [CVE-2015-8238](https://www.vulners.com/search?query=CVE-2015-8238)
 - js-soc protocol (4711/tcp)
 
-##### Apache TomEE
-- [CVE-2015-8581](https://www.vulners.com/search?query=CVE-2015-8581)
-- [CVE-2016-0779](https://www.vulners.com/search?query=CVE-2016-0779)
-
-##### IBM Congnos BI 
-- [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
-
-##### Novell NetIQ Sentinel
-- [?](https://www.tenable.com/plugins/index.php?view=single&id=90602)
-
-##### ForgeRock OpenAM 
-- *9-9.5.5, 10.0.0-10.0.2, 10.1.0-Xpress, 11.0.0-11.0.3 and 12.0.0*
-- [201505-01](https://forgerock.org/2015/07/openam-security-advisory-201505/)
-
-##### F5 (various) 
-- [sol30518307](https://support.f5.com/kb/en-us/solutions/public/k/30/sol30518307.html)
-
-##### Hitachi (various) 
-- [HS16-010](http://www.hitachi.co.jp/Prod/comp/soft1/global/security/info/vuls/HS16-010/index.html)
-- [0328_acc](http://www.hitachi.co.jp/products/it/storage-solutions/global/sec_info/2016/0328_acc.html)
-
 ##### Apache OFBiz
 - [CVE-2016-2170](https://blogs.apache.org/ofbiz/date/20160405)
- 
-##### NetApp (various)
-- [CVE-2015-8545](https://kb.netapp.com/support/index?page=content&id=9010052)
 
 ##### Apache Tomcat
 - requires local access
 - [CVE-2016-0714](https://www.vulners.com/search?query=CVE-2016-0714)
 - [Article](http://engineering.pivotal.io/post/java-deserialization-jmx/)
 
-##### Zimbra Collaboration 
-- *version < 8.7.0*
+##### Apache TomEE
+- [CVE-2015-8581](https://www.vulners.com/search?query=CVE-2015-8581)
+- [CVE-2016-0779](https://www.vulners.com/search?query=CVE-2016-0779)
+
+##### IBM Congnos BI
+- [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
+
+##### Novell NetIQ Sentinel
+- [?](https://www.tenable.com/plugins/index.php?view=single&id=90602)
+
+##### ForgeRock OpenAM
+- *9-9.5.5, 10.0.0-10.0.2, 10.1.0-Xpress, 11.0.0-11.0.3 and 12.0.0*
+- [201505-01](https://forgerock.org/2015/07/openam-security-advisory-201505/)
+
+##### F5 (various)
+- [sol30518307](https://support.f5.com/kb/en-us/solutions/public/k/30/sol30518307.html)
+
+##### Hitachi (various)
+- [HS16-010](http://www.hitachi.co.jp/Prod/comp/soft1/global/security/info/vuls/HS16-010/index.html)
+- [0328_acc](http://www.hitachi.co.jp/products/it/storage-solutions/global/sec_info/2016/0328_acc.html)
+
+##### NetApp (various)
+- [CVE-2015-8545](https://kb.netapp.com/support/index?page=content&id=9010052)
+
+##### Zimbra Collaboration
+- < 8.7.0
 - [CVE-2016-3415](https://www.vulners.com/search?query=CVE-2016-3415)
+
+##### Adobe ColdFusion
+- <= 2016 Update 5
+- <= 11 update 13
+- [CVE-2017-11283](https://www.vulners.com/search?query=CVE-2017-11283)
+- [CVE-2017-11284](https://www.vulners.com/search?query=CVE-2017-11284)
+
+##### Code42 CrashPlan
+- *TCP port 4282*
+- RMI (?)
+- 5.4.x
+- [CVE-2017-9830](https://www.vulners.com/search?query=CVE-2017-9830)
+- [Details](https://blog.radicallyopensecurity.com/CVE-2017-9830.html)
 
 ##### Apache Batchee
 ##### Apache JCS
 ##### Apache OpenJPA
 ##### Apache OpenWebBeans
 
-### Protection 
+### Protection
 - [Look-ahead Java deserialization](http://www.ibm.com/developerworks/library/se-lookahead/ )
 - [NotSoSerial](https://github.com/kantega/notsoserial)
 - [SerialKiller](https://github.com/ikkisoft/SerialKiller)
@@ -645,9 +722,9 @@ no spec tool
 - [Name Space Layout Randomization](http://www.waratek.com/warateks-name-space-layout-randomization-nslr/)
 - [Some protection bypasses](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet/blob/master/README.md#serial-killer-silently-pwning-your-java-endpoints)
 - Tool: [Serial Whitelist Application Trainer](https://github.com/cschneider4711/SWAT)
-- [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290) in JDK 6u141, 7u131, 8u121 
+- [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290) in JDK 6u141, 7u131, 8u121
 
-### For Android 
+### For Android
 - [One Class to Rule Them All: 0-Day Deserialization Vulnerabilities in Android](https://www.usenix.org/conference/woot15/workshop-program/presentation/peles)
 - [Android Serialization Vulnerabilities Revisited](https://www.rsaconference.com/events/us16/agenda/sessions/2455/android-serialization-vulnerabilities-revisited)
 
@@ -661,7 +738,7 @@ Payload generators:
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
-## XStream (XML/JSON/various) 
+## XStream (XML/JSON/various)
 How it works:
 
 - [http://www.pwntester.com/blog/2013/12/23/rce-via-xstream-object-deserialization38/](http://www.pwntester.com/blog/2013/12/23/rce-via-xstream-object-deserialization38/)
@@ -673,12 +750,22 @@ Payload generators:
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
+Exploits:
+##### Apache Struts (S2-052)
+- <= 2.3.34
+- <= 2.5.13
+- REST plugin
+- [CVE-2017-9805](https://www.vulners.com/search?query=CVE-2017-9805)
+
+[Exploit](https://www.exploit-db.com/exploits/42627/)
+
 Vulnerable apps (without public sploits/need more info):
-##### Atlassian Bamboo 
+##### Atlassian Bamboo
 - [CVE-2016-5229](https://www.vulners.com/search?query=CVE-2016-5229)
 
-##### Jenkins 
+##### Jenkins
 - [CVE-2017-2608](https://www.vulners.com/search?query=CVE-2017-2608)
+
 
 ## Kryo (binary)
 
@@ -724,7 +811,7 @@ Payload generators:
 
 ## Jackson (JSON)
 *vulnerable in some configuration*
- 
+
 How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
@@ -734,7 +821,7 @@ Payload generators:
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
 Vulnerable apps (without public sploits/need more info):
-##### Apache Camel 
+##### Apache Camel
 - [CVE-2016-8749](https://www.vulners.com/search?query=CVE-2016-8749)
 
 ## Red5 IO AMF (AMF)
@@ -747,7 +834,7 @@ Payload generators:
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
 Vulnerable apps (without public sploits/need more info):
-##### Apache OpenMeetings 
+##### Apache OpenMeetings
 - [CVE-2017-5878](https://www.vulners.com/search?query=CVE-2017-5878)
 
 ## Apache Flex BlazeDS (AMF)
@@ -761,16 +848,16 @@ Payload generators:
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
 Vulnerable apps (without public sploits/need more info):
-##### Adobe ColdFusion 
+##### Adobe ColdFusion
 - [CVE-2017-3066](https://www.vulners.com/search?query=CVE-2017-3066)
 - *<= 2016 Update 3*
 - *<= 11 update 11*
 - *<= 10 Update 22*
 
-##### Apache BlazeDS 
+##### Apache BlazeDS
 - [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
 
-##### VMWare VCenter 
+##### VMWare VCenter
 - [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
 
 ## Flamingo AMF  (AMF)
@@ -798,13 +885,13 @@ Payload generators:
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
 Vulnerable apps (without public sploits/need more info):
-##### Resteasy 
+##### Resteasy
 - [CVE-2016-9606](https://www.vulners.com/search?query=CVE-2016-9606)
 
-##### Apache Camel 
+##### Apache Camel
 - [CVE-2017-3159](https://www.vulners.com/search?query=CVE-2017-3159)
 
-##### Apache Brooklyn 
+##### Apache Brooklyn
 - [CVE-2016-8744](https://www.vulners.com/search?query=CVE-CVE-2016-8744)
 
 ## jYAML (YAML)
@@ -829,7 +916,7 @@ Payload generators:
 
 Some serialization libs are safe (or almost safe) [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
-However, it's not a recomendation, but just a list of other libs that has been researched by someone:
+However, it's not a recommendation, but just a list of other libs that has been researched by someone:
 
 - JAXB
 - XmlBeans
