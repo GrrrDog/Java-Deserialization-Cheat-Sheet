@@ -102,6 +102,12 @@ by deadcode.me
 - [Part I - Commons Gadgets](https://deadcode.me/blog/2016/09/02/Blind-Java-Deserialization-Commons-Gadgets.html)
 - [Part II - exploitation rev 2](https://deadcode.me/blog/2016/09/18/Blind-Java-Deserialization-Part-II.html)
 
+##### An Overview of Deserialization Vulnerabilities in the Java Virtual Machine (JVM)
+by [@joaomatosf](https://twitter.com/joaomatosf)
+
+- [Slides](https://www.slideshare.net/joaomatosf_/an-overview-of-deserialization-vulnerabilities-in-the-java-virtual-machine-jvm-h2hc-2017)
+- [Examples](https://github.com/joaomatosf/JavaDeserH2HC)
+
 ### Payload generators
 ##### ysoserial
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
@@ -259,10 +265,19 @@ no spec tool
 
 [JexBoss](https://github.com/joaomatosf/jexboss)
 
-##### Red Hat JBoss (2)
+##### Red Hat JBoss 6.X
+- *http://jboss_server/invoker/readonly*
+- *Default port - 8080/tcp*
+- [CVE-2017-12149](https://www.vulners.com/search?query=CVE-2017-12149)
+- JBoss 6.X and EAP 5.X 
+- [Details](https://github.com/joaomatosf/JavaDeserH2HC)
+
+no spec tool
+
+##### Red Hat JBoss 4.x
 - *http://jboss_server/jbossmq-httpil/HTTPServerILServlet/*
 - <= 4.x
-- [Details](https://www.vulners.com/search?query=CVE-2017-7504)
+- [CVE-2017-7504](https://www.vulners.com/search?query=CVE-2017-7504)
 
 no spec tool
 
@@ -285,7 +300,7 @@ no spec tool
 
 ##### Jenkins (s)
 - *Jenkins CLI LDAP*
-- *Default port - High number/tcp*
+- *Default port - High number/tcp
 - <= 2.32
 - <= 2.19.3 (LTS)
 - [CVE-2016-9299](https://www.vulners.com/search?query=CVE-2016-9299)
@@ -804,6 +819,7 @@ How it works:
 
 Payload generators:
 
+- [https://adamcaudill.com/2017/10/04/exploiting-jackson-rce-cve-2017-7525/](https://adamcaudill.com/2017/10/04/exploiting-jackson-rce-cve-2017-7525/)
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
 Vulnerable apps (without public sploits/need more info):
