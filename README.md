@@ -235,6 +235,7 @@ no spec tool
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
+[WLT3Serial](https://github.com/Bort-Millipede/WLT3Serial) 
 
 ##### IBM Websphere (1)
 - *wsadmin*
