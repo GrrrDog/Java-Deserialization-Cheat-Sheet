@@ -736,9 +736,18 @@ How it works:
 - [http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html)
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+Exploits:
+##### Oracle Weblogic
+- <= 10.3.6.0.0
+- <= 12.1.3.0.0
+- <= 12.2.1.2.0
+- <= 12.2.1.1.0
+- *http://weblogic_server/wls-wsat/CoordinatorPortType*
+- [CVE-2017-3506](https://www.vulners.com/search?query=CVE-2017-3506)
+- [CVE-2017-10271](https://www.vulners.com/search?query=CVE-2017-10271)
+- [Details](https://blog.nsfocusglobal.com/threats/vulnerability-analysis/technical-analysis-and-solution-of-weblogic-server-wls-component-vulnerability/)
 
-- [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+[Exploit](https://github.com/1337g/CVE-2017-10271/blob/master/CVE-2017-10271.py)
 
 ## XStream (XML/JSON/various)
 How it works:
