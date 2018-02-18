@@ -419,7 +419,7 @@ no spec tool
 - 2.0.0 <= version < 2.0.1
 - 2.1.0 <= version < 2.1.1
 - it does not check MAC
-- [CVE-2016-5004](https://www.vulners.com/search?query=CVE-2016-5019)
+- [CVE-2016-5019](https://www.vulners.com/search?query=CVE-2016-5019)
 
 no spec tool
 
