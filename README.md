@@ -20,6 +20,7 @@ Please, use **#javadeser** hash tag for tweets.
 - [Castor (XML)](#castor-xml)
 - [json-io (JSON)](#json-io-json)
 - [Jackson (JSON)](#jackson-json)
+- [Fastjson (JSON)](#fastjson-json)
 - [Red5 IO AMF (AMF)](#red5-io-amf-amf)
 - [Apache Flex BlazeDS (AMF)](#apache-flex-blazeds-amf)
 - [Flamingo AMF  (AMF)](#flamingo-amf--amf)
@@ -825,7 +826,7 @@ Payload generators:
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
 ## Jackson (JSON)
-*vulnerable in some configuration*
+*vulnerable in specific configuration*
 
 How it works:
 
@@ -839,6 +840,17 @@ Payload generators:
 Vulnerable apps (without public sploits/need more info):
 ##### Apache Camel
 - [CVE-2016-8749](https://www.vulners.com/search?query=CVE-2016-8749)
+
+## Fastjson (JSON)
+
+How it works (in Chinese):
+
+- [https://www.secfree.com/article-590.html](https://www.secfree.com/article-590.html) 
+- [Official advisory](https://github.com/alibaba/fastjson/wiki/security_update_20170315)
+
+PoC:
+
+- [https://github.com/iBearcat/Fastjson-Payload](https://github.com/iBearcat/Fastjson-Payload)
 
 ## Red5 IO AMF (AMF)
 How it works:
