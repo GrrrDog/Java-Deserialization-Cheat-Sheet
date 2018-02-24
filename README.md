@@ -247,6 +247,8 @@ no spec tool
 
 [serialator](https://github.com/roo7break/serialator)
 
+[CoalfireLabs/java_deserialization_exploits](https://github.com/Coalfire-Research/java-deserialization-exploits/tree/master/WebSphere)
+
 ##### IBM Websphere (2)
 - When using custom form authentication
 - WASPostParam cookie
@@ -378,7 +380,7 @@ no spec tool
 - <= 3.0.2
 - [CVE-2016-1291](https://www.vulners.com/search?query=CVE-2016-1291)
 
-[CoalfireLabs/java_deserialization_exploits](https://github.com/CoalfireLabs/java_deserialization_exploits/tree/master/CVE-2016-1291)
+[CoalfireLabs/java_deserialization_exploits](https://github.com/Coalfire-Research/java-deserialization-exploits/tree/master/CiscoPrime)
 
 ##### Cisco ACS
 - <= 5.8.0.32.2
