@@ -727,8 +727,12 @@ no spec tool
 - [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290) in JDK 6u141, 7u131, 8u121
 
 ### For Android
+#### Main talks & presentations & docs
 - [One Class to Rule Them All: 0-Day Deserialization Vulnerabilities in Android](https://www.usenix.org/conference/woot15/workshop-program/presentation/peles)
 - [Android Serialization Vulnerabilities Revisited](https://www.rsaconference.com/events/us16/agenda/sessions/2455/android-serialization-vulnerabilities-revisited)
+
+#### Tools
+- [Android Java Deserialization Vulnerability Tester](https://github.com/modzero/modjoda)
 
 ## XMLEncoder (XML)
 How it works:
