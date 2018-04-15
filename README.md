@@ -448,6 +448,13 @@ no spec tool
 
 no spec tool
 
+##### ManageEngine Applications Manager
+- version: 12, 13
+- RMI
+- [CVE-2016-9498](https://www.vulners.com/search?query=CVE-2016-9498)
+
+[ysoserial](#ysoserial)
+
 ##### Apache ActiveMQ - Client lib
 - [JMS](#jms)
 
