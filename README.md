@@ -188,6 +188,9 @@ How it works:
 
 Won't fix DoS using default Java classes (JRE)
 
+##### DoS against Serialization Filtering (JEP-290)
+- [CVE-2018-2677](https://www.waratek.com/waratek-identifies-two-new-deserialization-vulnerabilities-cve-2018-2677/)
+
 ### Exploits
 
 no spec tool - You don't need a special tool (just Burp/ZAP + payload)
@@ -455,6 +458,11 @@ no spec tool
 
 [ysoserial](#ysoserial)
 
+##### Apache Shiro
+- [SHIRO-550](https://issues.apache.org/jira/browse/SHIRO-550)
+- encrypted cookie (with the hardcoded key)
+- [Exploitation (in Chinese)](http://blog.knownsec.com/2016/08/apache-shiro-java/)
+
 ##### Apache ActiveMQ - Client lib
 - [JMS](#jms)
 
@@ -550,10 +558,6 @@ no spec tool
 - [SOLR-8262](https://issues.apache.org/jira/browse/SOLR-8262)
 - 5.1 <= version <=5.4
 - /stream handler uses Java serialization for RPC
-
-##### Apache Shiro
-- [SHIRO-550](https://issues.apache.org/jira/browse/SHIRO-550)
-- encrypted cookie (with the hardcoded key)
 
 ##### Apache ActiveMQ (2)
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
@@ -735,11 +739,13 @@ no spec tool
 - [Some protection bypasses](https://github.com/GrrrDog/Java-Deserialization-Cheat-Sheet/blob/master/README.md#serial-killer-silently-pwning-your-java-endpoints)
 - Tool: [Serial Whitelist Application Trainer](https://github.com/cschneider4711/SWAT)
 - [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290) in JDK 6u141, 7u131, 8u121
+  - [A First Look Into Java's New Serialization Filtering](https://dzone.com/articles/a-first-look-into-javas-new-serialization-filterin)
 
 ### For Android
 #### Main talks & presentations & docs
 - [One Class to Rule Them All: 0-Day Deserialization Vulnerabilities in Android](https://www.usenix.org/conference/woot15/workshop-program/presentation/peles)
 - [Android Serialization Vulnerabilities Revisited](https://www.rsaconference.com/events/us16/agenda/sessions/2455/android-serialization-vulnerabilities-revisited)
+- [A brief history of Android deserialization vulnerabilities](https://lgtm.com/blog/android_deserialization)
 
 #### Tools
 - [Android Java Deserialization Vulnerability Tester](https://github.com/modzero/modjoda)
@@ -840,11 +846,13 @@ Payload generators:
 How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+- [On Jackson CVEs: Don’t Panic — Here is what you need to know](https://medium.com/@cowtowncoder/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062)
 
 Payload generators:
 
 - [https://adamcaudill.com/2017/10/04/exploiting-jackson-rce-cve-2017-7525/](https://adamcaudill.com/2017/10/04/exploiting-jackson-rce-cve-2017-7525/)
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+- [blacklist bypass - CVE-2017-17485](https://github.com/irsl/jackson-rce-via-spel)
 
 Vulnerable apps (without public sploits/need more info):
 ##### Apache Camel
@@ -890,6 +898,8 @@ Vulnerable apps (without public sploits/need more info):
 - *<= 2016 Update 3*
 - *<= 11 update 11*
 - *<= 10 Update 22*
+
+- [Exploiting Adobe ColdFusion before CVE-2017-3066](http://codewhitesec.blogspot.ru/2018/03/exploiting-adobe-coldfusion.html)
 
 ##### Apache BlazeDS
 - [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
