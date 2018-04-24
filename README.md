@@ -234,12 +234,15 @@ no spec tool
 - *Default - 7001/tcp on localhost interface*
 - [CVE-2015-4852](https://www.vulners.com/search?query=CVE-2015-4852)
 - [Blacklist bypass](https://www.tenable.com/security/research/tra-2017-07)
+- [Blacklist bypass - CVE-2018-2628](https://github.com/brianwrf/CVE-2018-2628)
 
 [loubia](https://github.com/metalnas/loubia) (tested on 11g and 12c, supports t3s)
 
 [JavaUnserializeExploits](https://github.com/foxglovesec/JavaUnserializeExploits) (doesn't work for all Weblogic versions)
 
 [WLT3Serial](https://github.com/Bort-Millipede/WLT3Serial) 
+
+[CVE-2018-2628 sploit](https://github.com/brianwrf/CVE-2018-2628)
 
 ##### IBM Websphere (1)
 - *wsadmin*
@@ -450,6 +453,13 @@ no spec tool
 - [Details](https://www.tenable.com/security/research/tra-2017-01)
 
 no spec tool
+
+##### ScrumWorks Pro
+- */UFC*
+- <= 6.7.0
+- [Details](https://blogs.securiteam.com/index.php/archives/3387)
+
+[PoC](https://blogs.securiteam.com/index.php/archives/3387)
 
 ##### ManageEngine Applications Manager
 - version: 12, 13
@@ -725,9 +735,11 @@ no spec tool
 - [CVE-2017-9830](https://www.vulners.com/search?query=CVE-2017-9830)
 - [Details](https://blog.radicallyopensecurity.com/CVE-2017-9830.html)
 
+##### Apache OpenJPA
+- [CVE-2013-1768](http://seclists.org/fulldisclosure/2013/Jun/98)
+
 ##### Apache Batchee
 ##### Apache JCS
-##### Apache OpenJPA
 ##### Apache OpenWebBeans
 
 ### Protection
