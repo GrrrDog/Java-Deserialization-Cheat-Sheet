@@ -315,8 +315,6 @@ no spec tool
 - <= 2.19.3 (LTS)
 - [CVE-2016-9299](https://www.vulners.com/search?query=CVE-2016-9299)
 
-Metasploit Module for CVE-2016-9299
-
 ##### CloudBees Jenkins
 - <= 2.32.1
 - [CVE-2017-1000353](https://www.vulners.com/search?query=CVE-2017-1000353)
