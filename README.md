@@ -211,7 +211,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 [JexBoss](https://github.com/joaomatosf/jexboss)
 
 ##### JNDI/LDAP
-- When we control an adrress for lookup of JNDI (context.lookup(address) and can have backconnect from a server
+- When we control an address for lookup of JNDI (context.lookup(address) and can have backconnect from a server
 - [Full info](#a-journey-from-jndildap-manipulation-to-remote-code-execution-dream-land)
 - [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
 
