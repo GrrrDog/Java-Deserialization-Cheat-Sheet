@@ -148,12 +148,16 @@ URLDNS              |@gebl| | jre only vuln detect
 Wicket1             |@jacob-baines               |wicket-util:6.23.0, slf4j-api:1.6.4
 
 
-Additional tools (integration ysoserial with Burp Suite):
+Additional tools (detetection, integration ysoserial with Burp Suite):
+- [Freddy](https://github.com/nccgroup/freddy)
 - [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller)
 - [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
 - [Burp-ysoserial](https://github.com/summitt/burp-ysoserial)
 - [SuperSerial](https://github.com/DirectDefense/SuperSerial)
 - [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
+
+Additional tool to test RMI:
+- [BaRMIe](https://github.com/NickstaDB/BaRMIe)
 
 Full shell (pipes, redirects and other stuff):
 - [$@|sh – Or: Getting a shell environment from Runtime.exec](http://codewhitesec.blogspot.ru/2015/03/sh-or-getting-shell-environment-from.html)
@@ -190,6 +194,10 @@ Won't fix DoS using default Java classes (JRE)
 
 ##### DoS against Serialization Filtering (JEP-290)
 - [CVE-2018-2677](https://www.waratek.com/waratek-identifies-two-new-deserialization-vulnerabilities-cve-2018-2677/)
+
+
+##### Tool to search gadgets
+- [Gadget Inspector](https://github.com/JackOfMostTrades/gadgetinspector)
 
 ### Exploits
 
@@ -233,8 +241,11 @@ no spec tool
 - *Protocol*
 - *Default - 7001/tcp on localhost interface*
 - [CVE-2015-4852](https://www.vulners.com/search?query=CVE-2015-4852)
-- [Blacklist bypass](https://www.tenable.com/security/research/tra-2017-07)
+- [Blacklist bypass - CVE-2017-3248](https://www.tenable.com/security/research/tra-2017-07)
+- [Blacklist bypass - CVE-2017-3248 PoC](https://github.com/quentinhardy/scriptsAndExploits/blob/master/exploits/weblogic/exploit-CVE-2017-3248-bobsecq.py)
 - [Blacklist bypass - CVE-2018-2628](https://github.com/brianwrf/CVE-2018-2628)
+- [Blacklist bypass - CVE-2018-3245](https://blogs.projectmoon.pw/2018/10/19/Oracle-WebLogic-Two-RCE-Deserialization-Vulnerabilities/)
+- [Blacklist bypass - CVE-2018-3191](https://mp.weixin.qq.com/s/ebKHjpbQcszAy_vPocW0Sg)
 
 [loubia](https://github.com/metalnas/loubia) (tested on 11g and 12c, supports t3s)
 
@@ -243,6 +254,11 @@ no spec tool
 [WLT3Serial](https://github.com/Bort-Millipede/WLT3Serial) 
 
 [CVE-2018-2628 sploit](https://github.com/brianwrf/CVE-2018-2628)
+
+##### Oracle Weblogic
+- auth required
+- [How it works](https://blogs.projectmoon.pw/2018/10/19/Oracle-WebLogic-Two-RCE-Deserialization-Vulnerabilities/)
+- [CVE-2018-3252](https://www.vulners.com/search?query=CVE-2018-3252)
 
 ##### IBM Websphere (1)
 - *wsadmin*
@@ -541,6 +557,43 @@ no spec tool
 
 [ysoserial](#ysoserial)
 
+##### Apache Synapse
+- <= 3.0.1
+- RMI 
+- [Exploit](https://github.com/iBearcat/CVE-2017-15708)
+
+[ysoserial](#ysoserial)
+
+##### Apache Jmeter
+- <= 3.0.1
+- RMI 
+- When using Distributed Test only 
+- [Exploit](https://github.com/iBearcat/CVE-2018-1297)
+
+[ysoserial](#ysoserial)
+
+##### Jolokia
+- <= 1.4.0
+- JNDI injection 
+- /jolokia/ 
+- [Exploit](https://blog.gdssecurity.com/labs/2018/4/18/jolokia-vulnerabilities-rce-xss.html)
+
+##### RichFaces
+- all versions
+- [Poor RichFaces](https://codewhitesec.blogspot.com/2018/05/poor-richfaces.html)
+- [When EL Injection meets Java Deserialization](https://tint0.com/when-el-injection-meets-java-deserialization/)
+ 
+##### Apache James 
+- < 3.0.1 
+- [Analysis of CVE-2017-12628](https://nickbloor.co.uk/2017/10/22/analysis-of-cve-2017-12628/)
+ 
+[ysoserial](#ysoserial)
+ 
+##### Oracle RDBMS
+- priv escalation
+- [ Oracle Privilege Escalation via Deserialization](http://obtruse.syfrtext.com/2018/07/oracle-privilege-escalation-via.html)
+- [CVE-2018-3004](https://www.vulners.com/search?query=CVE-2018-3004)
+
 ### Detect
 ##### Code review
 - *ObjectInputStream.readObject*
@@ -563,6 +616,7 @@ no spec tool
 - [Burp-ysoserial](https://github.com/summitt/burp-ysoserial)
 - [SuperSerial](https://github.com/DirectDefense/SuperSerial)
 - [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
+- [Freddy](https://github.com/nccgroup/freddy)
 
 ### Vulnerable apps (without public sploits/need more info)
 
@@ -730,11 +784,18 @@ no spec tool
 - < 8.7.0
 - [CVE-2016-3415](https://www.vulners.com/search?query=CVE-2016-3415)
 
-##### Adobe ColdFusion
-- <= 2016 Update 5
-- <= 11 update 13
+##### Adobe ColdFusion (1)
+- <= 2016 Update 4
+- <= 11 update 12
 - [CVE-2017-11283](https://www.vulners.com/search?query=CVE-2017-11283)
 - [CVE-2017-11284](https://www.vulners.com/search?query=CVE-2017-11284)
+
+##### Adobe ColdFusion (2)
+- RMI
+- <= 2016 Update 5
+- <= 11 update 13
+- [Another ColdFusion RCE – CVE-2018-4939](https://nickbloor.co.uk/2018/06/18/another-coldfusion-rce-cve-2018-4939/)
+- [CVE-2018-4939](https://www.vulners.com/search?query=CVE-2018-4939)
 
 ##### Code42 CrashPlan
 - *TCP port 4282*
@@ -776,7 +837,15 @@ How it works:
 - [http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html)
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Exploits:
+### Detect
+##### Code review
+- java.beans.XMLDecoder
+- readObject
+ 
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
+
+### Exploits
 ##### Oracle Weblogic
 - <= 10.3.6.0.0
 - <= 12.1.3.0.0
@@ -797,11 +866,11 @@ How it works:
 - [https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-2-xstream](https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-2-xstream)
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
-Exploits:
+### Exploits
 ##### Apache Struts (S2-052)
 - <= 2.3.34
 - <= 2.5.13
@@ -810,13 +879,20 @@ Exploits:
 
 [Exploit](https://www.exploit-db.com/exploits/42627/)
 
-Vulnerable apps (without public sploits/need more info):
+### Detect
+##### Code review
+- com.thoughtworks.xstream.XStream
+- xs.fromXML(data)
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
+
+### Vulnerable apps (without public sploits/need more info):
 ##### Atlassian Bamboo
 - [CVE-2016-5229](https://www.vulners.com/search?query=CVE-2016-5229)
 
 ##### Jenkins
 - [CVE-2017-2608](https://www.vulners.com/search?query=CVE-2017-2608)
-
 
 ## Kryo (binary)
 
@@ -825,29 +901,64 @@ How it works:
 - [https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-1-kryo](https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-1-kryo)
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+### Detect
+##### Code review
+- com.esotericsoftware.kryo.io.Input
+- SomeClass object = (SomeClass)kryo.readClassAndObject(input);
+- SomeClass someObject = kryo.readObjectOrNull(input, SomeClass.class);
+- SomeClass someObject = kryo.readObject(input, SomeClass.class);
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
 
 ## Hessian/Burlap (binary/XML)
 How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+### Detect
+##### Code review
+- com.caucho.hessian.io
+- AbstractHessianInput
+- com.caucho.burlap.io.BurlapInput;
+- com.caucho.burlap.io.BurlapOutput;
+- BurlapInput in = new BurlapInput(is);
+- Person2 p1 = (Person2) in.readObject();
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
 
 ## Castor (XML)
 How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
-Vulnerable apps (without public sploits/need more info):
+### Detect
+##### Code review
+- org.codehaus.castor
+- org.exolab.castor.xml.Unmarshaller 
+- org.springframework.oxm.Unmarshaller
+- Unmarshaller.unmarshal(Person.class, reader)
+- unmarshaller = context.createUnmarshaller();
+- unmarshaller.unmarshal(new StringReader(data));
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
+
+### Vulnerable apps (without public sploits/need more info):
+
 ##### OpenNMS
 - [NMS-9100](https://issues.opennms.org/browse/NMS-9100)
 
@@ -856,9 +967,22 @@ How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+Exploitation examples:
+
+- [Experiments with JSON-IO, Serialization, Mass Assignment, and General Java Object Wizardry](https://versprite.com/blog/application-security/experiments-with-json-io-serialization-mass-assignment-and-general-java-object-wizardry/)
+- [JSON Deserialization Memory Corruption Vulnerabilities on Android](https://versprite.com/blog/json-deserialization-memory-corruption-vulnerabilities/)
+
+### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+### Detect
+##### Code review
+- com.cedarsoftware.util.io.JsonReader
+- JsonReader.jsonToJava
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
 
 ## Jackson (JSON)
 *vulnerable in specific configuration*
@@ -867,14 +991,28 @@ How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 - [On Jackson CVEs: Don’t Panic — Here is what you need to know](https://medium.com/@cowtowncoder/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062)
+- [Jackson Deserialization Vulnerabilities](https://www.nccgroup.trust/globalassets/our-research/us/whitepapers/2018/jackson_deserialization.pdf)
 
-Payload generators:
+### Payload generators
 
 - [https://adamcaudill.com/2017/10/04/exploiting-jackson-rce-cve-2017-7525/](https://adamcaudill.com/2017/10/04/exploiting-jackson-rce-cve-2017-7525/)
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 - [blacklist bypass - CVE-2017-17485](https://github.com/irsl/jackson-rce-via-spel)
+- [blacklist bypass - CVE-2017-15095](https://github.com/SecureSkyTechnology/study-struts2-s2-054_055-jackson-cve-2017-7525_cve-2017-15095) 
 
-Vulnerable apps (without public sploits/need more info):
+### Detect
+##### Code review
+- com.fasterxml.jackson.databind.ObjectMapper
+- ObjectMapper mapper = new ObjectMapper();  
+- objectMapper.enableDefaultTyping();
+- @JsonTypeInfo(use=JsonTypeInfo.Id.CLASS, include=JsonTypeInfo.As.PROPERTY, property="@class") 
+- public Object message; 
+- mapper.readValue(data, Object.class); 
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
+
+### Vulnerable apps (without public sploits/need more info):
 ##### Apache Camel
 - [CVE-2016-8749](https://www.vulners.com/search?query=CVE-2016-8749)
 
@@ -885,20 +1023,51 @@ How it works (in Chinese):
 - [https://www.secfree.com/article-590.html](https://www.secfree.com/article-590.html) 
 - [Official advisory](https://github.com/alibaba/fastjson/wiki/security_update_20170315)
 
-PoC:
+### Detect
+##### Code review
+- com.alibaba.fastjson.JSON
+- JSON.parseObject
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
+
+### Payload generators
 
 - [https://github.com/iBearcat/Fastjson-Payload](https://github.com/iBearcat/Fastjson-Payload)
+
+## Genson (JSON)
+
+How it works:
+
+- [Friday the 13th JSON Attacks](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-JSON-Attacks-wp.pdf) 
+
+### Detect
+##### Code review
+- com.owlike.genson.Genson
+- useRuntimeType
+- genson.deserialize
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
 
 ## Red5 IO AMF (AMF)
 How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
-Vulnerable apps (without public sploits/need more info):
+### Detect
+##### Code review
+- org.red5.io
+- Deserializer.deserialize(i, Object.class);
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
+
+### Vulnerable apps (without public sploits/need more info):
 ##### Apache OpenMeetings
 - [CVE-2017-5878](https://www.vulners.com/search?query=CVE-2017-5878)
 
@@ -908,11 +1077,18 @@ How it works:
 - [AMF – Another Malicious Format](http://codewhitesec.blogspot.ru/2017/04/amf.html)
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
-Vulnerable apps (without public sploits/need more info):
+### Detect
+##### Code review
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
+
+### Vulnerable apps (without public sploits/need more info):
+
 ##### Adobe ColdFusion
 - [CVE-2017-3066](https://www.vulners.com/search?query=CVE-2017-3066)
 - *<= 2016 Update 3*
@@ -920,6 +1096,7 @@ Vulnerable apps (without public sploits/need more info):
 - *<= 10 Update 22*
 
 - [Exploiting Adobe ColdFusion before CVE-2017-3066](http://codewhitesec.blogspot.ru/2018/03/exploiting-adobe-coldfusion.html)
+- [PoC](https://github.com/depthsecurity/coldfusion_blazeds_des)
 
 ##### Apache BlazeDS
 - [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
@@ -932,26 +1109,46 @@ How it works:
 
 - [AMF – Another Malicious Format](http://codewhitesec.blogspot.ru/2017/04/amf.html)
 
+### Detect
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
+
 ## GraniteDS  (AMF)
 How it works:
 
 - [AMF – Another Malicious Format](http://codewhitesec.blogspot.ru/2017/04/amf.html)
+
+### Detect
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
 
 ## WebORB for Java  (AMF)
 How it works:
 
 - [AMF – Another Malicious Format](http://codewhitesec.blogspot.ru/2017/04/amf.html)
 
+### Detect
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
+
 ## SnakeYAML (YAML)
 How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 
-Vulnerable apps (without public sploits/need more info):
+### Detect
+##### Code review
+- org.yaml.snakeyaml.Yaml
+- yaml.load
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
+
+### Vulnerable apps (without public sploits/need more info):
 ##### Resteasy
 - [CVE-2016-9606](https://www.vulners.com/search?query=CVE-2016-9606)
 
@@ -966,18 +1163,32 @@ How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+### Detect
+- org.ho.yaml.Yaml
+- Yaml.loadType(data, Object.class);
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
 
 ## YamlBeans (YAML)
 How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
-Payload generators:
+### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+
+### Detect
+- com.esotericsoftware.yamlbeans
+- YamlReader r = new YamlReader(data, yc);
+
+##### Burp plugins
+- [Freddy](https://github.com/nccgroup/freddy)
 
 ## "Safe" deserialization
 
