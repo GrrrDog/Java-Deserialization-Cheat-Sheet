@@ -1199,5 +1199,6 @@ However, it's not a recommendation, but just a list of other libs that has been 
 - JAXB
 - XmlBeans
 - Jibx
-- ProtobufGSON
+- Protobuf
+- GSON
 - GWT-RPC
