@@ -21,6 +21,7 @@ Please, use **#javadeser** hash tag for tweets.
 - [json-io (JSON)](#json-io-json)
 - [Jackson (JSON)](#jackson-json)
 - [Fastjson (JSON)](#fastjson-json)
+- [Genson (JSON)](#genson-json)
 - [Red5 IO AMF (AMF)](#red5-io-amf-amf)
 - [Apache Flex BlazeDS (AMF)](#apache-flex-blazeds-amf)
 - [Flamingo AMF  (AMF)](#flamingo-amf--amf)
@@ -589,11 +590,6 @@ no spec tool
  
 [ysoserial](#ysoserial)
  
-##### Oracle RDBMS
-- priv escalation
-- [ Oracle Privilege Escalation via Deserialization](http://obtruse.syfrtext.com/2018/07/oracle-privilege-escalation-via.html)
-- [CVE-2018-3004](https://www.vulners.com/search?query=CVE-2018-3004)
-
 ### Detect
 ##### Code review
 - *ObjectInputStream.readObject*
@@ -857,6 +853,10 @@ How it works:
 - [Details](https://blog.nsfocusglobal.com/threats/vulnerability-analysis/technical-analysis-and-solution-of-weblogic-server-wls-component-vulnerability/)
 
 [Exploit](https://github.com/1337g/CVE-2017-10271/blob/master/CVE-2017-10271.py)
+
+##### Oracle RDBMS
+- priv escalation
+- [Oracle Privilege Escalation via Deserialization](http://obtruse.syfrtext.com/2018/07/oracle-privilege-escalation-via.html)
 
 ## XStream (XML/JSON/various)
 How it works:
