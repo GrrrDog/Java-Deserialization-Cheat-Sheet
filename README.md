@@ -808,6 +808,14 @@ no spec tool
 - [Citrix advisory](https://support.citrix.com/article/CTX234879)
 - [CVE-2018-10654](https://www.vulners.com/search?query=CVE-2018-10654)
 
+##### IBM WebSphere
+- SOAP connector
+- <= 9.0.0.9
+- <= 8.5.5.14
+- <= 8.0.0.15
+- <= 7.0.0.45
+- [CVE-2018-1567](https://www.vulners.com/search?query=CVE-2018-1567)
+
 ##### Code42 CrashPlan
 - *TCP port 4282*
 - RMI (?)
