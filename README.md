@@ -488,6 +488,13 @@ no spec tool
 - encrypted cookie (with the hardcoded key)
 - [Exploitation (in Chinese)](http://blog.knownsec.com/2016/08/apache-shiro-java/)
 
+##### HPE IMC (Intelligent Management Center)
+- WebDMDebugServlet
+- <= 7.3 E0504P2
+- [CVE-2017-12557](https://www.vulners.com/search?query=CVE-2017-12557)
+
+[Metasploit module](https://www.exploit-db.com/exploits/45952)
+
 ##### Apache ActiveMQ - Client lib
 - [JMS](#jms)
 
