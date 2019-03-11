@@ -495,6 +495,13 @@ no spec tool
 
 [Metasploit module](https://www.exploit-db.com/exploits/45952)
 
+##### HP IMC (Intelligent Management Center)
+- RMI
+- <= 7.3 E0504P2
+- [CVE-2017-5792](https://www.vulners.com/search?query=CVE-2017-5792)
+
+[ysoserial](#ysoserial)
+
 ##### Apache ActiveMQ - Client lib
 - [JMS](#jms)
 
