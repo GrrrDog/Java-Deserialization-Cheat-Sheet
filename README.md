@@ -488,7 +488,7 @@ no spec tool
 - encrypted cookie (with the hardcoded key)
 - [Exploitation (in Chinese)](http://blog.knownsec.com/2016/08/apache-shiro-java/)
 
-##### HPE IMC (Intelligent Management Center)
+##### HP IMC (Intelligent Management Center)
 - WebDMDebugServlet
 - <= 7.3 E0504P2
 - [CVE-2017-12557](https://www.vulners.com/search?query=CVE-2017-12557)
@@ -799,6 +799,14 @@ no spec tool
 - <= 11 update 13
 - [Another ColdFusion RCE – CVE-2018-4939](https://nickbloor.co.uk/2018/06/18/another-coldfusion-rce-cve-2018-4939/)
 - [CVE-2018-4939](https://www.vulners.com/search?query=CVE-2018-4939)
+
+##### Citrix XenMobile Server
+- port 45000 
+- when Clustering is enabled
+- Won't Fix (?)
+- 10.7 and 10.8
+- [Citrix advisory](https://support.citrix.com/article/CTX234879)
+- [CVE-2018-10654](https://www.vulners.com/search?query=CVE-2018-10654)
 
 ##### Code42 CrashPlan
 - *TCP port 4282*
