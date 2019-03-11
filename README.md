@@ -1121,11 +1121,18 @@ How it works:
 - [Exploiting Adobe ColdFusion before CVE-2017-3066](http://codewhitesec.blogspot.ru/2018/03/exploiting-adobe-coldfusion.html)
 - [PoC](https://github.com/depthsecurity/coldfusion_blazeds_des)
 
+##### Draytek VigorACS 
+- */ACSServer/messagebroker/amf*
+- at least 2.2.1
+- based on [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
+
+- [PoC](https://github.com/pedrib/PoC/blob/master/exploits/acsPwn/acsPwn.rb)
+
 ##### Apache BlazeDS
 - [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
 
 ##### VMWare VCenter
-- [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
+- based on [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
 
 ## Flamingo AMF  (AMF)
 How it works:
