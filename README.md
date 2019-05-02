@@ -128,6 +128,7 @@ CommonsCollections3 |@frohoff                    |commons-collections:3.1
 CommonsCollections4 |@frohoff                    |commons-collections4:4.0
 CommonsCollections5 |@matthias_kaiser, @jasinner |commons-collections:3.1
 CommonsCollections6 |@matthias_kaiser            |commons-collections:3.1
+CommonsCollections7 |@scristalli, @hanyrax, @EdoardoVignati |commons-collections:3.1
 FileUpload1         |@mbechler                   |commons-fileupload:1.3.1, commons-io:2.4 | file uploading
 Groovy1             |@frohoff                    |groovy:2.3.9
 Hibernate1          |@mbechler|
@@ -140,12 +141,14 @@ JavassistWeld1      |@matthias_kaiser            |javassist:3.12.1.GA, weld-core
 Jdk7u21             |@frohoff|
 Jython1             |@pwntester, @cschneider4711 |jython-standalone:2.5.2
 MozillaRhino1       |@matthias_kaiser            |js:1.7R2
+MozillaRhino2       |@_tint0                     |js:1.7R2
 Myfaces1            |@mbechler|
 Myfaces2            |@mbechler|
 ROME                |@mbechler                   |rome:1.0
 Spring1             |@frohoff                    |spring-core:4.1.4.RELEASE, spring-beans:4.1.4.RELEASE
 Spring2             |@mbechler                   |spring-core:4.1.4.RELEASE, spring-aop:4.1.4.RELEASE, aopalliance:1.0, commons-logging:1.2
-URLDNS              |@gebl| | jre only vuln detect
+URLDNS              |@gebl|						 |jre only vuln detect
+Vaadin1             |@kai_ullrich                |vaadin-server:7.7.14, vaadin-shared:7.7.14  
 Wicket1             |@jacob-baines               |wicket-util:6.23.0, slf4j-api:1.6.4
 
 
@@ -159,6 +162,7 @@ Additional tools (detetection, integration ysoserial with Burp Suite):
 
 Additional tool to test RMI:
 - [BaRMIe](https://github.com/NickstaDB/BaRMIe)
+- [Barmitza](https://github.com/mogwailabs/rmi-deserialization/blob/master/barmitzwa.groovy)
 
 Full shell (pipes, redirects and other stuff):
 - [$@|sh – Or: Getting a shell environment from Runtime.exec](http://codewhitesec.blogspot.ru/2015/03/sh-or-getting-shell-environment-from.html)
@@ -217,6 +221,8 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
 [ysoserial](#ysoserial)
 
+[mjet](https://github.com/mogwailabs/mjet)
+
 [JexBoss](https://github.com/joaomatosf/jexboss)
 
 ##### JNDI/LDAP
@@ -247,6 +253,7 @@ no spec tool
 - [Blacklist bypass - CVE-2018-2628](https://github.com/brianwrf/CVE-2018-2628)
 - [Blacklist bypass - CVE-2018-3245](https://blogs.projectmoon.pw/2018/10/19/Oracle-WebLogic-Two-RCE-Deserialization-Vulnerabilities/)
 - [Blacklist bypass - CVE-2018-3191](https://mp.weixin.qq.com/s/ebKHjpbQcszAy_vPocW0Sg)
+- [CVE-2019-2725](https://paper.seebug.org/910/)
 
 [loubia](https://github.com/metalnas/loubia) (tested on 11g and 12c, supports t3s)
 
@@ -603,7 +610,12 @@ no spec tool
 - [Analysis of CVE-2017-12628](https://nickbloor.co.uk/2017/10/22/analysis-of-cve-2017-12628/)
  
 [ysoserial](#ysoserial)
- 
+
+##### Oracle DB 
+- <= Oracle 12C
+- [CVE-2018-3004 - Oracle Privilege Escalation via Deserialization](http://obtruse.syfrtext.com/2018/07/oracle-privilege-escalation-via.html)
+
+
 ### Detect
 ##### Code review
 - *ObjectInputStream.readObject*
@@ -636,10 +648,14 @@ no spec tool
 ##### SAP P4
 - [info from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
 
-##### Apache SOLR
+##### Apache SOLR (2)
 - [SOLR-8262](https://issues.apache.org/jira/browse/SOLR-8262)
 - 5.1 <= version <=5.4
 - /stream handler uses Java serialization for RPC
+
+- [SOLR-13301](https://issues.apache.org/jira/browse/SOLR-13301)
+- Attack via jmx.serviceUrl
+- [CVE-2019-0192](https://github.com/mpgn/CVE-2019-0192)
 
 ##### Apache ActiveMQ (2)
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
@@ -793,6 +809,8 @@ no spec tool
 ##### Zimbra Collaboration
 - < 8.7.0
 - [CVE-2016-3415](https://www.vulners.com/search?query=CVE-2016-3415)
+- <= 8.8.11
+- [A Saga of Code Executions on Zimbra](https://blog.tint0.com/2019/03/a-saga-of-code-executions-on-zimbra.html)
 
 ##### Adobe ColdFusion (1)
 - <= 2016 Update 4
