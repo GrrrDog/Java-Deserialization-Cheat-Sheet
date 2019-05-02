@@ -805,6 +805,8 @@ no spec tool
 ##### Zimbra Collaboration
 - < 8.7.0
 - [CVE-2016-3415](https://www.vulners.com/search?query=CVE-2016-3415)
+- <= 8.8.11
+- [A Saga of Code Executions on Zimbra](https://blog.tint0.com/2019/03/a-saga-of-code-executions-on-zimbra.html)
 
 ##### Adobe ColdFusion (1)
 - <= 2016 Update 4
