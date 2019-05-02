@@ -147,7 +147,7 @@ Myfaces2            |@mbechler|
 ROME                |@mbechler                   |rome:1.0
 Spring1             |@frohoff                    |spring-core:4.1.4.RELEASE, spring-beans:4.1.4.RELEASE
 Spring2             |@mbechler                   |spring-core:4.1.4.RELEASE, spring-aop:4.1.4.RELEASE, aopalliance:1.0, commons-logging:1.2
-URLDNS              |@gebl						 |jre only vuln detect
+URLDNS              |@gebl|						 |jre only vuln detect
 Vaadin1             |@kai_ullrich                |vaadin-server:7.7.14, vaadin-shared:7.7.14  
 Wicket1             |@jacob-baines               |wicket-util:6.23.0, slf4j-api:1.6.4
 
