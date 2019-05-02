@@ -648,7 +648,7 @@ no spec tool
 ##### SAP P4
 - [info from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
 
-##### Apache SOLR
+##### Apache SOLR (2)
 - [SOLR-8262](https://issues.apache.org/jira/browse/SOLR-8262)
 - 5.1 <= version <=5.4
 - /stream handler uses Java serialization for RPC
