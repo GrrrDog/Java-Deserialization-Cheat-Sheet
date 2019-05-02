@@ -162,6 +162,7 @@ Additional tools (detetection, integration ysoserial with Burp Suite):
 
 Additional tool to test RMI:
 - [BaRMIe](https://github.com/NickstaDB/BaRMIe)
+- [Barmitza](https://github.com/mogwailabs/rmi-deserialization/blob/master/barmitzwa.groovy)
 
 Full shell (pipes, redirects and other stuff):
 - [$@|sh – Or: Getting a shell environment from Runtime.exec](http://codewhitesec.blogspot.ru/2015/03/sh-or-getting-shell-environment-from.html)
@@ -220,6 +221,8 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 
 [ysoserial](#ysoserial)
 
+[mjet](https://github.com/mogwailabs/mjet)
+
 [JexBoss](https://github.com/joaomatosf/jexboss)
 
 ##### JNDI/LDAP
@@ -250,6 +253,7 @@ no spec tool
 - [Blacklist bypass - CVE-2018-2628](https://github.com/brianwrf/CVE-2018-2628)
 - [Blacklist bypass - CVE-2018-3245](https://blogs.projectmoon.pw/2018/10/19/Oracle-WebLogic-Two-RCE-Deserialization-Vulnerabilities/)
 - [Blacklist bypass - CVE-2018-3191](https://mp.weixin.qq.com/s/ebKHjpbQcszAy_vPocW0Sg)
+- [CVE-2019-2725](https://paper.seebug.org/910/)
 
 [loubia](https://github.com/metalnas/loubia) (tested on 11g and 12c, supports t3s)
 
@@ -606,7 +610,12 @@ no spec tool
 - [Analysis of CVE-2017-12628](https://nickbloor.co.uk/2017/10/22/analysis-of-cve-2017-12628/)
  
 [ysoserial](#ysoserial)
- 
+
+##### Oracle DB 
+- <= Oracle 12C
+- [CVE-2018-3004 - Oracle Privilege Escalation via Deserialization](http://obtruse.syfrtext.com/2018/07/oracle-privilege-escalation-via.html)
+
+
 ### Detect
 ##### Code review
 - *ObjectInputStream.readObject*
