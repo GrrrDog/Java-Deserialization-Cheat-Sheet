@@ -653,6 +653,10 @@ no spec tool
 - 5.1 <= version <=5.4
 - /stream handler uses Java serialization for RPC
 
+- [SOLR-13301](https://issues.apache.org/jira/browse/SOLR-13301)
+- Attack via jmx.serviceUrl
+- [CVE-2019-0192](https://github.com/mpgn/CVE-2019-0192)
+
 ##### Apache ActiveMQ (2)
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
 - *<= 5.12.1*
