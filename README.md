@@ -110,7 +110,8 @@ by [@joaomatosf](https://twitter.com/joaomatosf)
 - [Slides](https://www.slideshare.net/joaomatosf_/an-overview-of-deserialization-vulnerabilities-in-the-java-virtual-machine-jvm-h2hc-2017)
 - [Examples](https://github.com/joaomatosf/JavaDeserH2HC)
 
-##### Automated Discovery of Deserialization Gadget Chains [@ianhaken](https://twitter.com/ianhaken)
+##### Automated Discovery of Deserialization Gadget Chains
+by [@ianhaken](https://twitter.com/ianhaken)
 
 - [Video](https://youtube.com/watch?v=wPbW6zQ52w8)
 - [Slides](https://media.defcon.org/DEF%20CON%2026/DEF%20CON%2026%20presentations/DEFCON-26-Ian-Haken-Automated-Discovery-of-Deserialization-Gadget-Chains.pdf)
