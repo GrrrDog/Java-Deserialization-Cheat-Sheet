@@ -110,6 +110,13 @@ by [@joaomatosf](https://twitter.com/joaomatosf)
 - [Slides](https://www.slideshare.net/joaomatosf_/an-overview-of-deserialization-vulnerabilities-in-the-java-virtual-machine-jvm-h2hc-2017)
 - [Examples](https://github.com/joaomatosf/JavaDeserH2HC)
 
+##### Automated Discovery of Deserialization Gadget Chains
+by [@ianhaken](https://twitter.com/ianhaken)
+
+- [Video](https://youtube.com/watch?v=wPbW6zQ52w8)
+- [Slides](https://media.defcon.org/DEF%20CON%2026/DEF%20CON%2026%20presentations/DEFCON-26-Ian-Haken-Automated-Discovery-of-Deserialization-Gadget-Chains.pdf)
+- [Tool](https://github.com/JackOfMostTrades/gadgetinspector)
+
 ### Payload generators
 ##### ysoserial
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
@@ -152,7 +159,7 @@ Vaadin1             |@kai_ullrich                |vaadin-server:7.7.14, vaadin-s
 Wicket1             |@jacob-baines               |wicket-util:6.23.0, slf4j-api:1.6.4
 
 
-Additional tools (detetection, integration ysoserial with Burp Suite):
+Additional tools (detection, integration ysoserial with Burp Suite):
 - [Freddy](https://github.com/nccgroup/freddy)
 - [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller)
 - [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
