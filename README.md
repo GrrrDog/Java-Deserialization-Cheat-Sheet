@@ -872,6 +872,7 @@ no spec tool
 - Tool: [Serial Whitelist Application Trainer](https://github.com/cschneider4711/SWAT)
 - [JEP 290: Filter Incoming Serialization Data](http://openjdk.java.net/jeps/290) in JDK 6u141, 7u131, 8u121
   - [A First Look Into Java's New Serialization Filtering](https://dzone.com/articles/a-first-look-into-javas-new-serialization-filterin)
+- [AtomicSerial](https://github.com/pfirmstone/JGDMS/wiki)
 
 ### For Android
 #### Main talks & presentations & docs
