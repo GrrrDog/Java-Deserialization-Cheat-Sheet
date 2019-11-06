@@ -220,13 +220,16 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 ##### RMI
 - *Protocol*
 - *Default - 1099/tcp for rmiregistry*
+- partially patched in JRE with JEP290
+- [Attacking Java RMI services after JEP 290](https://mogwailabs.de/blog/2019/04/attacking-rmi-based-jmx-services/)
 
 [ysoserial](#ysoserial) 
 
 ##### JMX
 - *Protocol based on RMI*
 - + [CVE-2016-3427](http://engineering.pivotal.io/post/java-deserialization-jmx/)
-- partially patched in JRE
+- partially patched in JRE with JEP290
+- [Attacking RMI based JMX services (after JEP 290)](https://mogwailabs.de/blog/2019/04/attacking-rmi-based-jmx-services/)
 
 [ysoserial](#ysoserial)
 
