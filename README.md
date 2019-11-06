@@ -210,6 +210,8 @@ Won't fix DoS using default Java classes (JRE)
 
 ##### Tool to search gadgets
 - [Gadget Inspector](https://github.com/JackOfMostTrades/gadgetinspector)
+- [Article about Gadget Inspector](https://paper.seebug.org/1034/)
+
 
 ### Exploits
 
@@ -219,7 +221,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 - *Protocol*
 - *Default - 1099/tcp for rmiregistry*
 
-[ysoserial](#ysoserial) (works only against a RMI registry service)
+[ysoserial](#ysoserial) 
 
 ##### JMX
 - *Protocol based on RMI*
@@ -292,6 +294,15 @@ no spec tool
 - [Full info](https://lab.mediaservice.net/advisory/2016-02-websphere.txt)
 
 no spec tool
+
+##### IBM Websphere (3)
+- IBM WAS DMGR
+- special port 
+- [CVE-2019-8352](https://www.vulners.com/search?query=CVE-2019-8352)
+- [ibm10883628](https://www-01.ibm.com/support/docview.wss?uid=ibm10883628)
+- [Exploit](https://vulners.com/exploitdb/EDB-ID:46969?)
+
+Metasploit
 
 ##### Red Hat JBoss (1)
 - *http://jboss_server/invoker/JMXInvokerServlet*
@@ -424,6 +435,12 @@ no spec tool
 
 [ysoserial](#ysoserial)
 
+
+##### Cisco Unity Express
+- RMI (port 1099 tcp)
+- version < 9.0.6
+- [CVE-2018-15381](https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181107-cue)
+
 ##### Apache XML-RPC
 - all version, no fix (the project is not supported)
 - POST XML request with <ex:serializable> element
@@ -460,6 +477,10 @@ no spec tool
 - [CVE-2016-5019](https://www.vulners.com/search?query=CVE-2016-5019)
 
 no spec tool
+
+##### JBoss Richfaces
+- Variation of exploitation CVE-2018-12532
+- [When EL Injection meets Java Deserialization](https://blog.tint0.com/2019/03/when-el-injection-meets-java-deserialization.html)
 
 ##### Apache Tomcat JMX
 - JMX
@@ -622,6 +643,55 @@ no spec tool
 - <= Oracle 12C
 - [CVE-2018-3004 - Oracle Privilege Escalation via Deserialization](http://obtruse.syfrtext.com/2018/07/oracle-privilege-escalation-via.html)
 
+##### Zimbra Collaboration
+- < 8.7.0
+- [CVE-2016-3415](https://www.vulners.com/search?query=CVE-2016-3415)
+- <= 8.8.11
+- [A Saga of Code Executions on Zimbra](https://blog.tint0.com/2019/03/a-saga-of-code-executions-on-zimbra.html)
+
+##### Adobe ColdFusion (1)
+- <= 2016 Update 4
+- <= 11 update 12
+- [CVE-2017-11283](https://www.vulners.com/search?query=CVE-2017-11283)
+- [CVE-2017-11284](https://www.vulners.com/search?query=CVE-2017-11284)
+
+##### Adobe ColdFusion (2)
+- RMI
+- <= 2016 Update 5
+- <= 11 update 13
+- [Another ColdFusion RCE – CVE-2018-4939](https://nickbloor.co.uk/2018/06/18/another-coldfusion-rce-cve-2018-4939/)
+- [CVE-2018-4939](https://www.vulners.com/search?query=CVE-2018-4939)
+
+##### Adobe ColdFusion (3) / JNBridge 
+- custom protocol in JNBridge 
+- port 6093 or 6095
+- <= 2016 Update ?
+- <= 2018 Update ?
+- [APSB19-17](https://helpx.adobe.com/security/products/coldfusion/apsb19-27.html)
+- [CVE-2019-7839: ColdFusion Code Execution Through JNBridge](https://www.zerodayinitiative.com/blog/2019/7/25/cve-2019-7839-coldfusion-code-execution-through-jnbridge)
+
+##### Apache SOLR (1)
+- [SOLR-8262](https://issues.apache.org/jira/browse/SOLR-8262)
+- 5.1 <= version <=5.4
+- /stream handler uses Java serialization for RPC
+
+##### Apache SOLR (2)
+- [SOLR-13301](https://issues.apache.org/jira/browse/SOLR-13301)
+- [CVE-2019-0192](https://www.vulners.com/search?query=CVE-2019-0192)
+- version: 5.0.0 to 5.5.5
+- version: 6.0.0 to 6.6.5
+- Attack via jmx.serviceUrl
+- [Exploit](https://github.com/mpgn/CVE-2019-0192)
+
+##### Adobe Experience Manager AEM
+- 5.5 - 6.1 (?)
+- /lib/dam/cloud/proxy.json parameter `file`
+- [ExternalJobPostServlet](https://speakerdeck.com/0ang3el/hunting-for-security-bugs-in-aem-webapps?slide=102)
+
+##### MySQL Connector/J
+- version < 5.1.41
+- when "autoDeserialize" is set on
+- [CVE-2017-3523](https://www.computest.nl/advisories/CT-2017-0425_MySQL-Connector-J.txt)
 
 ### Detect
 ##### Code review
@@ -654,15 +724,6 @@ no spec tool
 
 ##### SAP P4
 - [info from slides](#java-deserialization-vulnerabilities---the-forgotten-bug-class)
-
-##### Apache SOLR (2)
-- [SOLR-8262](https://issues.apache.org/jira/browse/SOLR-8262)
-- 5.1 <= version <=5.4
-- /stream handler uses Java serialization for RPC
-
-- [SOLR-13301](https://issues.apache.org/jira/browse/SOLR-13301)
-- Attack via jmx.serviceUrl
-- [CVE-2019-0192](https://github.com/mpgn/CVE-2019-0192)
 
 ##### Apache ActiveMQ (2)
 - [*CVE-2015-5254*](http://activemq.apache.org/security-advisories.data/CVE-2015-5254-announcement.txt)
@@ -705,6 +766,12 @@ no spec tool
 ##### Apache Camel
 - [CVE-2015-5348](https://www.vulners.com/search?query=CVE-2015-5348)
 
+##### Apache Spark
+- [SPARK-20922: Unsafe deserialization in Spark LauncherConnection](https://issues.apache.org/jira/browse/SPARK-20922)
+
+##### Apache Spark
+- [SPARK-11652: Remote code execution with InvokerTransformer](https://issues.apache.org/jira/browse/SPARK-11652)
+
 ##### Apache Log4j
 - as server
 - [CVE-2017-5645](https://vulners.com/search?query=CVE-2017-5645)
@@ -744,6 +811,10 @@ no spec tool
 
 #####  McAfee ePolicy Orchestrator
 - [CVE-2015-8765](https://www.vulners.com/search?query=CVE-2015-8765)
+
+#####  HP IMC PLAT
+- version 7.3 E0506P09 and earlier
+- [several CVE-2019-x](https://support.hpe.com/hpsc/doc/public/display?docLocale=en_US&docId=emr_na-hpesbhf03930en_us&withFrame)
 
 #####  HP iMC
 - [CVE-2016-4372](https://www.vulners.com/search?query=CVE-2016-4372)
@@ -813,25 +884,6 @@ no spec tool
 ##### NetApp (various)
 - [CVE-2015-8545](https://kb.netapp.com/support/index?page=content&id=9010052)
 
-##### Zimbra Collaboration
-- < 8.7.0
-- [CVE-2016-3415](https://www.vulners.com/search?query=CVE-2016-3415)
-- <= 8.8.11
-- [A Saga of Code Executions on Zimbra](https://blog.tint0.com/2019/03/a-saga-of-code-executions-on-zimbra.html)
-
-##### Adobe ColdFusion (1)
-- <= 2016 Update 4
-- <= 11 update 12
-- [CVE-2017-11283](https://www.vulners.com/search?query=CVE-2017-11283)
-- [CVE-2017-11284](https://www.vulners.com/search?query=CVE-2017-11284)
-
-##### Adobe ColdFusion (2)
-- RMI
-- <= 2016 Update 5
-- <= 11 update 13
-- [Another ColdFusion RCE – CVE-2018-4939](https://nickbloor.co.uk/2018/06/18/another-coldfusion-rce-cve-2018-4939/)
-- [CVE-2018-4939](https://www.vulners.com/search?query=CVE-2018-4939)
-
 ##### Citrix XenMobile Server
 - port 45000 
 - when Clustering is enabled
@@ -840,13 +892,16 @@ no spec tool
 - [Citrix advisory](https://support.citrix.com/article/CTX234879)
 - [CVE-2018-10654](https://www.vulners.com/search?query=CVE-2018-10654)
 
-##### IBM WebSphere
+##### IBM WebSphere (1)
 - SOAP connector
 - <= 9.0.0.9
 - <= 8.5.5.14
 - <= 8.0.0.15
 - <= 7.0.0.45
 - [CVE-2018-1567](https://www.vulners.com/search?query=CVE-2018-1567)
+
+##### IBM WebSphere (2)
+- [CVE-2015-1920](https://nvd.nist.gov/vuln/detail/CVE-2015-1920)
 
 ##### Code42 CrashPlan
 - *TCP port 4282*
@@ -858,9 +913,18 @@ no spec tool
 ##### Apache OpenJPA
 - [CVE-2013-1768](http://seclists.org/fulldisclosure/2013/Jun/98)
 
+##### Dell EMC VNX Monitoring and Reporting 
+- [CVE-2017-8012](https://www.zerodayinitiative.com/advisories/ZDI-17-826/)
+
+##### CAS
+- v4.1.x 
+- v4.2.x
+- [CAS Vulnerability Disclosure from Apereo](https://apereo.github.io/2016/04/08/commonsvulndisc/)
+
 ##### Apache Batchee
 ##### Apache JCS
 ##### Apache OpenWebBeans
+
 
 ### Protection
 - [Look-ahead Java deserialization](http://www.ibm.com/developerworks/library/se-lookahead/ )
@@ -875,10 +939,11 @@ no spec tool
 - [AtomicSerial](https://github.com/pfirmstone/JGDMS/wiki)
 
 ### For Android
-#### Main talks & presentations & docs
+#### Main talks & presentations & examples
 - [One Class to Rule Them All: 0-Day Deserialization Vulnerabilities in Android](https://www.usenix.org/conference/woot15/workshop-program/presentation/peles)
 - [Android Serialization Vulnerabilities Revisited](https://www.rsaconference.com/events/us16/agenda/sessions/2455/android-serialization-vulnerabilities-revisited)
 - [A brief history of Android deserialization vulnerabilities](https://lgtm.com/blog/android_deserialization)
+- [Exploiting Android trough an Intent with Reflection](https://www.areizen.fr/post/exploiting_android_application_trough_serialized_intent/)
 
 #### Tools
 - [Android Java Deserialization Vulnerability Tester](https://github.com/modzero/modjoda)
@@ -975,6 +1040,7 @@ How it works:
 How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+- [Castor and Hessian java deserialization vulnerabilities](https://blog.semmle.com/hessian-java-deserialization-castor-vulnerabilities/)
 
 ### Payload generators
 
@@ -992,10 +1058,16 @@ How it works:
 ##### Burp plugins
 - [Freddy](https://github.com/nccgroup/freddy)
 
+### Vulnerable apps (without public sploits/need more info):
+
+##### Apache Camel
+- [CVE-2017-12634](https://blog.semmle.com/hessian-java-deserialization-castor-vulnerabilities/)
+
 ## Castor (XML)
 How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
+- [Castor and Hessian java deserialization vulnerabilities](https://blog.semmle.com/hessian-java-deserialization-castor-vulnerabilities/)
 
 ### Payload generators
 
@@ -1017,6 +1089,9 @@ How it works:
 
 ##### OpenNMS
 - [NMS-9100](https://issues.opennms.org/browse/NMS-9100)
+
+##### Apache Camel
+- [CVE-2017-12633](https://blog.semmle.com/hessian-java-deserialization-castor-vulnerabilities/)
 
 ## json-io (JSON)
 How it works:
@@ -1049,12 +1124,16 @@ How it works:
 - [On Jackson CVEs: Don’t Panic — Here is what you need to know](https://medium.com/@cowtowncoder/on-jackson-cves-dont-panic-here-is-what-you-need-to-know-54cd0d6e8062)
 - [Jackson Deserialization Vulnerabilities](https://www.nccgroup.trust/globalassets/our-research/us/whitepapers/2018/jackson_deserialization.pdf)
 
-### Payload generators
+### Payload generators / gadget chains
 
 - [https://adamcaudill.com/2017/10/04/exploiting-jackson-rce-cve-2017-7525/](https://adamcaudill.com/2017/10/04/exploiting-jackson-rce-cve-2017-7525/)
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 - [blacklist bypass - CVE-2017-17485](https://github.com/irsl/jackson-rce-via-spel)
-- [blacklist bypass - CVE-2017-15095](https://github.com/SecureSkyTechnology/study-struts2-s2-054_055-jackson-cve-2017-7525_cve-2017-15095) 
+- [blacklist bypass - CVE-2017-15095](https://github.com/SecureSkyTechnology/study-struts2-s2-054_055-jackson-cve-2017-7525_cve-2017-15095)
+- [cve-2019-14540](https://github.com/LeadroyaL/cve-2019-14540-exploit/)
+- [Jackson gadgets - Anatomy of a vulnerability](https://blog.doyensec.com/2019/07/22/jackson-gadgets.html)
+- [JNDI Injection using Getter Based Deserialization Gadgets](https://srcincite.io/blog/2019/08/07/attacking-unmarshallers-jndi-injection-using-getter-based-deserialization.html)
+
 
 ### Detect
 ##### Code review
@@ -1067,6 +1146,10 @@ How it works:
 
 ##### Burp plugins
 - [Freddy](https://github.com/nccgroup/freddy)
+
+### Exploits
+##### Liferay 
+- [CVE-2019-16891](https://sec.vnpt.vn/2019/09/liferay-deserialization-json-deserialization-part-4/)
 
 ### Vulnerable apps (without public sploits/need more info):
 ##### Apache Camel
@@ -1089,7 +1172,8 @@ How it works (in Chinese):
 
 ### Payload generators
 
-- [https://github.com/iBearcat/Fastjson-Payload](https://github.com/iBearcat/Fastjson-Payload)
+- [fastjson 1.2.24 <=](https://github.com/iBearcat/Fastjson-Payload)
+- [fastjson 1.2.47 <=](https://github.com/jas502n/fastjson-RCE)
 
 ## Genson (JSON)
 
