@@ -267,8 +267,11 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 - When we control an address for lookup of JNDI (context.lookup(address) and can have backconnect from a server
 - [Full info](#a-journey-from-jndildap-manipulation-to-remote-code-execution-dream-land)
 - [JNDI remote code injection](http://zerothoughts.tumblr.com/post/137769010389/fun-with-jndi-remote-code-injection)
+- [Exploiting JNDI Injections in Java](https://www.veracode.com/blog/research/exploiting-jndi-injections-java)
 
 [https://github.com/zerothoughts/jndipoc](https://github.com/zerothoughts/jndipoc)
+
+[https://github.com/welk1n/JNDI-Injection-Exploit](https://github.com/welk1n/JNDI-Injection-Exploit)
 
 ##### JMS
 - [Full info](#pwning-your-java-messaging-with-deserialization-vulnerabilities)
@@ -1306,8 +1309,8 @@ How it works:
 
 - [https://www.secfree.com/article-590.html](https://www.secfree.com/article-590.html) 
 - [Official advisory](https://github.com/alibaba/fastjson/wiki/security_update_20170315)
-- [Fastjson process analysis and RCE analysis](https://paper.seebug.org/1193/)
-- [Fastjson Deserialization Vulnerability History](https://paper.seebug.org/994/)
+- [Fastjson process analysis and RCE analysis](https://paper.seebug.org/994/)
+- [Fastjson Deserialization Vulnerability History](https://paper.seebug.org/1193/)
 
 ### Detect
 ##### Code review
