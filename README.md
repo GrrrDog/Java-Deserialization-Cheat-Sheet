@@ -22,6 +22,7 @@ Please, use **#javadeser** hash tag for tweets.
 - [Jackson (JSON)](#jackson-json)
 - [Fastjson (JSON)](#fastjson-json)
 - [Genson (JSON)](#genson-json)
+- [Flexjson (JSON)](#flexjson-json)
 - [Red5 IO AMF (AMF)](#red5-io-amf-amf)
 - [Apache Flex BlazeDS (AMF)](#apache-flex-blazeds-amf)
 - [Flamingo AMF  (AMF)](#flamingo-amf--amf)
@@ -117,6 +118,11 @@ by [@ianhaken](https://twitter.com/ianhaken)
 - [Slides](https://media.defcon.org/DEF%20CON%2026/DEF%20CON%2026%20presentations/DEFCON-26-Ian-Haken-Automated-Discovery-of-Deserialization-Gadget-Chains.pdf)
 - [Tool](https://github.com/JackOfMostTrades/gadgetinspector)
 
+##### An Far Sides Of Java Remote Protocols
+by [@_tint0](https://twitter.com/_tint0)
+
+- [Slides](https://i.blackhat.com/eu-19/Wednesday/eu-19-An-Far-Sides-Of-Java-Remote-Protocols.pdf)
+
 ### Payload generators
 ##### ysoserial
 [https://github.com/frohoff/ysoserial](https://github.com/frohoff/ysoserial)
@@ -159,17 +165,13 @@ Vaadin1             |@kai_ullrich                |vaadin-server:7.7.14, vaadin-s
 Wicket1             |@jacob-baines               |wicket-util:6.23.0, slf4j-api:1.6.4
 
 
-Additional tools (detection, integration ysoserial with Burp Suite):
+Plugins for Burp Suite (detection, ysoserial integration ):
 - [Freddy](https://github.com/nccgroup/freddy)
 - [JavaSerialKiller](https://github.com/NetSPI/JavaSerialKiller)
 - [Java Deserialization Scanner](https://github.com/federicodotta/Java-Deserialization-Scanner)
 - [Burp-ysoserial](https://github.com/summitt/burp-ysoserial)
 - [SuperSerial](https://github.com/DirectDefense/SuperSerial)
 - [SuperSerial-Active](https://github.com/DirectDefense/SuperSerial-Active)
-
-Additional tool to test RMI:
-- [BaRMIe](https://github.com/NickstaDB/BaRMIe)
-- [Barmitza](https://github.com/mogwailabs/rmi-deserialization/blob/master/barmitzwa.groovy)
 
 Full shell (pipes, redirects and other stuff):
 - [$@|sh – Or: Getting a shell environment from Runtime.exec](http://codewhitesec.blogspot.ru/2015/03/sh-or-getting-shell-environment-from.html)
@@ -179,6 +181,15 @@ Full shell (pipes, redirects and other stuff):
 How it works:
 - [https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/](https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/)
 - [http://gursevkalra.blogspot.ro/2016/01/ysoserial-commonscollections1-exploit.html](http://gursevkalra.blogspot.ro/2016/01/ysoserial-commonscollections1-exploit.html)
+
+##### ysoserial fork with additional payloads
+[https://github.com/wh1t3p1g/ysoserial](https://github.com/wh1t3p1g/ysoserial)
+
+- CommonsCollection8,9,10
+- RMIRegistryExploit2,3
+- RMIRefListener,RMIRefListener2
+- PayloadHTTPServer
+- Spring3
 
 ##### JRE8u20_RCE_Gadget
 [https://github.com/pwntester/JRE8u20_RCE_Gadget](https://github.com/pwntester/JRE8u20_RCE_Gadget)
@@ -208,10 +219,20 @@ Won't fix DoS using default Java classes (JRE)
 - [CVE-2018-2677](https://www.waratek.com/waratek-identifies-two-new-deserialization-vulnerabilities-cve-2018-2677/)
 
 
-##### Tool to search gadgets
+##### Tool to search gadgets in source
 - [Gadget Inspector](https://github.com/JackOfMostTrades/gadgetinspector)
 - [Article about Gadget Inspector](https://paper.seebug.org/1034/)
 
+##### Additional tools to test RMI:
+- [BaRMIe](https://github.com/NickstaDB/BaRMIe)
+- [Barmitza](https://github.com/mogwailabs/rmi-deserialization/blob/master/barmitzwa.groovy)
+
+##### Remote class detection:
+- [GadgetProbe: Exploiting Deserialization to Brute-Force the Remote Classpath](https://know.bishopfox.com/research/gadgetprobe)
+- [GadgetProbe](https://github.com/BishopFox/GadgetProbe)
+
+- [Remote Java classpath enumeration with EnumJavaLibs](https://www.redtimmy.com/web-application-hacking/remote-java-classpath-enumeration-with-enumjavalibs/)
+- [EnumJavaLibs](https://github.com/redtimmy/EnumJavaLibs)
 
 ### Exploits
 
@@ -222,11 +243,12 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 - *Default - 1099/tcp for rmiregistry*
 - partially patched in JRE with JEP290 (JDK 8u121, JDK 7u131, JDK 6u141)
 - [Attacking Java RMI services after JEP 290](https://mogwailabs.de/blog/2019/04/attacking-rmi-based-jmx-services/)
+- [An Trinhs RMI Registry Bypass](https://mogwailabs.de/blog/2020/02/an-trinhs-rmi-registry-bypass/)
 
 [ysoserial](#ysoserial) 
 
 ##### JMX
-- *Protocol based on RMI*
+- *JMX on RMI*
 - + [CVE-2016-3427](http://engineering.pivotal.io/post/java-deserialization-jmx/)
 - partially patched in JRE with JEP290 (JDK 8u121, JDK 7u131, JDK 6u141)
 - [Attacking RMI based JMX services (after JEP 290)](https://mogwailabs.de/blog/2019/04/attacking-rmi-based-jmx-services/)
@@ -236,6 +258,10 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 [mjet](https://github.com/mogwailabs/mjet)
 
 [JexBoss](https://github.com/joaomatosf/jexboss)
+
+##### JMXMP
+- *Special JMX protocol*
+- [The Curse of Old Java Libraries](https://www.acunetix.com/blog/web-security-zone/old-java-libraries/)
 
 ##### JNDI/LDAP
 - When we control an address for lookup of JNDI (context.lookup(address) and can have backconnect from a server
@@ -256,6 +282,13 @@ no spec tool
 
 [JexBoss](https://github.com/joaomatosf/jexboss)
 
+##### vjdbc
+- JDBC via HTTP library
+- all version are vulnerable
+- [Details](https://www.acunetix.com/blog/web-security-zone/old-java-libraries/)
+
+no spec tool
+
 ##### T3 of Oracle Weblogic
 - *Protocol*
 - *Default - 7001/tcp on localhost interface*
@@ -263,9 +296,12 @@ no spec tool
 - [Blacklist bypass - CVE-2017-3248](https://www.tenable.com/security/research/tra-2017-07)
 - [Blacklist bypass - CVE-2017-3248 PoC](https://github.com/quentinhardy/scriptsAndExploits/blob/master/exploits/weblogic/exploit-CVE-2017-3248-bobsecq.py)
 - [Blacklist bypass - CVE-2018-2628](https://github.com/brianwrf/CVE-2018-2628)
+- [Blacklist bypass - cve-2018-2893](https://github.com/pyn3rd/CVE-2018-2893)
 - [Blacklist bypass - CVE-2018-3245](https://blogs.projectmoon.pw/2018/10/19/Oracle-WebLogic-Two-RCE-Deserialization-Vulnerabilities/)
 - [Blacklist bypass - CVE-2018-3191](https://mp.weixin.qq.com/s/ebKHjpbQcszAy_vPocW0Sg)
 - [CVE-2019-2725](https://paper.seebug.org/910/)
+- [CVE-2020-2555](https://www.thezdi.com/blog/2020/3/5/cve-2020-2555-rce-through-a-deserialization-bug-in-oracles-weblogic-server)
+- [CVE-2020-2883](https://github.com/Y4er/CVE-2020-2883)
 
 [loubia](https://github.com/metalnas/loubia) (tested on 11g and 12c, supports t3s)
 
@@ -274,6 +310,15 @@ no spec tool
 [WLT3Serial](https://github.com/Bort-Millipede/WLT3Serial) 
 
 [CVE-2018-2628 sploit](https://github.com/brianwrf/CVE-2018-2628)
+
+##### IIOP of Oracle Weblogic
+- *Protocol*
+- *Default - 7001/tcp on localhost interface*
+
+- [CVE-2020-2551](https://www.vulners.com/search?query=CVE-2020-2551)
+- [Details](https://paper.seebug.org/1130/)
+
+[CVE-2020-2551 sploit](https://github.com/Y4er/CVE-2020-2551)
 
 ##### Oracle Weblogic
 - auth required
@@ -367,6 +412,11 @@ no spec tool
 
 [Sploit](https://blogs.securiteam.com/index.php/archives/3171)
 
+##### JetBrains TeamCity
+- RMI
+
+[ysoserial](#ysoserial)
+
 ##### Restlet
 - *<= 2.1.2*
 - *When Rest API accepts serialized objects (uses ObjectRepresentation)*
@@ -379,10 +429,16 @@ no spec tool
 
 no spec tool
 
-##### OpenNMS
+##### OpenNMS (1)
 - RMI
 
 [ysoserial](#ysoserial)
+
+##### OpenNMS (2)
+- [CVE-2020-12760/NMS-12673](https://issues.opennms.org/browse/NMS-12673)
+- [JMS](#jms)
+
+[JMET](https://github.com/matthiaskaiser/jmet)
 
 ##### Progress OpenEdge RDBMS
 - all versions
@@ -438,11 +494,52 @@ no spec tool
 
 [ysoserial](#ysoserial)
 
-
 ##### Cisco Unity Express
 - RMI (port 1099 tcp)
 - version < 9.0.6
 - [CVE-2018-15381](https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20181107-cue)
+
+[ysoserial](#ysoserial)
+
+##### Cisco Unified CVP
+- RMI (2098 and 2099)
+- [Details](https://www.redtimmy.com/java-hacking/jmx-rmi-multiple-applications-rce/)
+
+[ysoserial](#ysoserial)
+
+##### NASDAQ BWISE
+- RMI (port 81 tcp)
+- [Details](https://www.redtimmy.com/java-hacking/jmx-rmi-multiple-applications-rce/)
+- [CVE-2018-11247](https://www.vulners.com/search?query=CVE-2018-11247)
+
+[ysoserial](#ysoserial)
+
+##### NICE ENGAGE PLATFORM
+- JMX (port 6338 tcp)
+- [Details](https://www.redtimmy.com/java-hacking/jmx-rmi-multiple-applications-rce/)
+- [CVE-2019-7727](https://www.vulners.com/search?query=CVE-2019-7727)
+
+##### Apache Cassandra 
+- JMX (port 7199  tcp)
+- [Details](https://www.redtimmy.com/java-hacking/jmx-rmi-multiple-applications-rce/)
+- [CVE-2018-8016](https://www.vulners.com/search?query= CVE-2018-8016)
+
+##### Cloudera Zookeeper
+- JMX (port 9010 tcp)
+- [Details](https://www.redtimmy.com/java-hacking/jmx-rmi-multiple-applications-rce/)
+
+##### Apache Olingo
+- version <  4.7.0
+- [CVE-2019-17556](https://www.vulners.com/search?query=CVE-2019-17556)
+- [Details and examples](https://blog.gypsyengineer.com/en/security/cve-2019-17556-unsafe-deserialization-in-apache-olingo.html)
+
+no spec tool
+
+##### Apache Dubbo 
+- [CVE-2019-17564](https://www.vulners.com/search?query=CVE-2019-17564)
+- [Details and examples](https://www.checkmarx.com/blog/apache-dubbo-unauthenticated-remote-code-execution-vulnerability)
+
+no spec tool
 
 ##### Apache XML-RPC
 - all version, no fix (the project is not supported)
@@ -463,6 +560,12 @@ no spec tool
 - [CVE-2017-9844](https://erpscan.com/advisories/erpscan-17-014-sap-netweaver-java-deserialization-untrusted-user-value-metadatauploader/)
 
 [PoC](https://github.com/vah13/SAP_vulnerabilities/tree/5995daf7bac2e01a63dc57dcf5bbab70489bf6bb/CVE-2017-9844)
+
+##### SAP Hybris 
+- */virtualjdbc/*
+- [CVE-2019-0344](https://www.vulners.com/search?query=CVE-2019-0344)
+
+no spec tool
 
 #####  Sun Java Web Console
 - admin panel for Solaris
@@ -515,11 +618,18 @@ no spec tool
 [PoC](https://blogs.securiteam.com/index.php/archives/3387)
 
 ##### ManageEngine Applications Manager
-- version: 12, 13
+- version 
 - RMI
 - [CVE-2016-9498](https://www.vulners.com/search?query=CVE-2016-9498)
 
 [ysoserial](#ysoserial)
+
+
+##### ManageEngine Desktop Central
+- version < 10.0.474
+- [CVE-2020-10189](https://www.vulners.com/search?query=CVE-2020-10189)
+
+[MSF exploit](https://vulners.com/metasploit/MSF:EXPLOIT/WINDOWS/HTTP/DESKTOPCENTRAL_DESERIALIZATION)
 
 ##### Apache Shiro
 - [SHIRO-550](https://issues.apache.org/jira/browse/SHIRO-550)
@@ -539,6 +649,14 @@ no spec tool
 - [CVE-2017-5792](https://www.vulners.com/search?query=CVE-2017-5792)
 
 [ysoserial](#ysoserial)
+
+##### Apache Brooklyn
+- Non default config
+- [JMXMP](#jmxmp)
+
+##### Elassandra
+- Non default config
+- [JMXMP](#jmxmp)
 
 ##### Apache ActiveMQ - Client lib
 - [JMS](#jms)
@@ -775,9 +893,31 @@ no spec tool
 ##### Apache Spark
 - [SPARK-11652: Remote code execution with InvokerTransformer](https://issues.apache.org/jira/browse/SPARK-11652)
 
-##### Apache Log4j
+##### Apache Log4j (1)
 - as server
 - [CVE-2017-5645](https://vulners.com/search?query=CVE-2017-5645)
+
+##### Apache Log4j (2)
+- *<= 1.2.17*
+- [CVE-2019-17571](https://vulners.com/search?query=CVE-2019-17571)
+
+##### Apache Geode
+- [CVE-2017-15692](https://vulners.com/search?query=CVE-2017-15692)
+- [CVE-2017-15693](https://vulners.com/search?query=CVE-2017-15693)
+- [Details](https://securitylab.github.com/research/in-memory-data-grid-vulnerabilities)
+
+##### Apache Ignite
+- [CVE-2018-1295](https://vulners.com/search?query=CVE-2018-1295)
+- [CVE-2018-8018](https://vulners.com/search?query=CVE-2018-8018)
+- [Details](https://securitylab.github.com/research/in-memory-data-grid-vulnerabilities)
+
+##### Infinispan 
+- [CVE-2017-15089](https://vulners.com/search?query=CVE-2017-15089)
+- [Details](https://securitylab.github.com/research/in-memory-data-grid-vulnerabilities)
+
+##### Hazelcast 
+- [CVE-2016-10750](https://vulners.com/search?query=CVE-2016-10750)
+- [Details](https://securitylab.github.com/research/in-memory-data-grid-vulnerabilities)
 
 ##### Gradle (gui)
 - custom(?) protocol(60024/tcp)
@@ -1044,6 +1184,7 @@ How it works:
 
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 - [Castor and Hessian java deserialization vulnerabilities](https://blog.semmle.com/hessian-java-deserialization-castor-vulnerabilities/)
+- [Recurrence and Analysis of Hessian Deserialization RCE Vulnerability](https://www.freebuf.com/vuls/224280.html)
 
 ### Payload generators
 
@@ -1133,10 +1274,11 @@ How it works:
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
 - [blacklist bypass - CVE-2017-17485](https://github.com/irsl/jackson-rce-via-spel)
 - [blacklist bypass - CVE-2017-15095](https://github.com/SecureSkyTechnology/study-struts2-s2-054_055-jackson-cve-2017-7525_cve-2017-15095)
-- [cve-2019-14540](https://github.com/LeadroyaL/cve-2019-14540-exploit/)
+- [CVE-2019-14540](https://github.com/LeadroyaL/cve-2019-14540-exploit/)
 - [Jackson gadgets - Anatomy of a vulnerability](https://blog.doyensec.com/2019/07/22/jackson-gadgets.html)
 - [JNDI Injection using Getter Based Deserialization Gadgets](https://srcincite.io/blog/2019/08/07/attacking-unmarshallers-jndi-injection-using-getter-based-deserialization.html)
-
+- [blacklist bypass - CVE-2020-8840](https://github.com/jas502n/CVE-2020-8840)
+- [blacklist bypass - CVE-2020-10673](https://github.com/0nise/CVE-2020-10673/)
 
 ### Detect
 ##### Code review
@@ -1160,10 +1302,12 @@ How it works:
 
 ## Fastjson (JSON)
 
-How it works (in Chinese):
+How it works:
 
 - [https://www.secfree.com/article-590.html](https://www.secfree.com/article-590.html) 
 - [Official advisory](https://github.com/alibaba/fastjson/wiki/security_update_20170315)
+- [Fastjson process analysis and RCE analysis](https://paper.seebug.org/1193/)
+- [Fastjson Deserialization Vulnerability History](https://paper.seebug.org/994/)
 
 ### Detect
 ##### Code review
@@ -1177,6 +1321,7 @@ How it works (in Chinese):
 
 - [fastjson 1.2.24 <=](https://github.com/iBearcat/Fastjson-Payload)
 - [fastjson 1.2.47 <=](https://github.com/jas502n/fastjson-RCE)
+- [fastjson 1.2.66 <=](https://github.com/0nise/CVE-2020-10673/)
 
 ## Genson (JSON)
 
@@ -1192,6 +1337,17 @@ How it works:
 
 ##### Burp plugins
 - [Freddy](https://github.com/nccgroup/freddy)
+
+## Flexjson (JSON)
+
+How it works:
+
+- [Friday the 13th JSON Attacks](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-JSON-Attacks-wp.pdf) 
+
+### Exploits
+##### Liferay 
+- [Liferay Portal JSON Web Service RCE Vulnerabilities](https://codewhitesec.blogspot.com/2020/03/liferay-portal-json-vulns.html)
+- [CST-7111](https://portal.liferay.dev/learn/security/known-vulnerabilities/-/asset_publisher/HbL5mxmVrnXW/content/id/113765197)
 
 ## Red5 IO AMF (AMF)
 How it works:
@@ -1230,7 +1386,12 @@ How it works:
 ##### Burp plugins
 - [Freddy](https://github.com/nccgroup/freddy)
 
-### Vulnerable apps (without public sploits/need more info):
+### Vulnerable apps:
+
+##### Oracle Business Intelligence
+- *BIRemotingServlet*
+- no auth
+- [CVE-2020-2950](https://www.zerodayinitiative.com/advisories/ZDI-20-505/)
 
 ##### Adobe ColdFusion
 - [CVE-2017-3066](https://www.vulners.com/search?query=CVE-2017-3066)
@@ -1306,7 +1467,10 @@ How it works:
 - [CVE-2017-3159](https://www.vulners.com/search?query=CVE-2017-3159)
 
 ##### Apache Brooklyn
-- [CVE-2016-8744](https://www.vulners.com/search?query=CVE-CVE-2016-8744)
+- [CVE-2016-8744](https://www.vulners.com/search?query=CVE-2016-8744)
+
+##### Apache ShardingSphere
+- [CVE-2020-1947](https://www.vulners.com/search?query=CVE-2020-1947)
 
 ## jYAML (YAML)
 How it works:
