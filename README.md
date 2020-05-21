@@ -23,6 +23,7 @@ Please, use **#javadeser** hash tag for tweets.
 - [Fastjson (JSON)](#fastjson-json)
 - [Genson (JSON)](#genson-json)
 - [Flexjson (JSON)](#flexjson-json)
+- [Jodd (JSON)](#jodd-json)
 - [Red5 IO AMF (AMF)](#red5-io-amf-amf)
 - [Apache Flex BlazeDS (AMF)](#apache-flex-blazeds-amf)
 - [Flamingo AMF  (AMF)](#flamingo-amf--amf)
@@ -1347,10 +1348,34 @@ How it works:
 
 - [Friday the 13th JSON Attacks](https://www.blackhat.com/docs/us-17/thursday/us-17-Munoz-Friday-The-13th-JSON-Attacks-wp.pdf) 
 
+### Payload generators / gadget chains
+- [PoC](https://github.com/GrrrDog/Sploits)
+
+### Detect
+##### Code review
+- import flexjson.JSONDeserializer
+- JSONDeserializer jsonDeserializer = new JSONDeserializer()
+- jsonDeserializer.deserialize(jsonString);
+
 ### Exploits
 ##### Liferay 
 - [Liferay Portal JSON Web Service RCE Vulnerabilities](https://codewhitesec.blogspot.com/2020/03/liferay-portal-json-vulns.html)
 - [CST-7111](https://portal.liferay.dev/learn/security/known-vulnerabilities/-/asset_publisher/HbL5mxmVrnXW/content/id/113765197)
+
+
+## Jodd (JSON)
+*vulnerable in a non-default configuration when setClassMetadataName() is set*
+
+- [issues/628](https://github.com/oblac/jodd/issues/628)
+
+### Payload generators / gadget chains
+- [PoC](https://github.com/GrrrDog/Sploits)
+
+### Detect
+##### Code review
+- com.fasterxml.jackson.databind.ObjectMapper
+- JsonParser jsonParser = new JsonParser() 
+- jsonParser.setClassMetadataName("class").parse(jsonString, ClassName.class);
 
 ## Red5 IO AMF (AMF)
 How it works:
