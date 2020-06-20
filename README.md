@@ -1009,7 +1009,6 @@ no spec tool
 - [Article](http://engineering.pivotal.io/post/java-deserialization-jmx/)
 
 ##### Apache TomEE
-- [CVE-2015-8581](https://www.vulners.com/search?query=CVE-2015-8581)
 - [CVE-2016-0779](https://www.vulners.com/search?query=CVE-2016-0779)
 
 ##### IBM Congnos BI
