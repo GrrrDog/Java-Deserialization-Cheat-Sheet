@@ -350,7 +350,7 @@ no spec tool
 ##### IBM Websphere (3)
 - IBM WAS DMGR
 - special port 
-- [CVE-2019-8352](https://www.vulners.com/search?query=CVE-2019-8352)
+- [CVE-2019-4279](https://www.vulners.com/search?query=CVE-2019-4279)
 - [ibm10883628](https://www-01.ibm.com/support/docview.wss?uid=ibm10883628)
 - [Exploit](https://vulners.com/exploitdb/EDB-ID:46969?)
 
@@ -994,10 +994,11 @@ no spec tool
 - [CVE-2016-0958](https://www.vulners.com/search?query=CVE-2016-0958)
 
 #####  Unify OpenScape (various)
-- [CVE-2015-8237](https://www.vulners.com/search?query=CVE-2015-8237)
+- [CVE-2015-8237](https://www.vulners.com/search?query=CVE-2015-8237) (CVE ID changed?)
 - RMI (30xx/tcp)
-- [CVE-2015-8238](https://www.vulners.com/search?query=CVE-2015-8238)
+- [CVE-2015-8238](https://www.vulners.com/search?query=CVE-2015-8238) (CVE ID changed?)
 - js-soc protocol (4711/tcp)
+- [Details](https://networks.unify.com/security/advisories/OBSO-1511-01.pdf)
 
 ##### Apache OFBiz
 - [CVE-2016-2170](https://blogs.apache.org/ofbiz/date/20160405)
@@ -1029,7 +1030,7 @@ no spec tool
 - [0328_acc](http://www.hitachi.co.jp/products/it/storage-solutions/global/sec_info/2016/0328_acc.html)
 
 ##### NetApp (various)
-- [CVE-2015-8545](https://kb.netapp.com/support/index?page=content&id=9010052)
+- [CVE-2015-8545](https://security.netapp.com/advisory/ntap-20151123-0001/) (CVE ID changed?)
 
 ##### Citrix XenMobile Server
 - port 45000 
