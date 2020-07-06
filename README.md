@@ -1009,14 +1009,13 @@ no spec tool
 - [Article](http://engineering.pivotal.io/post/java-deserialization-jmx/)
 
 ##### Apache TomEE
-- [CVE-2015-8581](https://www.vulners.com/search?query=CVE-2015-8581)
 - [CVE-2016-0779](https://www.vulners.com/search?query=CVE-2016-0779)
 
 ##### IBM Congnos BI
 - [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
 
 ##### Novell NetIQ Sentinel
-- [?](https://www.tenable.com/plugins/index.php?view=single&id=90602)
+- [CVE-2016-1000031](https://www.zerodayinitiative.com/advisories/ZDI-16-570/)
 
 ##### ForgeRock OpenAM
 - *9-9.5.5, 10.0.0-10.0.2, 10.1.0-Xpress, 11.0.0-11.0.3 and 12.0.0*
