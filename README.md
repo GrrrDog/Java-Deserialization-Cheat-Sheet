@@ -38,15 +38,15 @@ Please, use **#javadeser** hash tag for tweets.
 
 ### Overview
 - [Java Deserialization Security FAQ](https://christian-schneider.net/JavaDeserializationSecurityFAQ.html)
-- [From Foxgloves Security](http://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/)
+- [From Foxgloves Security](https://foxglovesecurity.com/2015/11/06/what-do-weblogic-websphere-jboss-jenkins-opennms-and-your-application-have-in-common-this-vulnerability/)
 
 ### Main talks & presentations & docs
 ##### Marshalling Pickles
 by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
 
 - [Video](https://www.youtube.com/watch?v=KSA7vUkXGSg)
-- [Slides](http://www.slideshare.net/frohoff1/appseccali-2015-marshalling-pickles)
-- [Other stuff](http://frohoff.github.io/appseccali-marshalling-pickles/ )
+- [Slides](https://www.slideshare.net/frohoff1/appseccali-2015-marshalling-pickles)
+- [Other stuff](https://frohoff.github.io/appseccali-marshalling-pickles/ )
 
 ##### Exploiting Deserialization Vulnerabilities in Java
 by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
@@ -54,28 +54,28 @@ by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 - [Video](https://www.youtube.com/watch?v=VviY3O-euVQ)
 
 ##### Serial Killer: Silently Pwning Your Java Endpoints
-by [@pwntester](http://twitter.com/pwntester) & [@cschneider4711](http://twitter.com/cschneider4711)
+by [@pwntester](https://twitter.com/pwntester) & [@cschneider4711](https://twitter.com/cschneider4711)
 
 - [Slides](https://www.rsaconference.com/writable/presentations/file_upload/asd-f03-serial-killer-silently-pwning-your-java-endpoints.pdf)
-- [White Paper](http://community.hpe.com/hpeb/attachments/hpeb/off-by-on-software-security-blog/722/1/HPE-SR%20whitepaper%20java%20deserialization%20RSA2016.pdf)
+- [White Paper](https://community.hpe.com/hpeb/attachments/hpeb/off-by-on-software-security-blog/722/1/HPE-SR%20whitepaper%20java%20deserialization%20RSA2016.pdf)
 - [Bypass Gadget Collection](https://github.com/pwntester/SerialKillerBypassGadgetCollection)
 
 ##### Deserialize My Shorts: Or How I Learned To Start Worrying and Hate Java Object Deserialization
 by [@frohoff](https://twitter.com/frohoff) & [@gebl](https://twitter.com/gebl)
 
-- [Slides](http://www.slideshare.net/frohoff1/deserialize-my-shorts-or-how-i-learned-to-start-worrying-and-hate-java-object-deserialization)
+- [Slides](https://www.slideshare.net/frohoff1/deserialize-my-shorts-or-how-i-learned-to-start-worrying-and-hate-java-object-deserialization)
 
 ##### Surviving the Java serialization apocalypse
-by [@cschneider4711](http://twitter.com/cschneider4711) & [@pwntester](http://twitter.com/pwntester)
+by [@cschneider4711](https://twitter.com/cschneider4711) & [@pwntester](https://twitter.com/pwntester)
 
-- [Slides](http://www.slideshare.net/cschneider4711/surviving-the-java-deserialization-apocalypse-owasp-appseceu-2016)
+- [Slides](https://www.slideshare.net/cschneider4711/surviving-the-java-deserialization-apocalypse-owasp-appseceu-2016)
 - [Video](https://www.youtube.com/watch?v=m1sH240pEfw)
 - [PoC for Scala, Grovy](https://github.com/pwntester/JVMDeserialization)
 
 ##### Java Deserialization Vulnerabilities - The Forgotten Bug Class
 by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 
-- [Slides](http://www.slideshare.net/codewhitesec/java-deserialization-vulnerabilities-the-forgotten-bug-class)
+- [Slides](https://www.slideshare.net/codewhitesec/java-deserialization-vulnerabilities-the-forgotten-bug-class)
 
 ##### Pwning Your Java Messaging With Deserialization Vulnerabilities
 by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
@@ -87,10 +87,10 @@ by [@matthias_kaiser](https://twitter.com/matthias_kaiser)
 ##### Defending against Java Deserialization Vulnerabilities
 by [@lucacarettoni](https://twitter.com/lucacarettoni)
 
-- [Slides](http://www.slideshare.net/ikkisoft/defending-against-java-deserialization-vulnerabilities)
+- [Slides](https://www.slideshare.net/ikkisoft/defending-against-java-deserialization-vulnerabilities)
 
 ##### A Journey From JNDI/LDAP Manipulation To Remote Code Execution Dream Land
-by [@pwntester](http://twitter.com/pwntester) and O. Mirosh
+by [@pwntester](https://twitter.com/pwntester) and O. Mirosh
 
 - [Slides](https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE.pdf)
 - [White Paper](https://www.blackhat.com/docs/us-16/materials/us-16-Munoz-A-Journey-From-JNDI-LDAP-Manipulation-To-RCE-wp.pdf)
