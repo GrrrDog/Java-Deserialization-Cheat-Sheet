@@ -132,8 +132,10 @@ ysoserial 0.6 payloads:
 
 payload | author | dependencies | impact (if not RCE)
 ------|--------|------ |------
+AspectJWeaver       |@Jang                       |aspectjweaver:1.9.2, commons-collections:3.2.2
 BeanShell1          |@pwntester, @cschneider4711 |bsh:2.0b5
 C3P0                |@mbechler                   |c3p0:0.9.5.2, mchange-commons-java:0.2.11
+Click1              |@artsploit                  |click-nodeps:2.3.0, javax.servlet-api:3.1.0
 Clojure             |@JackOfMostTrades           |clojure:1.8.0
 CommonsBeanutils1   |@frohoff                    |commons-beanutils:1.9.2, commons-collections:3.1, commons-logging:1.2
 CommonsCollections1 |@frohoff                    |commons-collections:3.1
@@ -227,6 +229,8 @@ Won't fix DoS using default Java classes (JRE)
 - [BaRMIe](https://github.com/NickstaDB/BaRMIe)
 - [Barmitza](https://github.com/mogwailabs/rmi-deserialization/blob/master/barmitzwa.groovy)
 - [RMIScout](https://labs.bishopfox.com/tech-blog/rmiscout)
+- [attackRmi](https://github.com/waderwu/attackRmi)
+- [Remote Method Guesser][https://github.com/qtc-de/remote-method-guesser]
 
 ##### Remote class detection:
 - [GadgetProbe: Exploiting Deserialization to Brute-Force the Remote Classpath](https://know.bishopfox.com/research/gadgetprobe)
@@ -309,7 +313,13 @@ no spec tool
 - [CVE-2019-2725](https://paper.seebug.org/910/)
 - [CVE-2020-2555](https://www.thezdi.com/blog/2020/3/5/cve-2020-2555-rce-through-a-deserialization-bug-in-oracles-weblogic-server)
 - [CVE-2020-2883](https://github.com/Y4er/CVE-2020-2883)
+- [CVE-2020-2963](https://nvd.nist.gov/vuln/detail/CVE-2020-2963)
 - [CVE-2020-14625](https://www.zerodayinitiative.com/advisories/ZDI-20-885/)
+- [CVE-2020-14644](https://github.com/rufherg/WebLogic_Basic_Poc/tree/master/poc)
+- [CVE-2020-14645](https://github.com/rufherg/WebLogic_Basic_Poc/tree/master/poc)
+- [CVE-2020-14756](https://github.com/Y4er/CVE-2020-14756)
+- [CVE-2020-14825](https://github.com/rufherg/WebLogic_Basic_Poc/tree/master/poc)
+- [CVE-2020-14841](https://www.vulners.com/search?query=CVE-2020-14841)
 
 [loubia](https://github.com/metalnas/loubia) (tested on 11g and 12c, supports t3s)
 
@@ -328,10 +338,16 @@ no spec tool
 
 [CVE-2020-2551 sploit](https://github.com/Y4er/CVE-2020-2551)
 
-##### Oracle Weblogic
+##### Oracle Weblogic (1)
 - auth required
 - [How it works](https://blogs.projectmoon.pw/2018/10/19/Oracle-WebLogic-Two-RCE-Deserialization-Vulnerabilities/)
 - [CVE-2018-3252](https://www.vulners.com/search?query=CVE-2018-3252)
+
+##### Oracle Weblogic (2)
+- auth required
+- [CVE-2021-2109](https://www.vulners.com/search?query=CVE-2021-2109)
+
+[Exploit](https://packetstormsecurity.com/files/161053/Oracle-WebLogic-Server-14.1.1.0-Remote-Code-Execution.html)
 
 ##### IBM Websphere (1)
 - *wsadmin*
@@ -366,6 +382,7 @@ Metasploit
 - [CVE-2020-4450](https://www.vulners.com/search?query=CVE-2020-4450)
 - [CVE-2020-4449](https://www.vulners.com/search?query=CVE-2020-4449)
 - [Abusing Java Remote Protocols in IBM WebSphere](https://www.thezdi.com/blog/2020/7/20/abusing-java-remote-protocols-in-ibm-websphere)
+- [Vuln Details](https://www.freebuf.com/vuls/246928.html)
 
 ##### Red Hat JBoss (1)
 - *http://jboss_server/invoker/JMXInvokerServlet*
@@ -639,7 +656,6 @@ no spec tool
 
 [ysoserial](#ysoserial)
 
-
 ##### ManageEngine Desktop Central
 - version < 10.0.474
 - [CVE-2020-10189](https://www.vulners.com/search?query=CVE-2020-10189)
@@ -672,6 +688,44 @@ no spec tool
 ##### Elassandra
 - Non default config
 - [JMXMP](#jmxmp)
+
+##### Micro Focus
+- [CVE-2020-11853](https://www.vulners.com/search?query=CVE-2020-11853)
+- [Vulnerability analyzis](https://github.com/pedrib/PoC/blob/master/advisories/Micro_Focus/Micro_Focus_OBM.md)
+Affected products:
+- Operations Bridge Manager versions: 2020.05, 2019.11, 2019.05, 2018.11, 2018.05, versions 10.6x and 10.1x and older versions
+- Application Performance Management versions: 9.51, 9.50 and 9.40 with uCMDB 10.33 CUP 3 \
+- Data Center Automation version 2019.11
+- Operations Bridge (containerized) versions: 2019.11, 2019.08, 2019.05, 2018.11, 2018.08, 2018.05, 2018.02, 2017.11
+- Universal CMDB versions: 2020.05, 2019.11, 2019.05, 2019.02, 2018.11, 2018.08, 2018.05, 11, 10.33, 10.32, 10.31, 10.30
+- Hybrid Cloud Management version 2020.05
+- Service Management Automation versions 2020.5 and 2020.02
+
+[Metasploit Exploit](https://github.com/rapid7/metasploit-framework/pull/14671)
+
+##### IBM Qradar (1)
+- [CVE-2020-4280](https://www.vulners.com/search?query=CVE-2020-4280)
+- [Exploitation](https://www.securify.nl/advisory/java-deserialization-vulnerability-in-qradar-remotejavascript-servlet)
+
+##### IBM Qradar (2)
+- */console/remoteJavaScript*
+- [CVE-2020-4888](https://www.vulners.com/search?query=CVE-2020-4888)
+
+[Exploit](https://gist.github.com/testanull/e9ba06d0c0c403402f6941fe2dbb868a)
+
+##### IBM InfoSphere JReport
+- RMI
+- port 58611
+- <=8.5.0.0 (all)
+- [Exploitation details](https://n4nj0.github.io/advisories/ibm-infosphere-java-deserialization/)
+
+##### Apache Kafka 
+- connect-api
+- [Vulnerbility analyzis](https://www.programmersought.com/article/76446714621/)
+
+##### Zoho ManageEngine ADSelfService Plus
+- [CVE-2020-11518](https://www.vulners.com/search?query=CVE-2020-11518)
+- [Exloitation](https://honoki.net/2020/08/10/cve-2020-11518-how-i-bruteforced-my-way-into-your-active-directory/)
 
 ##### Apache ActiveMQ - Client lib
 - [JMS](#jms)
@@ -984,6 +1038,9 @@ no spec tool
 - [List of vulnerable products](https://tools.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-20151209-java-deserialization)
 - [CVE-2015-6420](https://www.vulners.com/search?query=CVE-2015-6420)
 
+##### Cisco Security Manager
+- [CVE-2020-27131](https://www.vulners.com/search?query=CVE-2020-27131)
+
 ##### Lexmark Markvision Enterprise
 - [CVE-2016-1487](http://support.lexmark.com/index?page=content&id=TE747&locale=en&userlocale=EN_US)
 
@@ -1053,6 +1110,9 @@ no spec tool
 ##### IBM Congnos BI
 - [CVE-2012-4858](https://www.vulners.com/search?query=CVE-2012-4858)
 
+##### IBM Maximo Asset Management
+- [CVE-2020-4521](https://www.ibm.com/support/pages/node/6332587)
+
 ##### Novell NetIQ Sentinel
 - [CVE-2016-1000031](https://www.zerodayinitiative.com/advisories/ZDI-16-570/)
 
@@ -1090,11 +1150,23 @@ no spec tool
 - [CVE-2015-1920](https://nvd.nist.gov/vuln/detail/CVE-2015-1920)
 
 ##### IBM WebSphere (3)
+- TCP port 11006
 - [CVE-2020-4448](https://www.vulners.com/search?query=CVE-2020-4448)
+- [Vuln details](https://www.thezdi.com/blog/2020/9/29/exploiting-other-remote-protocols-in-ibm-websphere)
 
 ##### IBM WebSphere (4)
 - SOAP connector
 - [CVE-2020-4464](https://www.vulners.com/search?query=CVE-2020-4464)
+- [Vuln details](https://www.thezdi.com/blog/2020/9/29/exploiting-other-remote-protocols-in-ibm-websphere)
+
+##### IBM WebSphere (5)
+- [CVE-2021-20353](https://www.zerodayinitiative.com/advisories/ZDI-21-174/)
+
+##### IBM WebSphere (6)
+- [CVE-2020-4576](https://nvd.nist.gov/vuln/detail/CVE-2020-4576)
+  
+##### IBM WebSphere (7)
+- [CVE-2020-4589](https://nvd.nist.gov/vuln/detail/CVE-2020-4589)
 
 ##### Code42 CrashPlan
 - *TCP port 4282*
@@ -1108,6 +1180,10 @@ no spec tool
 
 ##### Dell EMC VNX Monitoring and Reporting 
 - [CVE-2017-8012](https://www.zerodayinitiative.com/advisories/ZDI-17-826/)
+
+##### Taoensso Nippy
+- <2.14.2
+- [CVE-2020-24164](https://github.com/ptaoussanis/nippy/issues/130)
 
 ##### CAS
 - v4.1.x 
@@ -1165,6 +1241,7 @@ How it works:
 - [CVE-2017-3506](https://www.vulners.com/search?query=CVE-2017-3506)
 - [CVE-2017-10271](https://www.vulners.com/search?query=CVE-2017-10271)
 - [Details](https://blog.nsfocusglobal.com/threats/vulnerability-analysis/technical-analysis-and-solution-of-weblogic-server-wls-component-vulnerability/)
+- [CVE-2019-2729 Details](https://www.buaq.net/go-20897.html)
 
 [Exploit](https://github.com/1337g/CVE-2017-10271/blob/master/CVE-2017-10271.py)
 
@@ -1180,9 +1257,12 @@ How it works:
 - [https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-2-xstream](https://www.contrastsecurity.com/security-influencers/serialization-must-die-act-2-xstream)
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
+
 ### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+- [CVE-2020-26217](https://github.com/mai-lang-chai/Middleware-Vulnerability-detection/tree/master/XStream) 
+- [CVE-2020-26258 - SSRF](http://x-stream.github.io/CVE-2020-26258.html) 
 
 ### Exploits
 ##### Apache Struts (S2-052)
@@ -1256,6 +1336,10 @@ How it works:
 
 ##### Apache Camel
 - [CVE-2017-12634](https://blog.semmle.com/hessian-java-deserialization-castor-vulnerabilities/)
+
+##### MobileIron MDM
+- [CVE-2020-15505](https://www.vulners.com/search?query=2020-15505)
+- [Metasploit Exploit](https://vulners.com/metasploit/MSF:EXPLOIT/LINUX/HTTP/MOBILEIRON_MDM_HESSIAN_RCE/)
 
 ## Castor (XML)
 How it works:
@@ -1471,6 +1555,7 @@ How it works:
 - no auth
 - [CVE-2020-2950](https://www.zerodayinitiative.com/advisories/ZDI-20-505/)
 - [Details on the Oracle WebLogic Vulnerability Being Exploited in the Wild](https://www.thezdi.com/blog/2020/5/8/details-on-the-oracle-weblogic-vulnerability-being-exploited-in-the-wild)
+- [CVE-2020–2950 — Turning AMF Deserialize bug to Java Deserialize bug](https://peterjson.medium.com/cve-2020-2950-turning-amf-deserialize-bug-to-java-deserialize-bug-2984a8542b6f)
 
 ##### Adobe ColdFusion
 - [CVE-2017-3066](https://www.vulners.com/search?query=CVE-2017-3066)
@@ -1493,6 +1578,12 @@ How it works:
 
 ##### VMWare VCenter
 - based on [CVE-2017-5641](https://www.vulners.com/search?query=CVE-2017-5641)
+
+##### HP Systems Insight Manager
+- */simsearch/messagebroker/amfsecure*
+- 7.6.x
+- [CVE-2020-7200](https://www.vulners.com/search?query=CVE-2020-7200)
+- [Metasploit Exploit](https://github.com/rapid7/metasploit-framework/pull/14846)
 
 ## Flamingo AMF  (AMF)
 How it works:
