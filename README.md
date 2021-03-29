@@ -1428,6 +1428,9 @@ How it works:
 - [Freddy](https://github.com/nccgroup/freddy)
 
 ### Exploits
+##### FasterXML
+- [CVE-2019-12384](https://github.com/jas502n/CVE-2019-12384)
+
 ##### Liferay 
 - [CVE-2019-16891](https://sec.vnpt.vn/2019/09/liferay-deserialization-json-deserialization-part-4/)
 
