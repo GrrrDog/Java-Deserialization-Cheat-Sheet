@@ -1623,6 +1623,7 @@ How it works:
 ### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+- [Payload Generator for the SnakeYAML deserialization gadget](https://github.com/artsploit/yaml-payload)
 
 ### Detect
 ##### Code review
