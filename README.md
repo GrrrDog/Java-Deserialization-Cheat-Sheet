@@ -247,7 +247,7 @@ no spec tool - You don't need a special tool (just Burp/ZAP + payload)
 - *Protocol*
 - *Default - 1099/tcp for rmiregistry*
 - partially patched in JRE with JEP290 (JDK 8u121, JDK 7u131, JDK 6u141)
-- [Attacking Java RMI services after JEP 290](https://mogwailabs.de/blog/2019/04/attacking-rmi-based-jmx-services/)
+- [Attacking Java RMI services after JEP 290](https://mogwailabs.de/en/blog/2019/03/attacking-java-rmi-services-after-jep-290/)
 - [An Trinhs RMI Registry Bypass](https://mogwailabs.de/blog/2020/02/an-trinhs-rmi-registry-bypass/)
 - [RMIScout](https://labs.bishopfox.com/tech-blog/rmiscout)
 
