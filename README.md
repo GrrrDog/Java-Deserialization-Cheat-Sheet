@@ -1275,6 +1275,7 @@ How it works:
 ### Payload generators
 
 - [https://github.com/mbechler/marshalsec](https://github.com/mbechler/marshalsec)
+- [https://github.com/chudyPB/XStream-Gadgets](https://github.com/chudyPB/XStream-Gadgets)
 - [CVE-2020-26217](https://github.com/mai-lang-chai/Middleware-Vulnerability-detection/tree/master/XStream) 
 - [CVE-2020-26258 - SSRF](http://x-stream.github.io/CVE-2020-26258.html) 
 - [CVE-2021-29505](https://x-stream.github.io/CVE-2021-29505.html) 
