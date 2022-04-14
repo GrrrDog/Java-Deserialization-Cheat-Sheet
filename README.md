@@ -349,6 +349,9 @@ no spec tool
 
 [Exploit](https://packetstormsecurity.com/files/161053/Oracle-WebLogic-Server-14.1.1.0-Remote-Code-Execution.html)
 
+##### Oracle Access Manager (1)
+- [CVE-2021-35587](https://testbnull.medium.com/oracle-access-manager-pre-auth-rce-cve-2021-35587-analysis-1302a4542316)
+
 ##### IBM Websphere (1)
 - *wsadmin*
 - *Default port - 8880/tcp*
