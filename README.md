@@ -239,6 +239,9 @@ Won't fix DoS using default Java classes (JRE)
 - [Remote Java classpath enumeration with EnumJavaLibs](https://www.redtimmy.com/web-application-hacking/remote-java-classpath-enumeration-with-enumjavalibs/)
 - [EnumJavaLibs](https://github.com/redtimmy/EnumJavaLibs)
 
+##### Library for creating Java serialization data
+- [serial-builder](https://github.com/Marcono1234/serial-builder)
+
 ### Exploits
 
 no spec tool - You don't need a special tool (just Burp/ZAP + payload)
@@ -320,6 +323,7 @@ no spec tool
 - [CVE-2020-14756](https://github.com/Y4er/CVE-2020-14756)
 - [CVE-2020-14825](https://github.com/rufherg/WebLogic_Basic_Poc/tree/master/poc)
 - [CVE-2020-14841](https://www.vulners.com/search?query=CVE-2020-14841)
+- [CVE-2021-2394](https://github.com/BabyTeam1024/CVE-2021-2394)
 
 [loubia](https://github.com/metalnas/loubia) (tested on 11g and 12c, supports t3s)
 
@@ -351,6 +355,12 @@ no spec tool
 
 ##### Oracle Access Manager (1)
 - [CVE-2021-35587](https://testbnull.medium.com/oracle-access-manager-pre-auth-rce-cve-2021-35587-analysis-1302a4542316)
+
+##### Oracle ADF Faces
+- [CVE-2022–21445](https://peterjson.medium.com/miracle-one-vulnerability-to-rule-them-all-c3aed9edeea2)
+- /appcontext/afr/test/remote/payload/
+
+no spec tool
 
 ##### IBM Websphere (1)
 - *wsadmin*
@@ -659,6 +669,10 @@ no spec tool
 
 [ysoserial](#ysoserial)
 
+##### ManageEngine OpManager
+- version < 12.5.329  
+- [Details with exploit CVE-2020-28653/CVE-2021-3287](https://haxolot.com/posts/2021/manageengine_opmanager_pre_auth_rce/)
+
 ##### ManageEngine Desktop Central
 - version < 10.0.474
 - [CVE-2020-10189](https://www.vulners.com/search?query=CVE-2020-10189)
@@ -913,6 +927,30 @@ Affected products:
 
 [ysoserial](#ysoserial)
 Metasploit Exploit: exploit/windows/http/netmotion_mobility_mvcutil_deserialization
+
+##### Bonita
+- [Bonita serverAPI](http://mp.weixin.qq.com/s?__biz=Mzg3MTU0MjkwNw==&mid=2247490269&idx=1&sn=78357c8687101d66f11b98e91afac184&chksm=cefda3c9f98a2adfee40ec062470bacd46d6b42ea2069d62f93a3022eb197713668d2580e1bb&mpshare=1&scene=23&srcid=0530bEaTknyeozALkFfAbvgH&sharer_sharetime=1653965254260&sharer_shareid=4ab8b98c0a9c5866b3e90483ff7445f3#rd)
+- /bonita/serverAPI/
+
+[ysoserial](#ysoserial)
+
+##### Neo4j 
+- <= 3.4.18 (with the shell server enabled)
+- RMI
+- [Exploit for CVE-2021-34371](https://www.exploit-db.com/exploits/50170)
+
+##### Bitbucket Data Center 
+- port 5701 (Hazelcast)
+- similar to CVE-2016-10750
+- [Exploit for CVE-2022-26133](https://github.com/snowyyowl/writeups/tree/main/CVE-2022-26133)
+
+##### Jira Data Center / Jira Service Management Data Center 
+- RMI of Ehcache 
+- [CVE-2020-36239](https://confluence.atlassian.com/adminjiraserver/jira-data-center-and-jira-service-management-data-center-security-advisory-2021-07-21-1063571388.html)
+
+##### Nomulus 
+- patched
+- [Details of exloitation](https://irsl.medium.com/the-nomulus-rift-935a3c4d9300)
 
 ### Detect
 ##### Code review
@@ -1207,6 +1245,10 @@ Metasploit Exploit: exploit/windows/http/netmotion_mobility_mvcutil_deserializat
 - v4.2.x
 - [CAS Vulnerability Disclosure from Apereo](https://apereo.github.io/2016/04/08/commonsvulndisc/)
 
+##### SolarWinds Network Performance Monitor
+- [CVE-2021–31474](https://www.vulners.com/search?query=CVE-2021–31474)
+- [Video](https://twitter.com/testanull/status/1397138757673906182)
+
 ##### Apache Batchee
 ##### Apache JCS
 ##### Apache OpenWebBeans
@@ -1281,7 +1323,7 @@ How it works:
 - [https://github.com/chudyPB/XStream-Gadgets](https://github.com/chudyPB/XStream-Gadgets)
 - [CVE-2020-26217](https://github.com/mai-lang-chai/Middleware-Vulnerability-detection/tree/master/XStream) 
 - [CVE-2020-26258 - SSRF](http://x-stream.github.io/CVE-2020-26258.html) 
-- [CVE-2021-29505](https://x-stream.github.io/CVE-2021-29505.html) 
+- [CVE-2021-29505](https://github.com/MyBlackManba/CVE-2021-29505) 
 
 ### Exploits
 ##### Apache Struts (S2-052)
@@ -1359,6 +1401,9 @@ How it works:
 ##### MobileIron MDM
 - [CVE-2020-15505](https://www.vulners.com/search?query=2020-15505)
 - [Metasploit Exploit](https://vulners.com/metasploit/MSF:EXPLOIT/LINUX/HTTP/MOBILEIRON_MDM_HESSIAN_RCE/)
+
+##### Apache Dubbo
+- [Details and examples](https://checkmarx.com/blog/the-0xdabb-of-doom-cve-2021-25641/)
 
 ## Castor (XML)
 How it works:
@@ -1465,6 +1510,7 @@ How it works:
 - [Official advisory](https://github.com/alibaba/fastjson/wiki/security_update_20170315)
 - [Fastjson process analysis and RCE analysis](https://paper.seebug.org/994/)
 - [Fastjson Deserialization Vulnerability History](https://paper.seebug.org/1193/)
+- [Hao Xing Zekai Wu - How I use a JSON Deserialization 0day to Steal Your Money On The Blockchain.pdf](https://media.defcon.org/DEF%20CON%2029/DEF%20CON%2029%20presentations/Hao%20Xing%20Zekai%20Wu%20-%20How%20I%20use%20a%20JSON%20Deserialization%200day%20to%20Steal%20Your%20Money%20On%20The%20Blockchain.pdf?utm_source=pocket_mylist)
 
 
 ### Detect
@@ -1482,6 +1528,7 @@ How it works:
 - [fastjson 1.2.66 <=](https://github.com/0nise/CVE-2020-10673/)
 - [blacklisted gadgets](https://github.com/LeadroyaL/fastjson-blacklist)
 - [Fastjson: exceptional deserialization vulnerabilities](https://www.alphabot.com/security/blog/2020/java/Fastjson-exceptional-deserialization-vulnerabilities.html)
+- [Hao Xing Zekai Wu - How I use a JSON Deserialization 0day to Steal Your Money On The Blockchain.pdf](https://media.defcon.org/DEF%20CON%2029/DEF%20CON%2029%20presentations/Hao%20Xing%20Zekai%20Wu%20-%20How%20I%20use%20a%20JSON%20Deserialization%200day%20to%20Steal%20Your%20Money%20On%20The%20Blockchain.pdf?utm_source=pocket_mylist)
 
 ## Genson (JSON)
 
@@ -1606,6 +1653,11 @@ How it works:
 - 7.6.x
 - [CVE-2020-7200](https://www.vulners.com/search?query=CVE-2020-7200)
 - [Metasploit Exploit](https://github.com/rapid7/metasploit-framework/pull/14846)
+
+##### TIBCO Data Virtualization
+- <  8.3
+- */monitor/messagebroker/amf*
+- [Details](https://github.com/pedrib/PoC/blob/master/advisories/TIBCO/tibco_tdv_rce.md)
 
 ## Flamingo AMF  (AMF)
 How it works:
