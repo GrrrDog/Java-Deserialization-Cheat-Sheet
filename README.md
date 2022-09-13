@@ -230,7 +230,7 @@ Won't fix DoS using default Java classes (JRE)
 - [Barmitza](https://github.com/mogwailabs/rmi-deserialization/blob/master/barmitzwa.groovy)
 - [RMIScout](https://labs.bishopfox.com/tech-blog/rmiscout)
 - [attackRmi](https://github.com/waderwu/attackRmi)
-- [Remote Method Guesser][https://github.com/qtc-de/remote-method-guesser]
+- [Remote Method Guesser](https://github.com/qtc-de/remote-method-guesser)
 
 ##### Remote class detection:
 - [GadgetProbe: Exploiting Deserialization to Brute-Force the Remote Classpath](https://know.bishopfox.com/research/gadgetprobe)
