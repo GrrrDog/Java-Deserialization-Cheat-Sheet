@@ -178,7 +178,7 @@ Plugins for Burp Suite (detection, ysoserial integration ):
 Full shell (pipes, redirects and other stuff):
 - [$@|sh – Or: Getting a shell environment from Runtime.exec](http://codewhitesec.blogspot.ru/2015/03/sh-or-getting-shell-environment-from.html)
 - Set String[] for Runtime.exec (patch ysoserial's payloads)
-- [Shell Commands Converter](http://jackson.thuraisamy.me/runtime-exec-payloads.html)
+- [Shell Commands Converter](https://ares-x.com/tools/runtime-exec/)
 
 How it works:
 - [https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/](https://blog.srcclr.com/commons-collections-deserialization-vulnerability-research-findings/)
@@ -324,6 +324,8 @@ no spec tool
 - [CVE-2020-14825](https://github.com/rufherg/WebLogic_Basic_Poc/tree/master/poc)
 - [CVE-2020-14841](https://www.vulners.com/search?query=CVE-2020-14841)
 - [CVE-2021-2394](https://github.com/BabyTeam1024/CVE-2021-2394)
+- [SSRF JDBC](https://pyn3rd.github.io/2022/06/18/Weblogic-SSRF-Involving-Deserialized-JDBC-Connection/)
+- [CVE-2023-21931](https://github.com/gobysec/Weblogic/blob/main/WebLogic_CVE-2023-21931_en_US.md)
 
 [loubia](https://github.com/metalnas/loubia) (tested on 11g and 12c, supports t3s)
 
@@ -1324,6 +1326,7 @@ How it works:
 - [CVE-2020-26217](https://github.com/mai-lang-chai/Middleware-Vulnerability-detection/tree/master/XStream) 
 - [CVE-2020-26258 - SSRF](http://x-stream.github.io/CVE-2020-26258.html) 
 - [CVE-2021-29505](https://github.com/MyBlackManba/CVE-2021-29505) 
+- [CVE-2021-39144](https://x-stream.github.io/CVE-2021-39144.html) 
 
 ### Exploits
 ##### Apache Struts (S2-052)
