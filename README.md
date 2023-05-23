@@ -1281,7 +1281,7 @@ Metasploit Exploit: exploit/windows/http/netmotion_mobility_mvcutil_deserializat
 ## XMLEncoder (XML)
 How it works:
 
-- [http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html](http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html)
+- [https://web.archive.org/web/20191007233559/http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html](https://web.archive.org/web/20191007233559/http://blog.diniscruz.com/2013/08/using-xmldecoder-to-execute-server-side.html)
 - [Java Unmarshaller Security](https://www.github.com/mbechler/marshalsec/blob/master/marshalsec.pdf)
 
 ### Detect
